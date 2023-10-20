@@ -1,0 +1,16 @@
+.tagcloud {
+    display: inline-block;
+    top: 0;
+    left: 0;
+    font-weight: 600;
+    letter-spacing: 0.0625em;
+    font-size: 1.3em;
+}
+
+.tagcloud--item {
+    color: white;
+}
+
+.tagcloud--item:hover {
+    color: #29d658;
+}
