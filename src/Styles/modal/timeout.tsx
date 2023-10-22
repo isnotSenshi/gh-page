@@ -17,7 +17,7 @@ export const Title1 = styled.div`
     color: #222222;
     line-height: normal;
     display:block;
-    width:100vw;
+    width:100vh;
     margin-bottom: 10px;
 }
 `
@@ -28,7 +28,7 @@ export const Title2 = styled.div`
     color: #222222;
     line-height: normal;
     display:block;
-    width:100vw;
+    width:100vh;
     font-weight: 600;
     margin-bottom: 30px;
 }`
@@ -46,5 +46,5 @@ export const Action = styled.button`
 export const Actions = styled.div`
 	display: flex;
 	justify-content: flex-end;
-	width: 100vw;
+	width: 100vh;
 `

@@ -1,231 +1,191 @@
+import { keyframes } from "styled-components";
 import { COLORS } from "./colors"
 import ICONS from "./icons"
-
-const PAGE = {
-     styleString: `       
+const HOME = {
+     styleString: `      
           height: 100vh;
-          overflow-x: hidden;
-          overflow-y: hidden;
-          width: 100vw; 
-          position: relative;
-          background: #272B33;
           font-family: Josefin Sans;  
+          animation-iteration-count: 1;  
      `,
      mainContainer: {
           styleString: `     
-          margin-left: 45%;
-          font-weight: bold;'
+          font-weight: bold;
+          text-align: center;
+          item-align: center;
+          top: 20vh;
      `,
      },
      logo: {
           src: ICONS.CONDING_DOGE,
-          width: '120px',
-          height: '120px',
+          width: '5%',
           styleString: `
-               border: 5px solid ${COLORS.GREEN};
+               border: .5vh solid ${COLORS.GREEN};
                border-radius: 500px;
-               margin-top: 20vh;
+               margin-bottom: 1vh;
           `
      },
      presentationText: {
-          size: '35px',
-          align: 'center',
+          size: '3vh',
           fontWeight: 'bold',
      },
-}
-
-const HEADER = {
-     header: {
-          styleString: `   
-          display: flex;
-          padding: 20px;
-          border-radius: 35px;
-       `
-     },
-     home: {
-          title: {
-               title: 'Inicio',
-               size: '25px',
-               color: 'white',
-               margin: '10px; 0 0 0'
-          }
-     },
-     tech: {
-          title: {
-               title: 'Tecnologías',
-               color: 'white',
-               size: '25px',
-               margin: '10px; 0 0 0'
-          }
-     },
-     contact: {
-          title: {
-               title: 'Contactanos',
-               color: 'white',
-               size: '25px',
-               margin: '10px; 0 0 0'
-          }
-     },
-     contentBox: {
-          styleString: `       
-                    padding: 20px;
-                    margin-right: 10px;
-                    display: flex;
-                    border-radius: 10px;
-                    transition: .5s;
-                    cursor: pointer;
-                    &:hover{
-                         background: #29d658;                         
-                    } 
-               `
-     },
-     logo: {
-          src: ICONS.PEPE_GENTLEMAN,
-          width: '50px',
-          height: '60px',
+     pageText: {
+          size: '3vh',
+          fontWeight: 'bold',
           styleString: `
-               padding: 0px 0px 0px 15px;
-               border-radius: 5px;
-               margin-right: 20px;
+               display: inline-flex;
+               color: ${COLORS.GREEN};
+               font-size: 3vh; 
           `
      },
-     textlogo: {
+     linkedIn: {
+          src: ICONS.LINKEDIN,
+          //hoverSrc: ICONS.LINKEDIN_BLUE,
+          width: '4vh',
+          height: '4vh',
+          pointer: true,
           styleString: `
-               color: white;
-               font-size: 35px;
-               padding: 20px;
+               position: relative; 
+               top: 10vh;        
           `
      },
-     logoContent: {
+     arrowDown: {
+          src: ICONS.DRILL_ARROW,
+          //hoverSrc: ICONS.LINKEDIN_BLUE,
+          width: '2vh',
+          height: '2vh',
+          pointer: true,
           styleString: `
-               color: white;
-               cursor: pointer;
-               display: flex;
-               background: #29d65860;
-               border: 5px solid #29d658;
-               background: #29d65860;
-               border-radius: 10px;
-               position: absolute;
-               right: 2%;
-               `
-     },
-
-}
-
-const BODY_TECHS = {
-     styleString: `   
-          margin-left: 4vw;          
-          justify-content: space-between;
-          width: 90vw;
-          display: flex;
-          
-     `,
-     bodyTitle: {
-          color: 'white',
-          size: '30px',
-          margin: '25px'
-     },
-     bodySubTitle: {
-          color: '#29d658',
-          size: '60px',
-          margin: '25px'
+               rotate: 180deg;
+               position: relative; 
+               top: 45vh;       
+               background-color: ${COLORS.GREEN_STRONG}; 
+               border-radius: 5vh;
+               padding: .75vh;
+          `
      }
 }
 
-const TECH_DESC = {
+const ABOUT_ME = {
+     styleString: `      
+          background: ${COLORS.GREY_SMOOTH};
+          height: 100vh;
+          font-family: Josefin Sans;  
+     `,
      mainContainer: {
-          styleString: ` 
-               display: flex;
-               position: relative;
-               bottom: 14rem;
-               left: 2vw;
-          `
-     },
-     imgContainer: {
-          styleString: ` 
-               margin-left: 6rem;
-               height: 20rem;
-               width: 20rem;
-               border-radius: 15px;
-               background: linear-gradient(147deg, rgba(0,207,55,1) 0%, rgba(0,135,36,1) 12%, rgba(0,0,0,1) 100%);
-          `
-     },
-     imgContainer2: {
-          styleString: ` 
-               margin: 1rem;
-               height: 18rem;
-               width: 18rem;
-               border-radius: 15px;
-               background: black;
-          `
-     },
-     container: {
-          styleString: `   
-               margin-left: 6rem;
-               height: 20rem;
-               width: 50rem;
-               border-radius: 15px;
-               background: linear-gradient(347deg, rgba(0,207,55,1) 0%, rgba(0,135,36,1) 12%, rgba(0,0,0,1) 100%);
-          `,
-     },
-     text: {
-          styleString: `   
-               color: white;
-               font-size: 30px;
-               padding: 10px 20px 0px 30px;
-               letter-spacing: 3px;
-               height: 17.5rem;
-               overflow-y: auto;
-               margin-top: 15px;               
+          styleString: `     
+          top: 5vh;
+          font-weight: bold;
+          text-align: center;
+          item-align: center;
      `,
      },
-}
+     titleContainer: {
+          size: '3vh',
+          fontWeight: 'bold',
+          styleString: `
+               display: inline-block;
+               color: ${COLORS.GREEN};
+               font-size: 3vh; 
+          `
+     },
+     titleAbout: {
+          size: '3vh',
+          fontWeight: 'bold',
+     },
+     greenBar: {
+          styleString: `
+               background-color: ${COLORS.GREEN};
+               height: .5vh;
+               width: 5vh;
+               margin-left: 30%;
+               margin-top: 5%;
+               item-align: center;
+          `
 
-const GREEN_SPOTS = {
-     spot1: {
-          styleString: ` 
-          width: 15rem;
-          height: 25rem;
-          background: linear-gradient(347deg, rgba(0,207,55,1) 0%, rgba(0,120,32,1) 59%, rgba(0,82,22,1) 78%, rgba(0,0,0,1) 100%);
-          border-radius: 30rem;
-          bottom: -10rem;
-          right: 30rem;
-          position: absolute;
-          z-index: -9;
+     },
+     whiteBar: {
+          styleString: `
+               background-color: ${COLORS.GREEN};
+               height: .3vh;
+               margin-top: 5%;
+               item-align: center;
+               margin-bottom: 2vh;
+          `
+
+     },
+     introductionMe: {
+          styleString: `
+          margin-top: 10vh;
+          width: 40vh;
      `
      },
-     spot2: {
-          styleString: ` 
-          width: 30rem;
-          height: 50rem;
-          background: linear-gradient(347deg, rgba(0,207,55,1) 0%, rgba(0,120,32,1) 59%, rgba(0,82,22,1) 78%, rgba(0,0,0,1) 100%);
-          border-radius: 50rem;
-          right: -10rem;
-          bottom: -15rem;
-          position: absolute;
-          z-index: -9;
+     textBox: {
+          styleString: `    
+          text-align: start;
+          line-height: 1.3;
      `
      },
-     spot3: {
-          styleString: ` 
-          width: 30rem;
-          height: 40rem;
-          background: linear-gradient(347deg, rgba(0,207,55,1) 0%, rgba(0,120,32,1) 59%, rgba(0,82,22,1) 78%, rgba(0,0,0,1) 100%);
-          border-radius: 30rem;
-          right: 5rem;
-          bottom: -15rem;
-          position: absolute;
-          z-index: -9;
+     whoIam: {
+          styleString: `
+          color: ${COLORS.WHITE};
+          font-size: 3vh; 
+          margin-bottom: 2.5vh;
+     `
+     },
+     skillsText: {
+          styleString: `
+          font-size: 3vh; 
+          position: relative;
+          justify-content: center;
+     `
+     },
+     text1: {
+          styleString: `
+          color: ${COLORS.WHITE};
+          font-size: 1.5vh; 
+          font-weight: 100;
+          margin-bottom: 1.2vh;
+     `},
+     typeWritter: {
+          styleString: `
+          color: ${COLORS.WHITE};
+          font-size: 1.5vh; 
+          font-weight: 100;
+          margin-bottom: 1.5vh;
+          display: flex;
+     `
+     },
+     location: {
+          src: ICONS.LOCATION,
+          width: '1.5vh',
+          height: '1.5vh',
+          margin: '-.1vh .5vh 0 0'
+     },
+     skills: {
+          styleString: `
+          margin-top: 10vh;
+          margin-bottom: 3vh;
      `
      },
 }
 
 const TEXT_SPHERE: any = {
+     container: {
+          styleString: `   
+               border-radius: 5vh;
+               position: absolute;
+               width: 25vh;
+               height: 25vh;
+               padding: 1vh;
+               background-color: ${COLORS.GREEN_2};
+               border: .5vh solid ${COLORS.GREEN};
+     `},
      cloud: {
           styleString: `   
-               font-weight: 600;
-               font-size: 1.3em;
+               font-weight: bold;
+               font-size: 1vh;
                user-select: none;
+               margin-left: -3vh;
           `,
      },
      texts: [
@@ -238,62 +198,21 @@ const TEXT_SPHERE: any = {
           "MongoDB",
           "GIT",
           "Dart",
-     ],
-     options: {
-          radius: 250,
-          maxSpeed: "fast",
-          initSpeed: "fast",
-          keep: false,
-     }
+     ]
 }
 
-const CARD_BOX = {
-     singleBox: {
-          styleString: `   
-               cursor: pointer;
-               margin: 1rem;
-               background: ${COLORS.BLACK};
-               height: 100vh;
-               text-align: center;
-               overflow-wrap: break-word;
-               width: 25vw;
-               border-radius: 2rem;
-               transition: .5s;
-               &: hover{
-                    background: ${COLORS.GREEN_STRONG};
-                    border-radius: 2rem;
-                    transition: .5s;
-               }
-     `
-     },
-     multiBox: {
+const TECH_DESC = {
+     mainContainer: {
           styleString: ` 
-          width: 100vw;
-          display: flex; 
-     `
-     },
-     titleCard: {
-          color: 'black',
-          size: '70px',
-          align: 'center',
-          fontWeight: 'bold',
-     },
-     contentCard: {
-          color: 'white',
-          size: '25px',
-          align: 'center',
-          fontWeight: 'bold',
-          margin: '0px 0px 0px 0px'
+               display: flex;
+               position: relative;
+          `
      },
 }
-
 
 export {
-     HEADER,
-     BODY_TECHS,
-     TECH_DESC,
+     HOME,
+     ABOUT_ME,
      TEXT_SPHERE,
-     PAGE,
-     GREEN_SPOTS,
-     CARD_BOX
+     TECH_DESC
 }

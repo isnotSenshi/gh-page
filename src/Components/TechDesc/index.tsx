@@ -1,4 +1,4 @@
-import { GREEN_SPOTS, TECH_DESC } from '../../Constants/components'
+import { TECH_DESC } from '../../Constants/components'
 import { CustomBox } from '../../Styles/customBox'
 import Typewriter from 'typewriter-effect'
 import { CONTEXT } from '../../App/context'
@@ -17,31 +17,9 @@ const TechDesc = () => {
           setImg(greenBox?.icon)
      }, [greenBox])
 
-
      return ((greenText || greenImg) ?
           <CustomBox styleString={TECH_DESC.mainContainer.styleString}>
-               <CustomBox styleString={TECH_DESC.container.styleString}>
-                    <CustomBox styleString={TECH_DESC.text.styleString}>
-                         <Typewriter
-                              onInit={(typewriter) => {
-                                   typewriter
-                                        .stop()
-                                        .start()
-                              }}
-                              options={{
-                                   strings: greenText,
-                                   autoStart: true,
-                                   delay: 25
-                              }}
-                         />
-                    </CustomBox>
-               </CustomBox>               
-
-               <CustomBox styleString={TECH_DESC.imgContainer.styleString}>
-                    <CustomBox styleString={TECH_DESC.imgContainer2.styleString}>
-                         <RenderMedia src={greenImg} width={'10rem'} height={'10rem'} margin={'22%'} />
-                    </CustomBox>
-               </CustomBox>
+               <RenderMedia src={greenImg} width={'10rem'} height={'10rem'} margin={'22%'} />
           </CustomBox > : <></>
      )
 }

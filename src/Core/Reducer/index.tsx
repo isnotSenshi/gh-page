@@ -1,6 +1,6 @@
 import {
 	ADD_INITIAL_VALUE,
-	CHANGE_GREEN_BOX,
+	CHANGE_SPHERE_BOX,
 	CHANGE_PATH,
 	NAVIGATE_TO,
 	SET_SELECTED_CARD
@@ -18,7 +18,7 @@ export const Reducer = (state: any, action: any): any => {
 				...state,
 				setSelectedCard: action.value
 			}
-		case CHANGE_GREEN_BOX:
+		case CHANGE_SPHERE_BOX:
 			return {
 				...state,
 				greenBox: action.value

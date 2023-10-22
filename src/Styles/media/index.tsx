@@ -3,6 +3,7 @@ import styled, { css, keyframes } from 'styled-components'
 
 export interface MediaInterface {
 	src: any
+	hoverSrc?: string
 	alt?: string
 	name?: string
 	width?: string
@@ -65,15 +66,14 @@ export const ShakingImg = styled("img")(
 );
 
 export const ShakingText = styled("div")(
-	() => css`
-	  font-size: ${'30px'};
-	  display: block;
-	  margin: -10px 5px 0px;
-	  transform-origin: bottom right;
-	  transform: rotate(10deg);
-	  animation-name: ${imgAnimation};
-	  animation-duration: 3s;
-	  animation-iteration-count: infinite;  
+	({ style  }) => css`
+		font-size: ${'3vh'};
+		transform-origin: bottom right;
+		transform: rotate(10deg);
+		animation-name: ${imgAnimation};
+		animation-duration: 3s;
+		animation-iteration-count: infinite;  
+		position: relative;
 	`
 );
 

@@ -1,7 +1,7 @@
 import { useContext, useEffect, FC } from 'react'
 import { CONTEXT } from '../../App/context'
 import { useNavigate } from 'react-router-dom'
-import { NAVIGATE_TO, CHANGE_GREEN_BOX } from '../../Core/Types'
+import { NAVIGATE_TO, CHANGE_SPHERE_BOX } from '../../Core/Types'
 
 interface PageInterface {
 	element?: any
@@ -15,7 +15,7 @@ const CustomRoute: FC<PageInterface> = ({ element }) => {
 
 	useEffect(() => {
 		dispatch({
-			type: CHANGE_GREEN_BOX,
+			type: CHANGE_SPHERE_BOX,
 			value: null
 		})
 	}, [pathname])

@@ -14,7 +14,7 @@ interface ModalContentInterface {
 }
 
 export const ModalContainer = styled('div')<ModalContainer>`
-	width: 100vw;
+	width: 100vh;
 	height: 100vh;
 	background-color: ${(props) => (props.bgColor ? props.bgColor : 'rgba(0, 0, 0, 0.5)')};
 	position: fixed;
@@ -26,7 +26,7 @@ export const ModalContainer = styled('div')<ModalContainer>`
 `
 
 export const ModalWrapper = styled('div')<ModalWrapperInterface>`
-	min-width: ${(props) => (props.minWidth ? props.minWidth : '40vw')};
+	min-width: ${(props) => (props.minWidth ? props.minWidth : '40vh')};
 	box-sizing: border-box;
 	box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
 	background: #fff;
@@ -40,7 +40,7 @@ export const ModalIcon = styled.img`
 export const ModalClose = styled.img`
 	position: absolute;
 	top: 10vh;
-	right: 2vw;
+	right: 2vh;
 	cursor: pointer;
 `
 

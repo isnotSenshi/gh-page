@@ -31,6 +31,7 @@ export const CustomText: FC<CustomTextInterface> = styled('div') <{
 	onMouseOut?: () => void
 }>`
 	box-sizing: border-box;
+	display: flex;
 	font-weight: ${(props) => props.fontWeight};
 	color: ${(props) => props.color};
 	font-size: ${(props) => props.size} !important;

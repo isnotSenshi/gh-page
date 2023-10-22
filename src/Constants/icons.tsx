@@ -16,6 +16,9 @@ import folderBlack from '../Images/data.svg'
 import robotBlack from '../Images/robot.svg'
 import dogeCoding from '../Images/dogogif.gif'
 import dogePng from '../Images/dogepng.png'
+import linkedIn from '../Images/linkedin.png'
+import location from '../Images/location.png'
+import linkedInBlue from '../Images/linkedinblue.png'
 
 export const ICONS = {
      PEPE_PNG: pepePng,
@@ -23,9 +26,12 @@ export const ICONS = {
      PEPE_GENTLEMAN: pepeGentleman,
      DART: dart,
      SQL: sql,
+     LINKEDIN: linkedIn,
+     LINKEDIN_BLUE: linkedInBlue,
      REACT: react,
      ANALYTICS: analytics,
      PYTHON: python,
+     LOCATION: location,
      GIT: git,
      DOGE_PNG: dogePng,
      NODEJS: nodejs,
