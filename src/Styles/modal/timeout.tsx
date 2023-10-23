@@ -12,7 +12,6 @@ export const Timeout = styled.div`
 `
 
 export const Title1 = styled.div`
-    font-family: "Open Sans", sans-serif;
     font-size: 13px;
     color: #222222;
     line-height: normal;
@@ -23,7 +22,6 @@ export const Title1 = styled.div`
 `
 
 export const Title2 = styled.div`
-    font-family: "Open Sans Semibold", "Open Sans", sans-serif;
     font-size: 13px;
     color: #222222;
     line-height: normal;
@@ -38,7 +36,6 @@ export const Action = styled.button`
 	padding: 2px 20px;
 	font-size: 16px;
 	font-weight: 600;
-	font-family: 'Open Sans Semibold', 'Open Sans', sans-serif;
 	height: 40px;
 	border-width: 1px;
 	margin-left: 15px;

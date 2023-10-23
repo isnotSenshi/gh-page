@@ -20,7 +20,7 @@ const Homepage: FunctionComponent = () => {
                                    <RenderText text={"Hi, I'm"} {...HOME.presentationText} color={'#FFF'} />
                                    <RenderText text={"Mathias Lovera"} {...HOME.presentationText} color={COLORS.PURPLE} margin={'0 .5vh 0 .7vh'} />
                                    <RenderText text={"!"} {...HOME.presentationText} color={'#FFF'} />
-                                   <ShakingText style={{ top: '-1vh' }}>
+                                   <ShakingText style={{ top: '-.2vh' }}>
                                         {'👋'}
                                    </ShakingText>
                               </CustomBox>
@@ -44,12 +44,6 @@ const Homepage: FunctionComponent = () => {
                                    <RenderMedia {...HOME.linkedIn} />
                               </a>
                          </CustomBox>
-
-                         {/*
-                         <CustomBox onClick={() => handleClick()}>
-                              <RenderMedia {...HOME.arrowDown} />
-                         </CustomBox>
-                         */}
                     </CustomBox>
                </CustomBox>
           </>

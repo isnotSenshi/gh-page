@@ -15,7 +15,6 @@ const TechDesc = () => {
      const { greenBox }: any = state
 
      useEffect(() => {
-          console.log(greenBox)
           setText(greenBox?.text)
           setImg(greenBox?.icon)
           setlevel(greenBox?.level)

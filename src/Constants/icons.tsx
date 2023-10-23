@@ -22,20 +22,27 @@ import location from '../Images/location.png'
 import linkedInBlue from '../Images/linkedinblue.png'
 import styledCo from '../Images/styledCo.png'
 import flutter from '../Images/flutter.png'
+import flutterWhite from '../Images/flutterwhite.png'
 import express from '../Images/express.png'
 import home from '../Images/home.png'
 import person from '../Images/person.png'
 import portfolio from '../Images/portfolio.png'
 import mailMe from '../Images/mailme.png'
+import claro from '../Images/claro.png'
+import teeromu from '../Images/teeromu.png'
+import smartPhoneWhite from '../Images/smartphonewhite.png'
 
 export const ICONS = {
      PEPE_PNG: pepePng,
      DRILL_ARROW: drillArrow,
      PEPE_GENTLEMAN: pepeGentleman,
      DART: dart,
+     CLARO: claro,
      SQL: sql,
+     TEEROMU: teeromu,
      LINKEDIN: linkedIn,
      LINKEDIN_BLUE: linkedInBlue,
+     WHITE_SMARTPHONE: smartPhoneWhite,
      REACT: react,
      ANALYTICS: analytics,
      PYTHON: python,
@@ -43,6 +50,7 @@ export const ICONS = {
      EXPRESS: express,
      GIT: git,
      FLUTTER: flutter,
+     FLUTTER_WHITE: flutterWhite,
      DOGE_PNG: dogePng,
      NODEJS: nodejs,
      MONGODB: mongodb,

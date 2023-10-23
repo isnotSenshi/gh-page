@@ -1,4 +1,3 @@
-import { keyframes } from "styled-components";
 import { COLORS } from "./colors"
 import ICONS from "./icons"
 
@@ -14,7 +13,7 @@ const INDEX = {
                border-radius: 1vh;
                padding: .75vh;
                transition: .5s;
-               z-index: 99;
+               z-index: 2;
                position: fixed;
                top: 45vh;
                &: hover {
@@ -35,7 +34,7 @@ const INDEX = {
                transition: .5s;
                position: fixed;
                top: 50vh;
-               z-index: 99;
+               z-index: 2;
                &: hover {
                     background-color: ${COLORS.GREEN_4};
                }
@@ -54,39 +53,80 @@ const INDEX = {
                transition: .5s;
                position: fixed;
                top: 9vh;
-               z-index: 99;
+               z-index: 2;
                top: 55vh;              
                &: hover {
                     background-color: ${COLORS.GREEN_4};
                }
           `
      },
-     arrowDown3: {
-          src: ICONS.MAIL_ME,
-          width: '2.5vh',
-          height: '2.5vh',
-          pointer: true,
+     arrowDown3: (mailMe: boolean) => {
+          return (mailMe ? {
+               src: ICONS.MAIL_ME,
+               width: '2.5vh',
+               height: '2.5vh',
+               pointer: true,
+               styleString: `
+                    right: 3vh; 
+                    background-color: ${COLORS.GREEN}; 
+                    &: hover {
+                         background-color: ${COLORS.LIGHT_BLUE_STRONG};
+                    }
+                    border-radius: 1vh;
+                    padding: .75vh;
+                    transition: .5s;
+                    position: fixed;
+                    top: 9vh;
+                    z-index: 2;
+                    top: 60vh;
+          `} : {
+               src: ICONS.MAIL_ME,
+               width: '2.5vh',
+               height: '2.5vh',
+               pointer: true,
+               styleString: `
+                    right: -10vh; 
+                    background-color: ${COLORS.GREEN}; 
+                    &: hover {
+                         background-color: ${COLORS.LIGHT_BLUE_STRONG};
+                    }
+                    border-radius: 1vh;
+                    padding: .75vh;
+                    transition: .5s;
+                    position: fixed;
+                    top: 9vh;
+                    z-index: 2;
+                    top: 60vh;
+          `})
+     },
+     Size: '2vh',
+     contactWith: {
           styleString: `
-               right: 3vh; 
-               background-color: ${COLORS.GREEN}; 
+               position: absolute;
+               top: 280vh; 
+               left: 44.7vw; 
+               cursor: pointer;
+               background: ${COLORS.LIGHT_BLUE_STRONG};           
                &: hover {
-                    background-color: ${COLORS.LIGHT_BLUE_STRONG};
+                    background-color: ${COLORS.LIGHT_BLUE};
                }
+               padding: 1vh;
                border-radius: 1vh;
-               padding: .75vh;
-               transition: .5s;
-               position: fixed;
-               top: 9vh;
-               z-index: 99;
-               top: 60vh;
+               z-index: 99; 
+               width: 20vh;
+               height: 5vh;
           `
+     },
+     contactWithText: {
+          color: 'white',
+          size: '2vh',
+          margin: '1vh 0 0 1vh'
      }
 }
 
 const HOME = {
      styleString: `      
           height: 100vh;
-          font-family: Josefin Sans;  
           animation-iteration-count: 1;  
      `,
      mainContainer: {
@@ -102,7 +142,7 @@ const HOME = {
           width: '5%',
           styleString: `
                border: .5vh solid ${COLORS.GREEN};
-               border-radius: 500px;
+               border-radius: 500vh;
                margin-bottom: 1vh;
           `
      },
@@ -151,12 +191,11 @@ const ABOUT_ME = {
      styleString: `      
           background: ${COLORS.GREY_SMOOTH};
           height: 100vh;
-          font-family: Josefin Sans;
           background: linear-gradient(0deg, rgba(44,50,63,1) 0%, rgba(0,0,0,1) 100%);  
      `,
      mainContainer: {
           styleString: `     
-          top: 10vh;
+          top: 5vh;
           font-weight: bold;
           text-align: center;
           item-align: center;
@@ -258,15 +297,6 @@ const ABOUT_ME = {
           margin-top: 10vh;
           margin-bottom: 3vh;
      `
-     },
-     upButton: {
-          styleString: `
-               background-color: ${COLORS.GREEN};
-               height: 5vh;
-               width: 5vh;
-               position: absolute;
-          `
-
      },
 }
 
@@ -377,12 +407,12 @@ const EXPERIENCE = {
      styleString: `      
           background: ${COLORS.GREY_SMOOTH};
           height: 100vh;
-          font-family: Josefin Sans;
-          background: linear-gradient(180deg, rgba(44,50,63,1) 50%, rgba(0,0,0,1) 100%);  
+          background: linear-gradient(0deg, ${COLORS.BLACK} 10%, rgba(44,50,63,1) 70%);  
      `,
      mainContainer: {
           styleString: `     
-          top: 10vh;
+          justify-content: center;
+          top: 5vh;
           font-weight: bold;
           text-align: center;
           item-align: center;
@@ -411,6 +441,353 @@ const EXPERIENCE = {
                item-align: center;
           `
 
+     },
+     cardContainer: {
+          styleString: ` 
+               justify-content: center;
+               display: flex;
+               width: 90vw;
+               left: 5vw;
+               gap: 2vh;
+          `
+     },
+     cardBox: [
+          {
+               styleString: `
+               width: 30vh;
+               height: 40vh;
+               top: 5vh;
+               background-color: ${COLORS.GREY_DEEP};
+               border-radius: 1.5vh;
+               &: hover {
+                    background-color: ${COLORS.GREY_LIGHT};
+                    cursor: pointer;
+                    top: 4vh;
+               }
+          `,
+               cardTitle: {
+                    text: 'Claro',
+                    size: '1.8vh',
+                    styleString: `
+                         color: white;
+                         justify-content: center;
+                         position: relative; 
+                         z-index: 2;                        
+                         top: 1vh;
+                    `
+               },
+               upperPart: {
+                    styleString: `
+                         width: 30vh;
+                         height: 10vh;
+                         background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
+                         border-top-left-radius: 1vh;
+                         border-top-right-radius: 1vh;
+          `},
+               cardBoxLogo: {
+                    styleString: `
+                         width: 10vh;
+                         height: 10vh;
+                         top: -5vh;
+                         display: inline-block;
+                         background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
+                         border-radius: 10vh;
+                         box-shadow: .1vh .1vh 8vh .5vh black;
+          `},
+               media: {
+                    width: '8vh',
+                    height: '9.7vh',
+                    src: ICONS.CLARO,
+                    margin: '0',
+               },
+               cardBoxText: {
+                    text: 'Fullstack Developer',
+                    color: 'white',
+                    size: '2.5vh',
+                    styleString: `
+                    position: relative;
+                    top: -3vh;
+                    justify-content: center;
+               `
+               },
+               cardBoxSubText: {
+                    text: '2021 - Current',
+                    color: 'white',
+                    size: '1.7vh',
+                    styleString: `
+                    position: relative;
+                    justify-content: center;
+                    top: -2.5vh;
+                    font-weight: 300;
+               `
+               },
+               cardBoxUlText: {
+                    text: ['◆ Ssr Developer at WePlan S.A.', '◆ Web design, Back-end support, bug fixer, customer engagement.', ' ◆ Code quality control, code smells fixing, clean code coverage.'],
+                    color: 'white',
+                    size: '1.2vh',
+                    styleString: `
+                         font-weight: 100;
+               `},
+               miniTextBoxes: {
+                    text: ['ReactTS', 'NodeJS', 'SQL', 'Web Apps'],
+                    color: 'white',
+                    size: '1vh',
+                    mainContainer: `
+                         display: flex;
+                         justify-content: left;
+                         left: 2vh;
+                         gap: .5vh;
+                    `,
+                    container: `
+                         background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
+                         border-radius: .5vh;
+                         bottom: -4vh;
+                         display: flex;
+                         padding: .5vh .5vh .5vh .5vh;
+                    `,
+                    styleString: `
+                         font-weight: 100;
+               `
+               }
+
+          },
+          {
+               styleString: `
+               width: 30vh;
+               height: 40vh;
+               top: 5vh;
+               background-color: ${COLORS.GREY_DEEP};
+               border-radius: 1.5vh;
+               &: hover {
+                    background-color: ${COLORS.GREY_LIGHT};
+                    cursor: pointer;
+                    top: 4vh;
+               }
+          `,
+               cardTitle: {
+                    text: 'Teeromu',
+                    size: '1.8vh',
+                    styleString: `
+                    color: white;
+                    justify-content: center;
+                    position: relative; 
+                    z-index: 2;                        
+                    top: 1vh;
+               `
+               },
+               upperPart: {
+                    styleString: `
+                         width: 30vh;
+                         height: 10vh;
+                         background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
+                         border-top-left-radius: 1vh;
+                         border-top-right-radius: 1vh;
+          `},
+               cardBoxLogo: {
+                    styleString: `
+                         width: 10vh;
+                         height: 10vh;
+                         top: -5vh;
+                         display: inline-block;
+                         background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
+                         border-radius: 10vh;
+                         box-shadow: .1vh .1vh 8vh .5vh black;
+          `},
+               media: {
+                    width: '7vh',
+                    height: '7vh',
+                    src: ICONS.TEEROMU,
+                    margin: '1.5vh 0',
+               },
+               cardBoxText: {
+                    text: 'Creative Lead - Software Developer',
+                    color: 'white',
+                    size: '2.5vh',
+                    styleString: `
+                    position: relative;
+                    top: -3vh;
+                    justify-content: center;
+               `
+               },
+               cardBoxSubText: {
+                    text: '2019 - Current',
+                    color: 'white',
+                    size: '1.7vh',
+                    styleString: `
+                    position: relative;
+                    justify-content: center;
+                    top: -2.5vh;
+                    font-weight: 300;
+               `
+               },
+               cardBoxUlText: {
+                    text: ['◆ Responsible for general software team, development, architecture and design.', '◆ Vanguardist software team.'],
+                    color: 'white',
+                    size: '1.2vh',
+                    styleString: `
+                         font-weight: 100;
+                         top: -1vh;
+               `},
+               miniTextBoxes: {
+                    text: ['App design', 'Games', 'Challengers', 'Web'],
+                    color: 'white',
+                    size: '1vh',
+                    mainContainer: `
+                         display: flex;
+                         justify-content: left;
+                         left: 2vh;
+                         gap: .5vh;
+                    `,
+                    container: `
+                         background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
+                         border-radius: .5vh;
+                         display: flex;
+                         bottom: -5vh;
+                         padding: .5vh .5vh .5vh .5vh;
+                    `,
+                    styleString: `
+                         font-weight: 100;
+               `
+               }
+
+          },
+          {
+               styleString: `
+               width: 30vh;
+               height: 40vh;
+               top: 5vh;
+               background-color: ${COLORS.GREY_DEEP};
+               border-radius: 1.5vh;
+               &: hover {
+                    background-color: ${COLORS.GREY_LIGHT};
+                    cursor: pointer;
+                    top: 4vh;
+               }
+          `,
+               cardTitle: {
+                    text: 'Flutter Dev',
+                    size: '1.8vh',
+                    styleString: `
+                    color: white;
+                    justify-content: center;
+                    position: relative; 
+                    z-index: 2;                        
+                    top: 1vh;
+               `
+               },
+               upperPart: {
+                    styleString: `
+                         width: 30vh;
+                         height: 10vh;
+                         background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
+                         border-top-left-radius: 1vh;
+                         border-top-right-radius: 1vh;
+          `},
+               cardBoxLogo: {
+                    styleString: `
+                         width: 10vh;
+                         height: 10vh;
+                         top: -5vh;
+                         display: inline-block;
+                         background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
+                         border-radius: 10vh;
+                         box-shadow: .1vh .1vh 8vh .5vh black;
+          `},
+               media: {
+                    width: '7vh',
+                    height: '7vh',
+                    src: ICONS.WHITE_SMARTPHONE,
+                    margin: '1.5vh 0',
+               },
+               cardBoxText: {
+                    text: 'Beginner & Enthusiast',
+                    color: 'white',
+                    size: '2.5vh',
+                    styleString: `
+                    position: relative;
+                    top: -3vh;
+                    justify-content: center;
+               `
+               },
+               cardBoxSubText: {
+                    text: 'Since 2022',
+                    color: 'white',
+                    size: '1.7vh',
+                    styleString: `
+                    position: relative;
+                    justify-content: center;
+                    top: -2.5vh;
+                    font-weight: 300;
+               `
+               },
+               cardBoxUlText: {
+                    text: ['◆ Self taught on the area.', '◆ Many demos made from scratch.', '◆ Next step as a programmer, formally work with Mobile.'],
+                    color: 'white',
+                    size: '1.2vh',
+                    styleString: `
+                         font-weight: 100;
+               `},
+               miniTextBoxes: {
+                    text: ['Mobile', 'React Native', 'Flutter'],
+                    color: 'white',
+                    size: '1vh',
+                    mainContainer: `
+                         display: flex;
+                         margin-top: 2.1vh;
+                         left: 2vh;
+                         gap: .5vh;
+                    `,
+                    container: `
+                         background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
+                         border-radius: .5vh;
+                         display: flex;
+                         bottom: -3.3vh;
+                         padding: .5vh .5vh .5vh .5vh;
+                    `,
+                    styleString: `
+                         font-weight: 100;
+               `
+               }
+
+          },
+     ],
+     linkedInMessage: [{
+          text: "Further in-depth experience pre 2020 can be found on my",
+          size: '1.5vh',
+          color: COLORS.WHITE,
+          fontWeight: '100',
+          styleString: `   
+               justify-content: center;
+               z-index: 1;
+               position: relative;
+               top: 10vh;
+          `,
+     },
+     {
+          text: "LinkedIn",
+          size: '1.5vh',
+          color: COLORS.LIGHT_BLUE_STRONG,
+          fontWeight: 'bold',
+          onClick: () => window.open("https://www.linkedin.com/in/mathiasalss/"),
+          styleString: `   
+               justify-content: center;
+               z-index: 1;
+               position: relative;
+               top: 10vh;
+               cursor: pointer;
+          `,
+     }],
+     finalMessage: {
+          text: "Made with love 💖 by Mathias Lovera",
+          size: '1vh',
+          color: COLORS.WHITE,
+          fontWeight: '100',
+          styleString: `   
+               justify-content: center;
+               z-index: 1;
+               position: relative;
+               top: 45vh;
+          `,
      },
 }
 

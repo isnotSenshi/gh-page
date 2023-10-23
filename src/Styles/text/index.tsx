@@ -12,24 +12,13 @@ export interface CustomTextInterface {
 	padding?: string
 	bgColor?: string
 	styleString?: string
+	onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 	onMouseOver?: () => void
 	onMouseOut?: () => void
 	children?: React.ReactNode
 }
 
-export const CustomText: FC<CustomTextInterface> = styled('div') <{
-	text?: string
-	color?: string
-	size?: string
-	align?: string
-	fontWeight?: string
-	padding?: string
-	margin?: string
-	bgColor?: string
-	styleString?: string
-	onMouseOver?: () => void
-	onMouseOut?: () => void
-}>`
+export const CustomText = styled('div')<CustomTextInterface>`
 	box-sizing: border-box;
 	display: flex;
 	font-weight: ${(props) => props.fontWeight};

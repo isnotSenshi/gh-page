@@ -9,11 +9,12 @@ const RenderText: FunctionComponent<CustomTextInterface> = ({
 	fontWeight,
 	padding,
 	margin,
+	onClick,
 	styleString,
 	bgColor,
 	id
 }) => {
-	
+
 	return (
 		<CustomText
 			id={id}
@@ -21,6 +22,7 @@ const RenderText: FunctionComponent<CustomTextInterface> = ({
 			size={size}
 			align={align}
 			margin={margin}
+			onClick={onClick}
 			fontWeight={fontWeight}
 			padding={padding}
 			styleString={styleString}
