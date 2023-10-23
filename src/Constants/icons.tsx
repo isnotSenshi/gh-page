@@ -10,6 +10,7 @@ import git from '../Images/git.png'
 import nodejs from '../Images/nodejs.png'
 import mongodb from '../Images/mongodb.png'
 import js from '../Images/js.png'
+import ts from '../Images/ts.png'
 import mobileBlack from '../Images/phone.svg'
 import internetBlack from '../Images/web.svg'
 import folderBlack from '../Images/data.svg'
@@ -19,6 +20,13 @@ import dogePng from '../Images/dogepng.png'
 import linkedIn from '../Images/linkedin.png'
 import location from '../Images/location.png'
 import linkedInBlue from '../Images/linkedinblue.png'
+import styledCo from '../Images/styledCo.png'
+import flutter from '../Images/flutter.png'
+import express from '../Images/express.png'
+import home from '../Images/home.png'
+import person from '../Images/person.png'
+import portfolio from '../Images/portfolio.png'
+import mailMe from '../Images/mailme.png'
 
 export const ICONS = {
      PEPE_PNG: pepePng,
@@ -32,12 +40,20 @@ export const ICONS = {
      ANALYTICS: analytics,
      PYTHON: python,
      LOCATION: location,
+     EXPRESS: express,
      GIT: git,
+     FLUTTER: flutter,
      DOGE_PNG: dogePng,
      NODEJS: nodejs,
      MONGODB: mongodb,
      CONDING_DOGE: dogeCoding,
      JS: js,
+     TS: ts,
+     HOME: home,
+     PERSON: person,
+     PORTFOLIO: portfolio,
+     MAIL_ME: mailMe,
+     STYLED_COMPONENTS: styledCo,
      BLACK_ROBOT: robotBlack,
      BLACK_FOLDER: folderBlack,
      BLACK_MOBILE: mobileBlack,

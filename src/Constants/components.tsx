@@ -1,6 +1,88 @@
 import { keyframes } from "styled-components";
 import { COLORS } from "./colors"
 import ICONS from "./icons"
+
+const INDEX = {
+     arrowDown: {
+          src: ICONS.HOME,
+          width: '2.5vh',
+          height: '2.5vh',
+          pointer: true,
+          styleString: `
+               right: 3vh; 
+               background-color: ${COLORS.GREEN_STRONG}; 
+               border-radius: 1vh;
+               padding: .75vh;
+               transition: .5s;
+               z-index: 99;
+               position: fixed;
+               top: 45vh;
+               &: hover {
+                    background-color: ${COLORS.GREEN_4};
+               }
+          `
+     },
+     arrowDown1: {
+          src: ICONS.PERSON,
+          width: '2.5vh',
+          height: '2.5vh',
+          pointer: true,
+          styleString: `
+               right: 3vh; 
+               background-color: ${COLORS.GREEN_STRONG}; 
+               border-radius: 1vh;
+               padding: .75vh;
+               transition: .5s;
+               position: fixed;
+               top: 50vh;
+               z-index: 99;
+               &: hover {
+                    background-color: ${COLORS.GREEN_4};
+               }
+          `
+     },
+     arrowDown2: {
+          src: ICONS.PORTFOLIO,
+          width: '2.5vh',
+          height: '2.5vh',
+          pointer: true,
+          styleString: `
+               right: 3vh; 
+               background-color: ${COLORS.GREEN_STRONG}; 
+               border-radius: 1vh;
+               padding: .75vh;
+               transition: .5s;
+               position: fixed;
+               top: 9vh;
+               z-index: 99;
+               top: 55vh;              
+               &: hover {
+                    background-color: ${COLORS.GREEN_4};
+               }
+          `
+     },
+     arrowDown3: {
+          src: ICONS.MAIL_ME,
+          width: '2.5vh',
+          height: '2.5vh',
+          pointer: true,
+          styleString: `
+               right: 3vh; 
+               background-color: ${COLORS.GREEN}; 
+               &: hover {
+                    background-color: ${COLORS.LIGHT_BLUE_STRONG};
+               }
+               border-radius: 1vh;
+               padding: .75vh;
+               transition: .5s;
+               position: fixed;
+               top: 9vh;
+               z-index: 99;
+               top: 60vh;
+          `
+     }
+}
+
 const HOME = {
      styleString: `      
           height: 100vh;
@@ -8,11 +90,11 @@ const HOME = {
           animation-iteration-count: 1;  
      `,
      mainContainer: {
-          styleString: `     
+          styleString: `   
           font-weight: bold;
           text-align: center;
           item-align: center;
-          top: 20vh;
+          top: 15vh;
      `,
      },
      logo: {
@@ -69,11 +151,12 @@ const ABOUT_ME = {
      styleString: `      
           background: ${COLORS.GREY_SMOOTH};
           height: 100vh;
-          font-family: Josefin Sans;  
+          font-family: Josefin Sans;
+          background: linear-gradient(0deg, rgba(44,50,63,1) 0%, rgba(0,0,0,1) 100%);  
      `,
      mainContainer: {
           styleString: `     
-          top: 5vh;
+          top: 10vh;
           font-weight: bold;
           text-align: center;
           item-align: center;
@@ -139,6 +222,15 @@ const ABOUT_ME = {
           justify-content: center;
      `
      },
+     skillsText2: {
+          styleString: `
+          margin-top: .5vh;
+          margin-bottom: -1.5vh;
+          font-size: 1.5vh;
+          position: relative;
+          justify-content: center;
+     `
+     },
      text1: {
           styleString: `
           color: ${COLORS.WHITE};
@@ -167,16 +259,25 @@ const ABOUT_ME = {
           margin-bottom: 3vh;
      `
      },
+     upButton: {
+          styleString: `
+               background-color: ${COLORS.GREEN};
+               height: 5vh;
+               width: 5vh;
+               position: absolute;
+          `
+
+     },
 }
 
 const TEXT_SPHERE: any = {
      container: {
           styleString: `   
-               border-radius: 5vh;
+               border-radius: 2vh;
                position: absolute;
-               width: 25vh;
-               height: 25vh;
-               padding: 1vh;
+               width: 24vh;
+               height: 24vh;
+               padding: 1vh 1.5vh 1vh 1.5vh;
                background-color: ${COLORS.GREEN_2};
                border: .5vh solid ${COLORS.GREEN};
      `},
@@ -190,23 +291,126 @@ const TEXT_SPHERE: any = {
      },
      texts: [
           "React",
+          "TypeScript",
           "JavaScript",
           "Python",
           "NodeJS",
-          "Analytics",
+          "Design",
           "SQL",
+          //"Express",
           "MongoDB",
           "GIT",
           "Dart",
+          "Flutter"
      ]
 }
 
 const TECH_DESC = {
      mainContainer: {
           styleString: ` 
-               display: flex;
+               display: inline-block;
                position: relative;
+               top: 10vh;
+               left: -12.5vh;
           `
+     },
+     textImage: {
+          styleString: ` 
+               position: relative;
+               top: -.5vh;
+               left: -4vh;
+               font-size: 1.1vh;
+               justify-content: center;
+               width: 5vh;
+               color: white;
+          `
+     },
+     barMain: {
+          styleString: ` 
+          display: flex;
+          left: -5vh;
+          border-radius: 1vh;
+          background-color: ${COLORS.GREY_STRONG};
+     `},
+     barContainer:
+     {
+          styleString: ` 
+          display: flex;
+          border-top-right-radius: 1vh;
+          border-bottom-right-radius: 1vh;
+          margin-left: .2vh;
+          width: 50vh;
+          background-color: ${COLORS.GREEN_2};
+     `},
+     barLevelContainer: (width: any) => {
+          const realWidth = width * 5
+          return {
+               styleString: ` 
+               border-top-right-radius: ${width ? width === 10 && '1vh' : '0vh'};
+               border-bottom-right-radius:  ${width ? width === 10 && '1vh' : '0vh'};
+               width: ${realWidth ? realWidth + 'vh' : '10vh'};
+               background-color: ${COLORS.GREEN};
+               transition: 1s;
+               `
+          }
+     },
+     typeWritter: {
+          styleString: `
+               color: ${COLORS.WHITE};
+               font-size: 2.5vh; 
+               font-weight: bold;
+               margin-top: 2.2vh;
+     `
+     },
+     typeWritter2: {
+          styleString: `
+               color: ${COLORS.WHITE};
+               font-size: 2.5vh; 
+               font-weight: bold;
+               margin-top: .1vh;
+               margin-left: 1vh;
+     `
+     },
+}
+
+const EXPERIENCE = {
+     styleString: `      
+          background: ${COLORS.GREY_SMOOTH};
+          height: 100vh;
+          font-family: Josefin Sans;
+          background: linear-gradient(180deg, rgba(44,50,63,1) 50%, rgba(0,0,0,1) 100%);  
+     `,
+     mainContainer: {
+          styleString: `     
+          top: 10vh;
+          font-weight: bold;
+          text-align: center;
+          item-align: center;
+     `,
+     },
+     titleContainer: {
+          size: '3vh',
+          fontWeight: 'bold',
+          styleString: `
+               display: inline-block;
+               color: ${COLORS.GREEN};
+               font-size: 3vh; 
+          `
+     },
+     titleExperience: {
+          size: '3vh',
+          fontWeight: 'bold',
+     },
+     greenBar: {
+          styleString: `
+               background-color: ${COLORS.GREEN};
+               height: .5vh;
+               width: 5vh;
+               margin-left: 35%;
+               margin-top: 5%;
+               item-align: center;
+          `
+
      },
 }
 
@@ -214,5 +418,7 @@ export {
      HOME,
      ABOUT_ME,
      TEXT_SPHERE,
-     TECH_DESC
+     TECH_DESC,
+     INDEX,
+     EXPERIENCE
 }

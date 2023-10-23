@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext } from 'react'
+import { FunctionComponent } from 'react'
 import { CustomBox } from '../../Styles/customBox'
 import { HOME } from '../../Constants/components'
 import RenderMedia from '../../Components/Media'
@@ -11,8 +11,9 @@ const Homepage: FunctionComponent = () => {
 
      return (
           <>
-               <CustomBox styleString={HOME.styleString}>
-                    <CustomBox styleString={HOME.mainContainer.styleString} fadeAnimation>
+               <CustomBox {...HOME}>
+                    <CustomBox {...HOME.mainContainer} fadeAnimation>
+
                          <RenderMedia {...HOME.logo} />
                          <CustomBox>
                               <CustomBox {...HOME.pageText}>
@@ -44,10 +45,11 @@ const Homepage: FunctionComponent = () => {
                               </a>
                          </CustomBox>
 
-
-                         <CustomBox>
+                         {/*
+                         <CustomBox onClick={() => handleClick()}>
                               <RenderMedia {...HOME.arrowDown} />
                          </CustomBox>
+                         */}
                     </CustomBox>
                </CustomBox>
           </>

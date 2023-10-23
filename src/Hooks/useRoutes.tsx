@@ -1,5 +1,5 @@
 import URLS from '../Constants/urls'
-import Homepage from '../Pages/Homepage'
+import Homepage from '../Pages/MainPage'
 
 const useRoutes = () => {
 	return [

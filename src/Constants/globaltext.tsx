@@ -11,32 +11,17 @@ export const CARD_BOX_TEXT = {
 	WEB_APPS: "Aplicaciones Web"
 }
 
-export const GREEN_BOX_TEXT = {
-	gitText: `Git es un sistema de control de versiones distribuido, que permite gestionar y organizar de manera eficiente los cambios en el código fuente de un proyecto en tiempo real. 
-	Permite trabajar en equipo, realizar seguimiento de modificaciones, fusionar ramas y revertir cambios. Es ampliamente utilizado en el desarrollo de software.`,
-
-	nodeJSText: `NodeJS es un entorno de tiempo de ejecución de JavaScript que permite ejecutar código del lado del servidor. Es una plataforma basada en el motor de JavaScript de Google Chrome,
-	V8, y proporciona un conjunto de bibliotecas y módulos para desarrollar aplicaciones web y APIs de forma escalable y eficiente.`,
-
-	phytonText: `Python es un lenguaje de programación interpretado y de alto nivel, conocido por su simplicidad y legibilidad de código. 
-	Es utilizado en una amplia variedad de aplicaciones, desde desarrollo web y científico, hasta inteligencia artificial y análisis de datos.`,
-
-	reactText: `React es una biblioteca de JavaScript utilizada para construir interfaces de usuario interactivas y reactivas. Fue desarrollada por Facebook y se utiliza ampliamente
-	en el desarrollo web moderno. También es altamente modular y permite la reutilización de componentes, lo que facilita el desarrollo y mantenimiento de aplicaciones grandes y complejas.`,
-
-	dartText: `Dart es un lenguaje de programación desarrollado por Google, que se utiliza principalmente para la creación de aplicaciones móviles y web. Dart es un lenguaje orientado a 
-	objetos y utiliza un enfoque de compilación just-in-time para mejorar el rendimiento de las aplicaciones. `,
-
-	mongoText: `MongoDB es una base de datos NoSQL orientada a documentos, lo que significa que almacena los datos en formato JSON (BSON) en lugar de tablas y filas como en las bases de 
-	datos relacionales. MongoDB es flexible y escalable, permitiendo almacenar y manipular datos de manera eficiente y rápida.`,
-
-	sqlText: `SQL (Structured Query Language) es un lenguaje de programación utilizado para administrar y manipular bases de datos relacionales. 
-	SQL permite crear, modificar y eliminar tablas, así como insertar, actualizar y eliminar registros de datos.`,
-
-	JSText: `JavaScript es un lenguaje de programación utilizado principalmente para programar comportamientos interactivos en páginas web. 
-	Es un lenguaje de alto nivel y orientado a objetos que se ejecuta en el navegador del usuario, lo que le permite interactuar con el contenido de la página y realizar cambios dinámicos.`,
-
-	analyticsText: `El análisis de datos, es el campo de estudio que se enfoca en el procesamiento, interpretación y extracción de información útil
-	a partir de conjuntos de datos. Utiliza técnicas y herramientas para descubrir patrones, tendencias y conocimientos que pueden ser utilizados para la toma de decisiones y la resolución de problemas en diversas industrias y áreas de negocio.`,
-
+export const ABOUT_ME_TEXT = {
+	textBox1: "Who am I?",
+	textBox2: "I'm Mathias 😁, nice to meet you!",
+	textBox3: "⚡ I'm a Full-Stack developer focusing on Front-End applications.",
+	textBox4: "⚡ You can find me working with React, JavaScript or TypeScript, Native, Node, Apollo GQL and sometimes with Flutter.",
+	typeWritterStrings: ['Pocket solutions? Widely resolutive!.',
+		'Always flexible, like a rubber.',
+		"If I don't know it, then I can learn it.",
+		'Self taught 24/7!',
+	],
+	presentationText: `Since 2014 - I've been working on different projects, some of my own, others as a formal programmer.
+	Always looking for new challenges and places where I can achieve experience and improve myself. This has lead me
+	working on some amazing projectsm at some amazing palces and with some great people`
 }

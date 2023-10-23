@@ -5,17 +5,17 @@ import { CONTEXT } from '../../App/context'
 import { useContext, useState } from 'react'
 import '../../Styles/textSphere/TextShpere.css'
 import { CHANGE_SPHERE_BOX } from '../../Core/Types'
-import { greenBoxText } from '../../utils/greenBoxText'
 import { greenBoxImg } from '../../utils/greenBoxImg'
+import { greenBoxLevel } from '../../utils/greenBoxBar'
 
 const TextShpere = () => {
-  const [windowSize, setWindowSize] = useState(window.innerHeight / 8)
+  const [windowSize, setWindowSize] = useState(window.innerHeight / 9)
   const { dispatch } = useContext(CONTEXT)
 
   const changeGreenBox = (lang: string) => {
     dispatch({
       type: CHANGE_SPHERE_BOX,
-      value: { text: greenBoxText(lang), icon: greenBoxImg(lang) }
+      value: { text: lang, icon: greenBoxImg(lang), level: greenBoxLevel(lang) }
     })
   }
 
@@ -31,7 +31,7 @@ const TextShpere = () => {
         onClick={e => changeGreenBox(e)}
         options={{
           maxSpeed: "fast",
-          initSpeed: "normal",
+          initSpeed: "fast",
           keep: false,
           radius: windowSize
         }}>

@@ -5,6 +5,7 @@ export interface MediaInterface {
 	src: any
 	hoverSrc?: string
 	alt?: string
+	hide?: boolean
 	name?: string
 	width?: string
 	height?: string
@@ -37,10 +38,8 @@ export const Media = styled('img') <MediaInterface>`
             fill:white; 
             background: ${props.hoverColor};
             cursor: pointer;
-            transition: .2s;
         }`}
 	user-select: none;
-
 	${(props) => (props.pointer ? `cursor: pointer` : `pointer-events: none;`)};
 `
 
@@ -66,7 +65,7 @@ export const ShakingImg = styled("img")(
 );
 
 export const ShakingText = styled("div")(
-	({ style  }) => css`
+	({ style }) => css`
 		font-size: ${'3vh'};
 		transform-origin: bottom right;
 		transform: rotate(10deg);

@@ -1,24 +1,24 @@
-import { GREEN_BOX_TEXT } from "../Constants/globaltext"
-
-export const greenBoxText = (lang: string) => {
-     switch (lang) {
-          case 'React':
-               return GREEN_BOX_TEXT.reactText
-          case 'JavaScript':
-               return GREEN_BOX_TEXT.JSText
-          case 'Python':
-               return GREEN_BOX_TEXT.phytonText
-          case 'NodeJS':
-               return GREEN_BOX_TEXT.nodeJSText
-          case 'Analytics':
-               return GREEN_BOX_TEXT.analyticsText
-          case 'SQL':
-               return GREEN_BOX_TEXT.sqlText
-          case 'MongoDB':
-               return GREEN_BOX_TEXT.mongoText
-          case 'Dart':
-               return GREEN_BOX_TEXT.dartText
-          case 'GIT':
-               return GREEN_BOX_TEXT.gitText
-     }
+export const GreenBoxText = (number: any) => {
+	switch (number) {
+		case (10):
+			return 'Master'
+		case (9):
+			return 'Senior Level'
+		case (8):
+			return 'SSR Level'
+		case (7):
+			return 'Upper Intermediate'
+		case (6):
+			return 'Intermediate'
+		case (5):
+			return 'Mid Level'
+		case (4):
+			return 'Junior Level'
+		case (3):
+			return 'Just the basic'
+		case (2):
+			return 'Still learning'
+		case (1):
+			return "I'd love to learn it"
+	}
 }

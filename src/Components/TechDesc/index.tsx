@@ -1,26 +1,63 @@
-import { TECH_DESC } from '../../Constants/components'
+import { ABOUT_ME, TECH_DESC } from '../../Constants/components'
 import { CustomBox } from '../../Styles/customBox'
-import Typewriter from 'typewriter-effect'
 import { CONTEXT } from '../../App/context'
-import { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import RenderMedia from '../Media'
-import ICONS from '../../Constants/icons'
+import Typewriter from 'typewriter-effect'
+import { GreenBoxText } from '../../utils/greenBoxText'
+import RenderText from '../Text'
 
 const TechDesc = () => {
      const { state } = useContext(CONTEXT)
      const [greenText, setText]: any = useState('')
      const [greenImg, setImg]: any = useState('')
+     const [greenLevel, setlevel]: any = useState('')
      const { greenBox }: any = state
 
      useEffect(() => {
+          console.log(greenBox)
           setText(greenBox?.text)
           setImg(greenBox?.icon)
+          setlevel(greenBox?.level)
      }, [greenBox])
 
-     return ((greenText || greenImg) ?
-          <CustomBox styleString={TECH_DESC.mainContainer.styleString}>
-               <RenderMedia src={greenImg} width={'10rem'} height={'10rem'} margin={'22%'} />
-          </CustomBox > : <></>
+     return ((greenText || greenImg || greenLevel) &&
+          <CustomBox {...TECH_DESC.mainContainer}>
+               <RenderText text={greenText} {...TECH_DESC.textImage} />
+               <CustomBox {...TECH_DESC.barMain}>
+                    <RenderMedia src={greenImg} width={'5vh'} height={'5vh'} styleString={'border-radius: 2vh; padding: 1vh;'} />
+                    <CustomBox {...TECH_DESC.barContainer}>
+                         <CustomBox {...TECH_DESC.barLevelContainer(greenLevel)} barAnimation>
+                              {greenLevel >= 4 && <CustomBox {...TECH_DESC.typeWritter}>
+                                   <Typewriter
+                                        options={{
+                                             cursor: '!',
+                                             delay: 70,
+                                             deleteSpeed: 10,
+                                             strings: GreenBoxText(greenLevel),
+                                             autoStart: true,
+                                             loop: false,
+                                        }}
+                                   />
+                              </CustomBox>}
+                         </CustomBox>
+                         <CustomBox {...TECH_DESC.typeWritter}>
+                              {greenLevel < 4 && <CustomBox {...TECH_DESC.typeWritter2}>
+                                   <Typewriter
+                                        options={{
+                                             cursor: '!',
+                                             delay: 70,
+                                             deleteSpeed: 10,
+                                             strings: GreenBoxText(greenLevel),
+                                             autoStart: true,
+                                             loop: false,
+                                        }}
+                                   />
+                              </CustomBox>}
+                         </CustomBox>
+                    </CustomBox>
+               </CustomBox>
+          </CustomBox>
      )
 }
 
