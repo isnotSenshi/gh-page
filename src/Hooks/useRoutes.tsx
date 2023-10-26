@@ -7,6 +7,11 @@ const useRoutes = () => {
 			name: 'HOME',
 			path: URLS.home,
 			element: <Homepage />
+		},
+		{
+			name: 'HOME',
+			path: URLS.portfolio,
+			element: <Homepage />
 		}
 	]
 }
