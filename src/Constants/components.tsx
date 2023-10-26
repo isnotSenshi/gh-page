@@ -457,6 +457,7 @@ const EXPERIENCE = {
                width: 30vh;
                height: 40vh;
                top: 5vh;
+               transition: .2s;
                background-color: ${COLORS.GREY_DEEP};
                border-radius: 1.5vh;
                &: hover {
@@ -555,6 +556,7 @@ const EXPERIENCE = {
                styleString: `
                width: 30vh;
                height: 40vh;
+               transition: .2s;
                top: 5vh;
                background-color: ${COLORS.GREY_DEEP};
                border-radius: 1.5vh;
@@ -654,6 +656,7 @@ const EXPERIENCE = {
           {
                styleString: `
                width: 30vh;
+               transition: .2s;
                height: 40vh;
                top: 5vh;
                background-color: ${COLORS.GREY_DEEP};

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useReducer } from 'react'
+import { useMemo, useReducer } from 'react'
 import Router from './Router'
 import Provider from './context'
 import { store } from '../Core/store'
