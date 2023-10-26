@@ -1,5 +1,5 @@
 {
-  "homepage": "https://isnotSenshi.github.io/gh-page",
+  "homepage": "https://isnotsenshi.github.io/portfolio",
   "name": "portfolio-landpage",
   "version": "1.0.0",
   "private": true,
@@ -26,9 +26,9 @@
     "yarn": "^1.22.19"
   },
   "scripts": {
-    "dev": "nodemon src/app.tsx",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "dev": "nodemon src/app.tsx",
     "start": "react-scripts start",
     "build": "react-scripts build"
   },
