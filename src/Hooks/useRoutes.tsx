@@ -12,11 +12,6 @@ const useRoutes = () => {
 			name: 'PORTFOLIO',
 			path: URLS.portfolio,
 			element: <Homepage />
-		},
-		{
-			name: 'HOME',
-			path: URLS.home2,
-			element: <Homepage />
 		}
 	]
 }
