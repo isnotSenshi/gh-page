@@ -36,6 +36,7 @@ const IndexPage: FunctionComponent = () => {
      }
 
      const setModal = () => {
+          console.log("dispatch")
           dispatch({
                type: SHOW_MODAL,
                value: !state.showModal
