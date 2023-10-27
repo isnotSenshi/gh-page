@@ -14,9 +14,9 @@ interface ModalContentInterface {
 }
 
 export const ModalContainer = styled('div')<ModalContainer>`
-	width: 100vh;
-	height: 100vh;
-	background-color: ${(props) => (props.bgColor ? props.bgColor : 'rgba(0, 0, 0, 0.5)')};
+	width: 100%;
+	height: 100%;
+	background-color: #00000099;
 	position: fixed;
 	display: flex;
 	justify-content: center;
@@ -33,26 +33,16 @@ export const ModalWrapper = styled('div')<ModalWrapperInterface>`
 	border-radius: 5px;
 	position: relative;
 `
-export const ModalIcon = styled.img`
-	margin-right: 10px;
-`
-
-export const ModalClose = styled.img`
-	position: absolute;
-	top: 10vh;
-	right: 2vh;
-	cursor: pointer;
-`
 
 export const Content = styled('div')<ModalContentInterface>`
 	padding: 2rem;
 	${(props) => props.styleString}
 `
 export interface ModalInterface {
-	showModal: boolean
-	toggleModal: any
+	showModal?: boolean
+	toggleModal?: any
 	title?: string
-	content: React.ReactNode
+	content?: React.ReactNode
 	minWidth?: string
 	closeIcon?: boolean
 	disableBackdropClose?: boolean

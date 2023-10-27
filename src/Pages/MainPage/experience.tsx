@@ -59,8 +59,6 @@ const Experience: FunctionComponent = () => {
                                         </CustomBox>
                                    </CustomBox>
                               ))}
-
-
                          </CustomBox>
 
                          <CustomBox styleString={'display: flex; gap: .7vh; justify-content: center;'} ref={ref}>

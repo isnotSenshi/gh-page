@@ -1,13 +1,14 @@
-import { FunctionComponent, useContext } from 'react'
+import { FunctionComponent, useContext, useState } from 'react'
 import Homepage from './home'
 import AboutMe from './about'
 import RenderMedia from '../../Components/Media'
 import { INDEX } from '../../Constants/components'
 import { CustomBox } from '../../Styles/customBox'
 import Experience from './experience'
-import { CHANGE_SPHERE_BOX } from '../../Core/Types'
+import { CHANGE_SPHERE_BOX, SHOW_MODAL } from '../../Core/Types'
 import { CONTEXT } from '../../App/context'
 import RenderText from '../../Components/Text'
+import ModalContact from '../../Components/ModalContact'
 
 const IndexPage: FunctionComponent = () => {
 
@@ -34,10 +35,17 @@ const IndexPage: FunctionComponent = () => {
           }
      }
 
+     const setModal = () => {
+          dispatch({
+               type: SHOW_MODAL,
+               value: !state.showModal
+          })
+     }
+
      return (
           <>
+               <ModalContact showModal={state.showModal} action={setModal} />
                <CustomBox styleString={'display: inline-block; transition: .5s;'}>
-
                     <CustomBox onClick={() => handleClick('HOME')} >
                          <RenderMedia {...INDEX.arrowDown} />
                     </CustomBox>
@@ -51,8 +59,8 @@ const IndexPage: FunctionComponent = () => {
                     <CustomBox onClick={() => handleClick('EXP')} >
                          <RenderMedia {...INDEX.arrowDown3(!mailMe)} />
                     </CustomBox>
-                    
-                    <CustomBox {...INDEX.contactWith}>
+
+                    <CustomBox {...INDEX.contactWith} onClick={setModal}>
                          {mailMe && <RenderText text={'Contact with me'} {...INDEX.contactWithText} />}
                     </CustomBox>
 

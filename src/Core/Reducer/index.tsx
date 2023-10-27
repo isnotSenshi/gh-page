@@ -4,7 +4,8 @@ import {
 	CHANGE_PATH,
 	NAVIGATE_TO,
 	SET_SELECTED_CARD,
-	MAIL_ME_STATUS
+	MAIL_ME_STATUS,
+	SHOW_MODAL
 } from '../Types'
 
 export const Reducer = (state: any, action: any): any => {
@@ -13,6 +14,11 @@ export const Reducer = (state: any, action: any): any => {
 			return {
 				...state,
 				...action.value
+			}
+		case SHOW_MODAL:
+			return {
+				...state,
+				showModal: action.value
 			}
 		case SET_SELECTED_CARD:
 			return {

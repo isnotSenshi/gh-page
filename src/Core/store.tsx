@@ -6,5 +6,6 @@ export interface Store {
 export const store: Store = {
      example: null,
      greenBox: { text: null , img: null, level: null },
-     mailMe: false
+     mailMe: false,
+     showModal: true,
 }
