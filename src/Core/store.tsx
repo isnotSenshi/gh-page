@@ -7,5 +7,5 @@ export const store: Store = {
      example: null,
      greenBox: { text: null , img: null, level: null },
      mailMe: false,
-     showModal: true,
+     showModal: false,
 }

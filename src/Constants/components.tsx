@@ -794,11 +794,56 @@ const EXPERIENCE = {
      },
 }
 
+const MODAL_CONTACT = {
+     mainConainer: {
+          styleString: `
+          padding: 3vh;
+          background: ${COLORS.GREY_SMOOTH};  
+          border-radius: 1vh;
+     `},
+     titleModal: {
+          text: "Leave me your message",
+          color: COLORS.WHITE,
+          size: '3vh',
+          fontWeight: 'bold',
+          styleString: 'justify-content: center;'
+     },
+     greenBar: {
+          styleString: `
+               background-color: ${COLORS.GREEN};
+               margin-top: 1vh;
+               margin-left: 7.5vh;
+               width: 20vh;
+               height: .35vh;
+          `
+
+     }, 
+     close: {
+          src: ICONS.PORTFOLIO,
+          color: COLORS.WHITE,
+          text: '✖',
+          size: '1.5vh',
+          pointer: true,
+          styleString: `
+               border-radius: 1vh;
+               padding: .5vh;
+               position: fixed;
+               top: 44vh;    
+               right: 80.5vh; 
+               cursor: pointer;
+               &: hover { 
+                    color: ${COLORS.LIGHT_BLUE};
+               }
+          `
+     },
+}
+
 export {
      HOME,
      ABOUT_ME,
      TEXT_SPHERE,
      TECH_DESC,
      INDEX,
-     EXPERIENCE
+     EXPERIENCE,
+     MODAL_CONTACT
 }

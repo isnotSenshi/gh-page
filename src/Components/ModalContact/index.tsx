@@ -1,17 +1,29 @@
-import { FunctionComponent, useRef, useState } from 'react'
+import { useRef, useEffect } from 'react'
+import { MODAL_CONTACT } from '../../Constants/components'
+import { CustomBox } from '../../Styles/customBox'
 import {
-	Content,
 	ModalContainer,
 	ModalWrapper
 } from '../../Styles/modal'
+import RenderMedia from '../Media'
+import RenderText from '../Text'
+import { useOutsideRef } from '../../Hooks/useOutsideRef'
 
-const ModalContact = ({ showModal, action }: any) => {
+const ModalContact = ({ showModal }: any) => {
+
+	const { ref, isVisible, setIsVisible } = useOutsideRef(false)
+	useEffect(() => {
+		setIsVisible(true)
+	}, [showModal])
 
 	return (
-		showModal ? (
-			<ModalContainer onClick={action}>
+		isVisible ? (
+			<ModalContainer>
 				<ModalWrapper>
-					<Content>{<> asdad </>}</Content>
+					<CustomBox {...MODAL_CONTACT.mainConainer} ref={ref}>
+						<RenderText {...MODAL_CONTACT.titleModal} />
+						<CustomBox {...MODAL_CONTACT.greenBar} />
+					</CustomBox>
 				</ModalWrapper>
 			</ModalContainer>
 		) : <></>

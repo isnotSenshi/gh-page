@@ -29,14 +29,8 @@ export const ModalWrapper = styled('div')<ModalWrapperInterface>`
 	min-width: ${(props) => (props.minWidth ? props.minWidth : '40vh')};
 	box-sizing: border-box;
 	box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-	background: #fff;
 	border-radius: 5px;
 	position: relative;
-`
-
-export const Content = styled('div')<ModalContentInterface>`
-	padding: 2rem;
-	${(props) => props.styleString}
 `
 export interface ModalInterface {
 	showModal?: boolean

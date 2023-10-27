@@ -44,7 +44,7 @@ const IndexPage: FunctionComponent = () => {
 
      return (
           <>
-               <ModalContact showModal={state.showModal} action={setModal} />
+               <ModalContact showModal={state.showModal} />
                <CustomBox styleString={'display: inline-block; transition: .5s;'}>
                     <CustomBox onClick={() => handleClick('HOME')} >
                          <RenderMedia {...INDEX.arrowDown} />
