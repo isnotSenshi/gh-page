@@ -100,28 +100,6 @@ const INDEX = {
           `})
      },
      Size: '2vh',
-     contactWith: {
-          styleString: `
-               position: absolute;
-               top: 280vh; 
-               left: 44.7vw; 
-               cursor: pointer;
-               background: ${COLORS.LIGHT_BLUE_STRONG};           
-               &: hover {
-                    background-color: ${COLORS.LIGHT_BLUE};
-               }
-               padding: 1vh;
-               border-radius: 1vh;
-               z-index: 99; 
-               width: 20vh;
-               height: 5vh;
-          `
-     },
-     contactWithText: {
-          color: 'white',
-          size: '2vh',
-          margin: '1vh 0 0 1vh'
-     }
 }
 
 const HOME = {
@@ -780,6 +758,29 @@ const EXPERIENCE = {
                cursor: pointer;
           `,
      }],
+     contactWith: {
+          styleString: `
+               justify-content: center;
+               position: relative;
+               cursor: pointer;
+               background: ${COLORS.LIGHT_BLUE_STRONG};           
+               padding: 1vh;
+               border-radius: 1vh;
+               top: 25vh;
+               left: 44.5vw;
+               height: 5vh;
+               width: 20vh;
+               &: hover {
+                    background-color: ${COLORS.LIGHT_BLUE};
+               }
+          `
+     },
+     contactWithText: {
+          color: 'white',
+          size: '2vh',
+          styleString: 'padding-top: 1vh; margin-left: 1.5vh;',
+
+     },
      finalMessage: {
           text: "Made with love 💖 by Mathias Lovera",
           size: '1vh',
@@ -802,7 +803,7 @@ const MODAL_CONTACT = {
           border-radius: 1vh;
      `},
      titleModal: {
-          text: "Leave me your message",
+          text: "Mail me ",
           color: COLORS.WHITE,
           size: '3vh',
           fontWeight: 'bold',
@@ -817,7 +818,7 @@ const MODAL_CONTACT = {
                height: .35vh;
           `
 
-     }, 
+     },
      close: {
           src: ICONS.PORTFOLIO,
           color: COLORS.WHITE,
@@ -835,6 +836,125 @@ const MODAL_CONTACT = {
                     color: ${COLORS.LIGHT_BLUE};
                }
           `
+     },
+     inputContainer: {
+          styleString: `		
+               margin-top: 5vh;
+               display: flex;
+               justify-content: center;
+     `,
+     },
+     inputText: {
+          text: 'Email',
+          styleString: `		
+                    font-size: 1vh;
+                    border-radius: .5vh;
+                    position: absolute;
+                    top: -2.5vh;
+                    left: 1vh;
+                    padding: .5vh;
+                    z-index: 1;
+                    color: ${COLORS.GREEN_STRONG};
+                    transition: .5s;
+		`,
+     },
+     inputText1: {
+          text: 'Email',
+          styleString: `		
+               font-size: 1.5vh;
+               border-radius: .5vh;
+               position: absolute;
+               top: .75vh;
+               left: 2vh;
+               padding: .5vh;
+               z-index: 1;
+               color: ${COLORS.WHITE_GREY};
+               transition: .5s;
+		`,
+     },
+     input1: {
+          styleString: `		
+                    padding: 1.5vh 1.5vh 1.5vh 1vh;
+                    font-size: 1.5vh;
+                    border: .25vh solid transparent;
+			     background-color: ${COLORS.GREY_DEEP};
+                    border-radius: .5vh;
+                    color: white;
+		`,
+     },
+     input2: {
+          styleString: `		
+                    padding: 1.5vh 1.5vh 1.5vh 1vh;
+                    font-size: 1.5vh;	
+                    border: .2vh solid ${COLORS.GREEN_STRONG}; 
+                    border-radius: .5vh;
+			     background-color: ${COLORS.GREY_DEEP};
+                    color: white;
+		`,
+     },
+     messageContainer: {
+          styleString: `		
+               margin-top: 5vh;
+               display: flex;
+               justify-content: center;
+     `,
+     },
+     messageText: {
+          text: 'Message',
+          styleString: `		
+                    font-size: 1vh;
+                    border-radius: .5vh;
+                    position: absolute;
+                    top: -2.5vh;
+                    left: 1vh;
+                    padding: .5vh;
+                    z-index: 1;
+                    color: ${COLORS.GREEN_STRONG};
+                    transition: .5s;
+		`,
+     },
+     messageText1: {
+          text: 'Message',
+          styleString: `		
+                    font-size: 1.5vh;
+                    border-radius: .5vh;
+                    position: absolute;
+                    top: 1vh;
+                    left: 2vh;
+                    padding: .5vh;
+                    z-index: 1;
+                    color: ${COLORS.WHITE_GREY};
+                    transition: .5s;
+		`,
+     },
+     message1: {
+          styleString: `	                    
+                    font-family: Montserrat;
+                    height: 10vh;	
+                    resize: none;                    
+                    justify-content: flex-start;
+                    padding: 1.5vh 1.5vh 1.5vh 1vh;
+                    font-size: 1.5vh;
+                    border: .25vh solid transparent;
+			     background-color: ${COLORS.GREY_DEEP};
+                    border-radius: .5vh;
+                    color: white;
+                    ine-break: auto;
+		`,
+     },
+     message2: {
+          styleString: `		
+                    font-family: Montserrat;
+                    height: 10vh;	
+                    resize: none;
+                    padding: 1.5vh 1.5vh 1.5vh 1vh;
+                    text-overflow: hidden;
+                    font-size: 1.5vh;	
+                    border: .2vh solid ${COLORS.GREEN_STRONG}; 
+                    border-radius: .5vh;
+			     background-color: ${COLORS.GREY_DEEP};
+                    color: white;
+		`,
      },
 }
 

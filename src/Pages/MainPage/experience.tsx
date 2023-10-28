@@ -6,14 +6,21 @@ import RenderText from '../../Components/Text'
 import { COLORS } from '../../Constants/colors'
 import useOnScreen from '../../Hooks/checkVisibility'
 import { CONTEXT } from '../../App/context'
-import { MAIL_ME_STATUS } from '../../Core/Types'
+import { MAIL_ME_STATUS, SHOW_MODAL } from '../../Core/Types'
 
 const Experience: FunctionComponent = () => {
 
-     const { dispatch }: any = useContext(CONTEXT)
+     const { state, dispatch }: any = useContext(CONTEXT)
+     const { mailMe }: any = state
      const ref = useRef<HTMLDivElement>(null)
      const isVisible = useOnScreen(ref)
 
+     const setModal = () => {
+          dispatch({
+               type: SHOW_MODAL,
+               value: !state.showModal
+          })
+     }
      useEffect(() => {
           dispatch({
                type: MAIL_ME_STATUS,
@@ -68,6 +75,10 @@ const Experience: FunctionComponent = () => {
                          </CustomBox>
 
                          <RenderText {...EXPERIENCE.finalMessage} />
+
+                         <CustomBox {...EXPERIENCE.contactWith} onClick={setModal}>
+                              {mailMe && <RenderText text={'Contact with me'} {...EXPERIENCE.contactWithText} />}
+                         </CustomBox>
                     </CustomBox>
 
                </CustomBox>

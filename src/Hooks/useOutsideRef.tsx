@@ -13,7 +13,6 @@ const useOutsideRef = (initialVisible: boolean) => {
 	 */
 	function handleClickOutside(event: any) {
 		if (ref.current && !ref.current.contains(event.target)) {
-			console.log('EUEUUE')
 			setIsVisible(false)
 		}
 	}

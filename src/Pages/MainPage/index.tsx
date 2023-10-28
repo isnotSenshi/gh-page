@@ -35,13 +35,6 @@ const IndexPage: FunctionComponent = () => {
           }
      }
 
-     const setModal = () => {
-          console.log("dispatch")
-          dispatch({
-               type: SHOW_MODAL,
-               value: !state.showModal
-          })
-     }
 
      return (
           <>
@@ -59,10 +52,6 @@ const IndexPage: FunctionComponent = () => {
 
                     <CustomBox onClick={() => handleClick('EXP')} >
                          <RenderMedia {...INDEX.arrowDown3(!mailMe)} />
-                    </CustomBox>
-
-                    <CustomBox {...INDEX.contactWith} onClick={setModal}>
-                         {mailMe && <RenderText text={'Contact with me'} {...INDEX.contactWithText} />}
                     </CustomBox>
 
                </CustomBox >
