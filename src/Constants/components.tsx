@@ -733,7 +733,7 @@ const EXPERIENCE = {
           },
      ],
      linkedInMessage: [{
-          text: "Further in-depth experience pre 2020 can be found on my",
+          text: "Further in-depth experience can be found on my",
           size: '1.5vh',
           color: COLORS.WHITE,
           fontWeight: '100',
