@@ -19,7 +19,6 @@ const Homepage: FunctionComponent = () => {
                               <CustomBox {...HOME.pageText}>
                                    <RenderText text={"Hi, I'm"} {...HOME.presentationText} color={'#FFF'} />
                                    <RenderText text={"Mathias Lovera"} {...HOME.presentationText} color={COLORS.PURPLE} margin={'0 .5vh 0 .7vh'} />
-                                   <RenderText text={"!"} {...HOME.presentationText} color={'#FFF'} />
                                    <ShakingText style={{ top: '-.2vh' }}>
                                         {'👋'}
                                    </ShakingText>
