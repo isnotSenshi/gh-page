@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface InputInterface {
-    styleString?: any;
+    $styleString?: any;
     backColor?: string;
     width?: string;
     margin?: string;
@@ -20,7 +20,7 @@ export const Input = styled("input") <InputInterface>`
     width: ${props => props.width};
     height: ${props => props.height};
 	cursor: ${props => props.cursor};
-    ${props => props.styleString};
+    ${props => props.$styleString};
     ${props => props.id};
 
 `;
@@ -32,7 +32,7 @@ export const TextArea = styled("textarea") <InputInterface>`
     outline: none;
     width: ${props => props.width};
 	cursor: ${props => props.cursor};
-    ${props => props.styleString};
+    ${props => props.$styleString};
     ${props => props.id};
 
 `;

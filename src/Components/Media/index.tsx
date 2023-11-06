@@ -8,12 +8,12 @@ const RenderMedia: FunctionComponent<MediaInterface> = ({
 	width,
 	height,
 	hoverColor,
-	styleString,
+	$styleString,
 	padding,
-	margin,
+	$margin,
 	center,
 	bgColor,
-	pointer,
+	$pointer,
 	id
 }) => {
 	const [handledSrc, setHandledSrc]: any = useState(src)
@@ -21,16 +21,16 @@ const RenderMedia: FunctionComponent<MediaInterface> = ({
 		<Media
 			padding={padding}
 			hoverColor={hoverColor}
-			margin={margin}
+			$margin={$margin}
 			src={hoverSrc ? handledSrc : src}
 			alt={name}
 			width={width}
 			height={height}
 			center={center}
 			bgColor={bgColor}
-			pointer={pointer}
+			$pointer={$pointer}
 			id={id}
-			styleString={styleString}
+			$styleString={$styleString}
 			onMouseOver={() => {
 				if (hoverSrc)
 					setHandledSrc(hoverSrc)

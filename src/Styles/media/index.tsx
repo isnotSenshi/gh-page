@@ -12,17 +12,19 @@ export interface MediaInterface {
 	hoverColor?: string
 	padding?: string
 	center?: boolean
-	styleString?: string
-	margin?: string
+	$styleString?: string
+	$margin?: string
 	bgColor?: string
 	onClick?: (event: MouseEvent) => void
-	pointer?: boolean
+	$pointer?: boolean
 	id?: string
 }
 
 export const Media = styled('img') <MediaInterface>`
+	${(props) => props.$styleString};
+	${(props) => (props.$pointer ? `cursor: pointer;` : `pointer-events: none;`)};
 	padding: ${(props) => props.padding};
-	margin: ${(props) => props.margin};
+	margin: ${(props) => props.$margin};
 	height: ${(props) => props.height};
 	width: ${(props) => props.width};
 	background-color: ${(props) => props.bgColor};
@@ -31,7 +33,6 @@ export const Media = styled('img') <MediaInterface>`
 		`display: block;
         margin-left: auto;
         margin-right: auto;`};
-	${(props) => props.styleString};
 	${(props) =>
 		props.hoverColor &&
 		` &:hover{
@@ -40,7 +41,6 @@ export const Media = styled('img') <MediaInterface>`
             cursor: pointer;
         }`}
 	user-select: none;
-	${(props) => (props.pointer ? `cursor: pointer` : `pointer-events: none;`)};
 `
 
 const imgAnimation = keyframes`

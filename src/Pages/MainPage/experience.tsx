@@ -7,6 +7,7 @@ import { COLORS } from '../../Constants/colors'
 import useOnScreen from '../../Hooks/checkVisibility'
 import { CONTEXT } from '../../App/context'
 import { MAIL_ME_STATUS, SHOW_MODAL } from '../../Core/Types'
+import { v4 as uuidv4 } from 'uuid'
 
 const Experience: FunctionComponent = () => {
 
@@ -30,37 +31,37 @@ const Experience: FunctionComponent = () => {
 
      return (
           <>
-               <CustomBox styleString={EXPERIENCE.styleString}>
-                    <CustomBox styleString={EXPERIENCE.mainContainer.styleString}>
+               <CustomBox $styleString={EXPERIENCE.$styleString}>
+                    <CustomBox $styleString={EXPERIENCE.$mainContainer.$styleString}>
                          <CustomBox {...EXPERIENCE.titleContainer}>
                               <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE} id='about-me' />
                               <CustomBox {...EXPERIENCE.greenBar} />
                          </CustomBox>
 
                          <CustomBox {...EXPERIENCE.cardContainer}>
-                              {EXPERIENCE.cardBox.map((card: any) => (
-                                   <CustomBox {...card}>
-                                        <CustomBox {...card.upperPart}>
-                                             <RenderText {...card.cardTitle} />
+                              {EXPERIENCE.cardBox.map((card: any, i: any) => (
+                                   <CustomBox {...card} key={uuidv4()}>
+                                        <CustomBox {...card.$upperPart}>
+                                             <RenderText {...card.$cardTitle} />
                                         </CustomBox>
-                                        <CustomBox {...card.cardBoxLogo}>
+                                        <CustomBox {...card.$cardBoxLogo}>
                                              <RenderMedia {...card.media} />
                                         </CustomBox>
-                                        <RenderText {...card.cardBoxText} />
-                                        <RenderText {...card.cardBoxSubText} />
+                                        <RenderText {...card.$cardBoxText} />
+                                        <RenderText {...card.$cardBoxSubText} />
 
                                         <CustomBox style={{ margin: '-2vh 0' }}>
-                                             {card.cardBoxUlText.text.map((cardUl: any) => (
-                                                  <CustomBox style={{ textAlign: 'left', left: '3vh', maxWidth: '25vh', marginTop: '1vh' }}>
-                                                       <RenderText {...card.cardBoxUlText} text={cardUl} />
+                                             {card.$cardBoxUlText.text.map((cardUl: any, i: any) => (
+                                                  <CustomBox style={{ textAlign: 'left', left: '3vh', maxWidth: '25vh', marginTop: '1vh' }} key={uuidv4()}>
+                                                       <RenderText {...card.$cardBoxUlText} text={cardUl} />
                                                   </CustomBox>
                                              ))}
                                         </CustomBox>
 
-                                        <CustomBox styleString={card.miniTextBoxes.mainContainer}>
-                                             {card.miniTextBoxes.text.map((boxText: any) => (
-                                                  <CustomBox styleString={card.miniTextBoxes.container}>
-                                                       <RenderText {...card.cardBoxUlText} text={boxText} />
+                                        <CustomBox $styleString={card.$miniTextBoxes.$mainContainer}>
+                                             {card.$miniTextBoxes.text.map((boxText: any, i: any) => (
+                                                  <CustomBox $styleString={card.$miniTextBoxes.container} key={uuidv4()}>
+                                                       <RenderText {...card.$cardBoxUlText} text={boxText} />
                                                   </CustomBox>
                                              ))}
                                         </CustomBox>
@@ -68,9 +69,9 @@ const Experience: FunctionComponent = () => {
                               ))}
                          </CustomBox>
 
-                         <CustomBox styleString={'display: flex; gap: .7vh; justify-content: center;'} ref={ref}>
-                              {EXPERIENCE.linkedInMessage.map((message: any) =>
-                                   <RenderText {...message} />
+                         <CustomBox $styleString={'display: flex; gap: .7vh; justify-content: center;'} ref={ref}>
+                              {EXPERIENCE.$linkedInMessage.map((message: any) =>
+                                   <RenderText {...message} key={uuidv4()} />
                               )}
                          </CustomBox>
 

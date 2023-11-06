@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { FunctionComponent } from 'react'
 
 interface ContainerInterface {
-	styleString?: any
+	$styleString?: any
 	bgColor?: string
 	border?: string
 	children: React.ReactNode
 }
 
 export const Container: FunctionComponent<ContainerInterface> = styled('div')<{
-	styleString?: any
+	$styleString?: any
 	bgColor?: string
 	border?: string
 }>`
@@ -20,5 +20,5 @@ export const Container: FunctionComponent<ContainerInterface> = styled('div')<{
 	background-color: ${(props) => props.bgColor};
 	border: ${(props) => props.border};
 	border-radius: 5px;
-	${(props) => props.styleString}
+	${(props) => props.$styleString}
 `

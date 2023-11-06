@@ -12,11 +12,11 @@ export const HorizontalDivisor = styled('div') <HorizontalDivisor>`
 	margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : '1rem')};
 `
 export const Divisor = styled('div') <{
-	styleString?: string
+	$styleString?: string
 }>`
 	border-bottom: 1px solid ${COLORS.GREY};
 	padding: 1rem;
 	display: flex;
 	align-items: center;
-	${(props) => props.styleString}
+	${(props) => props.$styleString}
 `

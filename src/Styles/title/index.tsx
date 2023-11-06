@@ -10,7 +10,7 @@ export interface TitleInterface {
 	fontWeight?: string
 	padding?: string
 	bgColor?: string
-	styleString?: string
+	$styleString?: string
 	onMouseOver?: () => void
 	onMouseOut?: () => void
 	children?: React.ReactNode
@@ -28,7 +28,7 @@ export const Title: FC<TitleInterface> = styled('div')<{
 	padding?: string
 	margin?: string
 	bgColor?: string
-	styleString?: string
+	$styleString?: string
 	onMouseOver?: () => void
 	onMouseOut?: () => void
 	hover?: boolean
@@ -41,7 +41,7 @@ export const Title: FC<TitleInterface> = styled('div')<{
 	padding: ${(props) => props.padding};
 	margin: ${(props) => props.margin};
 	background-color: ${(props) => props.bgColor};
-	${(props) => props.styleString};
+	${(props) => props.$styleString};
 	${(props) =>
 		props.hover &&
 		` &:hover{

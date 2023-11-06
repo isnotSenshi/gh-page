@@ -60,7 +60,7 @@ const ModalContact = ({ showModal }: any) => {
 						<CustomBox {...MODAL_CONTACT.greenBar} />
 
 						<CustomBox {...MODAL_CONTACT.inputContainer}>
-							<RenderText {...showGreen ? { ...MODAL_CONTACT.inputText } : !inputText ? { ...MODAL_CONTACT.inputText1 } : { styleString: 'color: white;' }} />
+							<RenderText {...showGreen ? { ...MODAL_CONTACT.inputText } : !inputText ? { ...MODAL_CONTACT.inputText1 } : { $styleString: 'color: white;' }} />
 							<Input
 								{...inputStyle}
 								maxlength="255"
@@ -75,7 +75,7 @@ const ModalContact = ({ showModal }: any) => {
 						</CustomBox>
 
 						<CustomBox {...MODAL_CONTACT.messageContainer}>
-							<RenderText {...showGreen2 ? { ...MODAL_CONTACT.messageText } : !messageText ? { ...MODAL_CONTACT.messageText1 } : { styleString: 'color: white;' }} />
+							<RenderText {...showGreen2 ? { ...MODAL_CONTACT.messageText } : !messageText ? { ...MODAL_CONTACT.messageText1 } : { $styleString: 'color: white;' }} />
 							<TextArea
 								{...messageStyle}
 								maxlength="255"

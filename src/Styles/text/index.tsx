@@ -7,11 +7,11 @@ export interface CustomTextInterface {
 	color?: string
 	size?: string
 	align?: string
-	margin?: string
+	$margin?: string
 	fontWeight?: string
 	padding?: string
 	bgColor?: string
-	styleString?: string
+	$styleString?: string
 	onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 	onMouseOver?: () => void
 	onMouseOut?: () => void
@@ -26,7 +26,7 @@ export const CustomText = styled('div')<CustomTextInterface>`
 	font-size: ${(props) => props.size} !important;
 	text-align: ${(props) => props.align};
 	padding: ${(props) => props.padding};
-	margin: ${(props) => props.margin};
+	margin: ${(props) => props.$margin};
 	background-color: ${(props) => props.bgColor};
-	${(props) => props.styleString};
+	${(props) => props.$styleString};
 `

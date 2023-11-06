@@ -14,14 +14,14 @@ const AboutMe: FunctionComponent = () => {
 
      return (
           <>
-               <CustomBox styleString={ABOUT_ME.styleString}>
-                    <CustomBox styleString={ABOUT_ME.mainContainer.styleString}>
+               <CustomBox $styleString={ABOUT_ME.$styleString}>
+                    <CustomBox $styleString={ABOUT_ME.$mainContainer.$styleString}>
                          <CustomBox {...ABOUT_ME.titleContainer}>
                               <RenderText text={"About Me"} {...ABOUT_ME.titleAbout} color={COLORS.WHITE} id='about-me' />
                               <CustomBox {...ABOUT_ME.greenBar} />
                          </CustomBox>
 
-                         <CustomBox styleString={'display: flex; justify-content: space-around;'}>
+                         <CustomBox $styleString={'display: flex; justify-content: space-around;'}>
                               <CustomBox {...ABOUT_ME.introductionMe}>
                                    <CustomBox {...ABOUT_ME.textBox}>
                                         <RenderText text={ABOUT_ME_TEXT.textBox1} {...ABOUT_ME.whoIam} color={COLORS.WHITE} />
@@ -29,7 +29,7 @@ const AboutMe: FunctionComponent = () => {
                                         <RenderText text={ABOUT_ME_TEXT.textBox3} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         <RenderText text={ABOUT_ME_TEXT.textBox4} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         <CustomBox {...ABOUT_ME.typeWritter}>
-                                             ⚡ <CustomBox styleString={'text-indent: .7vh;'}>
+                                             ⚡ <CustomBox $styleString={'text-indent: .7vh;'}>
                                                   <Typewriter
                                                        options={{
                                                             cursor: '<',
@@ -42,16 +42,16 @@ const AboutMe: FunctionComponent = () => {
                                                   />
                                              </CustomBox>
                                         </CustomBox>
-                                        <RenderText text={ABOUT_ME_TEXT.presentationText} {...ABOUT_ME.text1} color={COLORS.WHITE} />
+                                        <RenderText text={ABOUT_ME_TEXT.$presentationText} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         <CustomBox {...ABOUT_ME.whiteBar} />
-                                        <CustomBox styleString={'display: flex;'}>
+                                        <CustomBox $styleString={'display: flex;'}>
                                              <RenderMedia {...ABOUT_ME.location} />
                                              <RenderText text={"Buenos Aires, Argentina"} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         </CustomBox>
                                    </CustomBox >
                               </CustomBox>
 
-                              <CustomBox styleString={'display: inline-block;'}>
+                              <CustomBox $styleString={'display: inline-block;'}>
                                    <CustomBox {...ABOUT_ME.skills}>
                                         <RenderText text={"Skills Box"} {...ABOUT_ME.skillsText} color={COLORS.WHITE} />
                                         <RenderText text={"Interact with me!"} {...ABOUT_ME.skillsText2} color={COLORS.GREEN} />

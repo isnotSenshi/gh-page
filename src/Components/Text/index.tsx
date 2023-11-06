@@ -8,9 +8,9 @@ const RenderText: FunctionComponent<CustomTextInterface> = ({
 	align,
 	fontWeight,
 	padding,
-	margin,
+	$margin,
 	onClick,
-	styleString,
+	$styleString,
 	bgColor,
 	id
 }) => {
@@ -21,11 +21,11 @@ const RenderText: FunctionComponent<CustomTextInterface> = ({
 			color={color}
 			size={size}
 			align={align}
-			margin={margin}
+			$margin={$margin}
 			onClick={onClick}
 			fontWeight={fontWeight}
 			padding={padding}
-			styleString={styleString}
+			$styleString={$styleString}
 			bgColor={bgColor}
 		>
 			{text}

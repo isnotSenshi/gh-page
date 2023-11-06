@@ -21,10 +21,10 @@ const TechDesc = () => {
      }, [greenBox])
 
      return ((greenText || greenImg || greenLevel) &&
-          <CustomBox {...TECH_DESC.mainContainer}>
+          <CustomBox {...TECH_DESC.$mainContainer}>
                <RenderText text={greenText} {...TECH_DESC.textImage} />
                <CustomBox {...TECH_DESC.barMain}>
-                    <RenderMedia src={greenImg} width={'5vh'} height={'5vh'} styleString={'border-radius: 2vh; padding: 1vh;'} />
+                    <RenderMedia src={greenImg} width={'5vh'} height={'5vh'} $styleString={'border-radius: 2vh; padding: 1vh;'} />
                     <CustomBox {...TECH_DESC.barContainer}>
                          <CustomBox {...TECH_DESC.barLevelContainer(greenLevel)} barAnimation>
                               {greenLevel >= 4 && <CustomBox {...TECH_DESC.typeWritter}>

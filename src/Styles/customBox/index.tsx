@@ -3,8 +3,8 @@ import styled, { css, keyframes } from 'styled-components'
 
 export interface BoxInterface {
      background?: any
-     styleString?: string
-     fadeAnimation?: boolean
+     $styleString?: string
+     $fadeAnimation?: boolean
      barAnimation?: boolean
 }
 
@@ -30,8 +30,8 @@ const barAnimation = keyframes`
 
 
 export const CustomBox = styled('div') <BoxInterface>`
-     ${(props) => props.styleString};
+     ${(props) => props.$styleString};
      position: relative;
      background: ${(props) => props.background && props.background};
-     animation: ${(props) => props.barAnimation ? barAnimation : props.fadeAnimation && fadeAnimation} 2s 1;
+     animation: ${(props) => props.barAnimation ? barAnimation : props.$fadeAnimation && fadeAnimation} 2s 1;
 `

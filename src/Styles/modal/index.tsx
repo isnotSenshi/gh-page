@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 interface ModalContainer {
 	bgColor?: string
-	styleString?: string
+	$styleString?: string
 }
 
 interface ModalWrapperInterface {
@@ -10,7 +10,7 @@ interface ModalWrapperInterface {
 }
 
 interface ModalContentInterface {
-	styleString?: string
+	$styleString?: string
 }
 
 export const ModalContainer = styled('div')<ModalContainer>`
@@ -22,7 +22,7 @@ export const ModalContainer = styled('div')<ModalContainer>`
 	justify-content: center;
 	align-items: center;
 	z-index: 1000;
-	${(props) => props.styleString};
+	${(props) => props.$styleString};
 `
 
 export const ModalWrapper = styled('div')<ModalWrapperInterface>`

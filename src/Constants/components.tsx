@@ -2,12 +2,12 @@ import { COLORS } from "./colors"
 import ICONS from "./icons"
 
 const INDEX = {
-     arrowDown: {
+     $arrowDow: {
           src: ICONS.HOME,
           width: '2.5vh',
           height: '2.5vh',
-          pointer: true,
-          styleString: `
+          $pointer: true,
+          $styleString: `
                right: 3vh; 
                background-color: ${COLORS.GREEN_STRONG}; 
                border-radius: 1vh;
@@ -21,12 +21,12 @@ const INDEX = {
                }
           `
      },
-     arrowDown1: {
+     $arrowDow1: {
           src: ICONS.PERSON,
           width: '2.5vh',
           height: '2.5vh',
-          pointer: true,
-          styleString: `
+          $pointer: true,
+          $styleString: `
                right: 3vh; 
                background-color: ${COLORS.GREEN_STRONG}; 
                border-radius: 1vh;
@@ -40,12 +40,12 @@ const INDEX = {
                }
           `
      },
-     arrowDown2: {
+     $arrowDow2: {
           src: ICONS.PORTFOLIO,
           width: '2.5vh',
           height: '2.5vh',
-          pointer: true,
-          styleString: `
+          $pointer: true,
+          $styleString: `
                right: 3vh; 
                background-color: ${COLORS.GREEN_STRONG}; 
                border-radius: 1vh;
@@ -60,13 +60,13 @@ const INDEX = {
                }
           `
      },
-     arrowDown3: (mailMe: boolean) => {
+     $arrowDow3: (mailMe: boolean) => {
           return (mailMe ? {
                src: ICONS.MAIL_ME,
                width: '2.5vh',
                height: '2.5vh',
-               pointer: true,
-               styleString: `
+               $pointer: true,
+               $styleString: `
                     right: 3vh; 
                     background-color: ${COLORS.GREEN}; 
                     &: hover {
@@ -83,8 +83,8 @@ const INDEX = {
                src: ICONS.MAIL_ME,
                width: '2.5vh',
                height: '2.5vh',
-               pointer: true,
-               styleString: `
+               $pointer: true,
+               $styleString: `
                     right: -10vh; 
                     background-color: ${COLORS.GREEN}; 
                     &: hover {
@@ -103,58 +103,56 @@ const INDEX = {
 }
 
 const HOME = {
-     styleString: `      
+     $styleString: `      
           height: 100vh;
           animation-iteration-count: 1;  
      `,
-     mainContainer: {
-          styleString: `   
+     $mainContainer: {
+          $styleString: `   
           font-weight: bold;
           text-align: center;
           item-align: center;
           top: 15vh;
      `,
      },
-     logo: {
+     $logo: {
           src: ICONS.CONDING_DOGE,
           width: '5%',
-          styleString: `
+          $styleString: `
                border: .5vh solid ${COLORS.GREEN};
                border-radius: 500vh;
                margin-bottom: 1vh;
           `
      },
-     presentationText: {
+     $presentationText: {
           size: '3vh',
           fontWeight: 'bold',
      },
-     pageText: {
+     $pageText: {
           size: '3vh',
           fontWeight: 'bold',
-          styleString: `
+          $styleString: `
                display: inline-flex;
                color: ${COLORS.GREEN};
                font-size: 3vh; 
           `
      },
-     linkedIn: {
-          src: ICONS.LINKEDIN,
-          //hoverSrc: ICONS.LINKEDIN_BLUE,
+     $linkedIn: {
+          src: ICONS.linkedIn,
           width: '4vh',
           height: '4vh',
-          pointer: true,
-          styleString: `
+          $pointer: true,
+          $styleString: `
                position: relative; 
                top: 10vh;        
           `
      },
-     arrowDown: {
+     $arrowDow: {
           src: ICONS.DRILL_ARROW,
-          //hoverSrc: ICONS.LINKEDIN_BLUE,
           width: '2vh',
           height: '2vh',
-          pointer: true,
-          styleString: `
+          $pointer: true,
+          $styleString: `
                rotate: 180deg;
                position: relative; 
                top: 45vh;       
@@ -166,13 +164,13 @@ const HOME = {
 }
 
 const ABOUT_ME = {
-     styleString: `      
+     $styleString: `      
           background: ${COLORS.GREY_SMOOTH};
           height: 100vh;
           background: linear-gradient(0deg, rgba(44,50,63,1) 0%, rgba(0,0,0,1) 100%);  
      `,
-     mainContainer: {
-          styleString: `     
+     $mainContainer: {
+          $styleString: `     
           top: 5vh;
           font-weight: bold;
           text-align: center;
@@ -182,7 +180,7 @@ const ABOUT_ME = {
      titleContainer: {
           size: '3vh',
           fontWeight: 'bold',
-          styleString: `
+          $styleString: `
                display: inline-block;
                color: ${COLORS.GREEN};
                font-size: 3vh; 
@@ -193,7 +191,7 @@ const ABOUT_ME = {
           fontWeight: 'bold',
      },
      greenBar: {
-          styleString: `
+          $styleString: `
                background-color: ${COLORS.GREEN};
                height: .5vh;
                width: 5vh;
@@ -204,7 +202,7 @@ const ABOUT_ME = {
 
      },
      whiteBar: {
-          styleString: `
+          $styleString: `
                background-color: ${COLORS.GREEN};
                height: .3vh;
                margin-top: 5%;
@@ -214,33 +212,33 @@ const ABOUT_ME = {
 
      },
      introductionMe: {
-          styleString: `
+          $styleString: `
           margin-top: 10vh;
           width: 40vh;
      `
      },
      textBox: {
-          styleString: `    
+          $styleString: `    
           text-align: start;
           line-height: 1.3;
      `
      },
      whoIam: {
-          styleString: `
+          $styleString: `
           color: ${COLORS.WHITE};
           font-size: 3vh; 
           margin-bottom: 2.5vh;
      `
      },
      skillsText: {
-          styleString: `
+          $styleString: `
           font-size: 3vh; 
           position: relative;
           justify-content: center;
      `
      },
      skillsText2: {
-          styleString: `
+          $styleString: `
           margin-top: .5vh;
           margin-bottom: -1.5vh;
           font-size: 1.5vh;
@@ -249,14 +247,14 @@ const ABOUT_ME = {
      `
      },
      text1: {
-          styleString: `
+          $styleString: `
           color: ${COLORS.WHITE};
           font-size: 1.5vh; 
           font-weight: 100;
           margin-bottom: 1.2vh;
      `},
      typeWritter: {
-          styleString: `
+          $styleString: `
           color: ${COLORS.WHITE};
           font-size: 1.5vh; 
           font-weight: 100;
@@ -271,7 +269,7 @@ const ABOUT_ME = {
           margin: '-.1vh .5vh 0 0'
      },
      skills: {
-          styleString: `
+          $styleString: `
           margin-top: 10vh;
           margin-bottom: 3vh;
      `
@@ -280,7 +278,7 @@ const ABOUT_ME = {
 
 const TEXT_SPHERE: any = {
      container: {
-          styleString: `   
+          $styleString: `   
                border-radius: 2vh;
                position: absolute;
                width: 24vh;
@@ -290,7 +288,7 @@ const TEXT_SPHERE: any = {
                border: .5vh solid ${COLORS.GREEN};
      `},
      cloud: {
-          styleString: `   
+          $styleString: `   
                font-weight: bold;
                font-size: 1vh;
                user-select: none;
@@ -314,8 +312,8 @@ const TEXT_SPHERE: any = {
 }
 
 const TECH_DESC = {
-     mainContainer: {
-          styleString: ` 
+     $mainContainer: {
+          $styleString: ` 
                display: inline-block;
                position: relative;
                top: 10vh;
@@ -323,7 +321,7 @@ const TECH_DESC = {
           `
      },
      textImage: {
-          styleString: ` 
+          $styleString: ` 
                position: relative;
                top: -.5vh;
                left: -4vh;
@@ -334,7 +332,7 @@ const TECH_DESC = {
           `
      },
      barMain: {
-          styleString: ` 
+          $styleString: ` 
           display: flex;
           left: -5vh;
           border-radius: 1vh;
@@ -342,7 +340,7 @@ const TECH_DESC = {
      `},
      barContainer:
      {
-          styleString: ` 
+          $styleString: ` 
           display: flex;
           border-top-right-radius: 1vh;
           border-bottom-right-radius: 1vh;
@@ -353,7 +351,7 @@ const TECH_DESC = {
      barLevelContainer: (width: any) => {
           const realWidth = width * 5
           return {
-               styleString: ` 
+               $styleString: ` 
                border-top-right-radius: ${width ? width === 10 && '1vh' : '0vh'};
                border-bottom-right-radius:  ${width ? width === 10 && '1vh' : '0vh'};
                width: ${realWidth ? realWidth + 'vh' : '10vh'};
@@ -363,7 +361,7 @@ const TECH_DESC = {
           }
      },
      typeWritter: {
-          styleString: `
+          $styleString: `
                color: ${COLORS.WHITE};
                font-size: 2.5vh; 
                font-weight: bold;
@@ -371,7 +369,7 @@ const TECH_DESC = {
      `
      },
      typeWritter2: {
-          styleString: `
+          $styleString: `
                color: ${COLORS.WHITE};
                font-size: 2.5vh; 
                font-weight: bold;
@@ -382,13 +380,13 @@ const TECH_DESC = {
 }
 
 const EXPERIENCE = {
-     styleString: `      
+     $styleString: `      
           background: ${COLORS.GREY_SMOOTH};
           height: 100vh;
           background: linear-gradient(0deg, ${COLORS.BLACK} 10%, rgba(44,50,63,1) 70%);  
      `,
-     mainContainer: {
-          styleString: `     
+     $mainContainer: {
+          $styleString: `     
           justify-content: center;
           top: 5vh;
           font-weight: bold;
@@ -399,7 +397,7 @@ const EXPERIENCE = {
      titleContainer: {
           size: '3vh',
           fontWeight: 'bold',
-          styleString: `
+          $styleString: `
                display: inline-block;
                color: ${COLORS.GREEN};
                font-size: 3vh; 
@@ -410,7 +408,7 @@ const EXPERIENCE = {
           fontWeight: 'bold',
      },
      greenBar: {
-          styleString: `
+          $styleString: `
                background-color: ${COLORS.GREEN};
                height: .5vh;
                width: 5vh;
@@ -421,7 +419,7 @@ const EXPERIENCE = {
 
      },
      cardContainer: {
-          styleString: ` 
+          $styleString: ` 
                justify-content: center;
                display: flex;
                width: 90vw;
@@ -431,7 +429,7 @@ const EXPERIENCE = {
      },
      cardBox: [
           {
-               styleString: `
+               $styleString: `
                width: 30vh;
                height: 40vh;
                top: 5vh;
@@ -444,10 +442,10 @@ const EXPERIENCE = {
                     top: 4vh;
                }
           `,
-               cardTitle: {
+               $cardTitle: {
                     text: 'Claro',
                     size: '1.8vh',
-                    styleString: `
+                    $styleString: `
                          color: white;
                          justify-content: center;
                          position: relative; 
@@ -455,16 +453,16 @@ const EXPERIENCE = {
                          top: 1vh;
                     `
                },
-               upperPart: {
-                    styleString: `
+               $upperPart: {
+                    $styleString: `
                          width: 30vh;
                          height: 10vh;
                          background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
           `},
-               cardBoxLogo: {
-                    styleString: `
+               $cardBoxLogo: {
+                    $styleString: `
                          width: 10vh;
                          height: 10vh;
                          top: -5vh;
@@ -479,39 +477,39 @@ const EXPERIENCE = {
                     src: ICONS.CLARO,
                     margin: '0',
                },
-               cardBoxText: {
+               $cardBoxText: {
                     text: 'Fullstack Developer',
                     color: 'white',
                     size: '2.5vh',
-                    styleString: `
+                    $styleString: `
                     position: relative;
                     top: -3vh;
                     justify-content: center;
                `
                },
-               cardBoxSubText: {
+               $cardBoxSubText: {
                     text: '2021 - Current',
                     color: 'white',
                     size: '1.7vh',
-                    styleString: `
+                    $styleString: `
                     position: relative;
                     justify-content: center;
                     top: -2.5vh;
                     font-weight: 300;
                `
                },
-               cardBoxUlText: {
+               $cardBoxUlText: {
                     text: ['◆ Ssr Developer at WePlan S.A.', '◆ Web design, Back-end support, bug fixer, customer engagement.', ' ◆ Code quality control, code smells fixing, clean code coverage.'],
                     color: 'white',
                     size: '1.2vh',
-                    styleString: `
+                    $styleString: `
                          font-weight: 100;
                `},
-               miniTextBoxes: {
+               $miniTextBoxes: {
                     text: ['ReactTS', 'NodeJS', 'SQL', 'Web Apps'],
                     color: 'white',
                     size: '1vh',
-                    mainContainer: `
+                    $mainContainer: `
                          display: flex;
                          justify-content: left;
                          left: 2vh;
@@ -524,14 +522,14 @@ const EXPERIENCE = {
                          display: flex;
                          padding: .5vh .5vh .5vh .5vh;
                     `,
-                    styleString: `
+                    $styleString: `
                          font-weight: 100;
                `
                }
 
           },
           {
-               styleString: `
+               $styleString: `
                width: 30vh;
                height: 40vh;
                transition: .2s;
@@ -544,10 +542,10 @@ const EXPERIENCE = {
                     top: 4vh;
                }
           `,
-               cardTitle: {
+               $cardTitle: {
                     text: 'Teeromu',
                     size: '1.8vh',
-                    styleString: `
+                    $styleString: `
                     color: white;
                     justify-content: center;
                     position: relative; 
@@ -555,16 +553,16 @@ const EXPERIENCE = {
                     top: 1vh;
                `
                },
-               upperPart: {
-                    styleString: `
+               $upperPart: {
+                    $styleString: `
                          width: 30vh;
                          height: 10vh;
                          background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
           `},
-               cardBoxLogo: {
-                    styleString: `
+               $cardBoxLogo: {
+                    $styleString: `
                          width: 10vh;
                          height: 10vh;
                          top: -5vh;
@@ -579,40 +577,40 @@ const EXPERIENCE = {
                     src: ICONS.TEEROMU,
                     margin: '1.5vh 0',
                },
-               cardBoxText: {
+               $cardBoxText: {
                     text: 'Creative Lead - Software Developer',
                     color: 'white',
                     size: '2.5vh',
-                    styleString: `
+                    $styleString: `
                     position: relative;
                     top: -3vh;
                     justify-content: center;
                `
                },
-               cardBoxSubText: {
+               $cardBoxSubText: {
                     text: '2019 - Current',
                     color: 'white',
                     size: '1.7vh',
-                    styleString: `
+                    $styleString: `
                     position: relative;
                     justify-content: center;
                     top: -2.5vh;
                     font-weight: 300;
                `
                },
-               cardBoxUlText: {
+               $cardBoxUlText: {
                     text: ['◆ Responsible for general software team, development, architecture and design.', '◆ Vanguardist software team.'],
                     color: 'white',
                     size: '1.2vh',
-                    styleString: `
+                    $styleString: `
                          font-weight: 100;
                          top: -1vh;
                `},
-               miniTextBoxes: {
+               $miniTextBoxes: {
                     text: ['App design', 'Games', 'Challengers', 'Web'],
                     color: 'white',
                     size: '1vh',
-                    mainContainer: `
+                    $mainContainer: `
                          display: flex;
                          justify-content: left;
                          left: 2vh;
@@ -625,14 +623,14 @@ const EXPERIENCE = {
                          bottom: -5vh;
                          padding: .5vh .5vh .5vh .5vh;
                     `,
-                    styleString: `
+                    $styleString: `
                          font-weight: 100;
                `
                }
 
           },
           {
-               styleString: `
+               $styleString: `
                width: 30vh;
                transition: .2s;
                height: 40vh;
@@ -645,10 +643,10 @@ const EXPERIENCE = {
                     top: 4vh;
                }
           `,
-               cardTitle: {
+               $cardTitle: {
                     text: 'Flutter Dev',
                     size: '1.8vh',
-                    styleString: `
+                    $styleString: `
                     color: white;
                     justify-content: center;
                     position: relative; 
@@ -656,16 +654,16 @@ const EXPERIENCE = {
                     top: 1vh;
                `
                },
-               upperPart: {
-                    styleString: `
+               $upperPart: {
+                    $styleString: `
                          width: 30vh;
                          height: 10vh;
                          background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
           `},
-               cardBoxLogo: {
-                    styleString: `
+               $cardBoxLogo: {
+                    $styleString: `
                          width: 10vh;
                          height: 10vh;
                          top: -5vh;
@@ -680,39 +678,39 @@ const EXPERIENCE = {
                     src: ICONS.WHITE_SMARTPHONE,
                     margin: '1.5vh 0',
                },
-               cardBoxText: {
+               $cardBoxText: {
                     text: 'Beginner & Enthusiast',
                     color: 'white',
                     size: '2.5vh',
-                    styleString: `
+                    $styleString: `
                     position: relative;
                     top: -3vh;
                     justify-content: center;
                `
                },
-               cardBoxSubText: {
+               $cardBoxSubText: {
                     text: 'Since 2022',
                     color: 'white',
                     size: '1.7vh',
-                    styleString: `
+                    $styleString: `
                     position: relative;
                     justify-content: center;
                     top: -2.5vh;
                     font-weight: 300;
                `
                },
-               cardBoxUlText: {
+               $cardBoxUlText: {
                     text: ['◆ Self taught on the area.', '◆ Many demos made from scratch.', '◆ Next step as a programmer, formally work with Mobile.'],
                     color: 'white',
                     size: '1.2vh',
-                    styleString: `
+                    $styleString: `
                          font-weight: 100;
                `},
-               miniTextBoxes: {
+               $miniTextBoxes: {
                     text: ['Mobile', 'React Native', 'Flutter'],
                     color: 'white',
                     size: '1vh',
-                    mainContainer: `
+                    $mainContainer: `
                          display: flex;
                          margin-top: 2.1vh;
                          left: 2vh;
@@ -725,19 +723,19 @@ const EXPERIENCE = {
                          bottom: -3.3vh;
                          padding: .5vh .5vh .5vh .5vh;
                     `,
-                    styleString: `
+                    $styleString: `
                          font-weight: 100;
                `
                }
 
           },
      ],
-     linkedInMessage: [{
+     $linkedInMessage: [{
           text: "Further in-depth experience can be found on my",
           size: '1.5vh',
           color: COLORS.WHITE,
           fontWeight: '100',
-          styleString: `   
+          $styleString: `   
                justify-content: center;
                z-index: 1;
                position: relative;
@@ -745,12 +743,12 @@ const EXPERIENCE = {
           `,
      },
      {
-          text: "LinkedIn",
+          text: "$linkedIn",
           size: '1.5vh',
           color: COLORS.LIGHT_BLUE_STRONG,
           fontWeight: 'bold',
-          onClick: () => window.open("https://www.linkedin.com/in/mathiasalss/"),
-          styleString: `   
+          onClick: () => window.open("https://www.$linkedIn.com/in/mathiasalss/"),
+          $styleString: `   
                justify-content: center;
                z-index: 1;
                position: relative;
@@ -759,7 +757,7 @@ const EXPERIENCE = {
           `,
      }],
      contactWith: {
-          styleString: `
+          $styleString: `
                justify-content: center;
                position: relative;
                cursor: pointer;
@@ -778,7 +776,7 @@ const EXPERIENCE = {
      contactWithText: {
           color: 'white',
           size: '2vh',
-          styleString: 'padding-top: 1vh; margin-left: 1.5vh;',
+          $styleString: 'padding-top: 1vh; margin-left: 1.5vh;',
 
      },
      finalMessage: {
@@ -786,7 +784,7 @@ const EXPERIENCE = {
           size: '1vh',
           color: COLORS.WHITE,
           fontWeight: '100',
-          styleString: `   
+          $styleString: `   
                justify-content: center;
                z-index: 1;
                position: relative;
@@ -797,7 +795,7 @@ const EXPERIENCE = {
 
 const MODAL_CONTACT = {
      mainConainer: {
-          styleString: `
+          $styleString: `
           padding: 3vh;
           background: ${COLORS.GREY_SMOOTH};  
           border-radius: 1vh;
@@ -807,10 +805,10 @@ const MODAL_CONTACT = {
           color: COLORS.WHITE,
           size: '3vh',
           fontWeight: 'bold',
-          styleString: 'justify-content: center;'
+          $styleString: 'justify-content: center;'
      },
      greenBar: {
-          styleString: `
+          $styleString: `
                background-color: ${COLORS.GREEN};
                margin-top: 1vh;
                margin-left: 7.5vh;
@@ -824,8 +822,8 @@ const MODAL_CONTACT = {
           color: COLORS.WHITE,
           text: '✖',
           size: '1.5vh',
-          pointer: true,
-          styleString: `
+          $pointer: true,
+          $styleString: `
                border-radius: 1vh;
                padding: .5vh;
                position: fixed;
@@ -838,7 +836,7 @@ const MODAL_CONTACT = {
           `
      },
      inputContainer: {
-          styleString: `		
+          $styleString: `		
                margin-top: 5vh;
                display: flex;
                justify-content: center;
@@ -846,7 +844,7 @@ const MODAL_CONTACT = {
      },
      inputText: {
           text: 'Email',
-          styleString: `		
+          $styleString: `		
                     font-size: 1vh;
                     border-radius: .5vh;
                     position: absolute;
@@ -860,7 +858,7 @@ const MODAL_CONTACT = {
      },
      inputText1: {
           text: 'Email',
-          styleString: `		
+          $styleString: `		
                font-size: 1.5vh;
                border-radius: .5vh;
                position: absolute;
@@ -873,7 +871,7 @@ const MODAL_CONTACT = {
 		`,
      },
      input1: {
-          styleString: `		
+          $styleString: `		
                     padding: 1.5vh 1.5vh 1.5vh 1vh;
                     font-size: 1.5vh;
                     border: .25vh solid transparent;
@@ -883,7 +881,7 @@ const MODAL_CONTACT = {
 		`,
      },
      input2: {
-          styleString: `		
+          $styleString: `		
                     padding: 1.5vh 1.5vh 1.5vh 1vh;
                     font-size: 1.5vh;	
                     border: .2vh solid ${COLORS.GREEN_STRONG}; 
@@ -893,7 +891,7 @@ const MODAL_CONTACT = {
 		`,
      },
      messageContainer: {
-          styleString: `		
+          $styleString: `		
                margin-top: 5vh;
                display: flex;
                justify-content: center;
@@ -901,7 +899,7 @@ const MODAL_CONTACT = {
      },
      messageText: {
           text: 'Message',
-          styleString: `		
+          $styleString: `		
                     font-size: 1vh;
                     border-radius: .5vh;
                     position: absolute;
@@ -915,7 +913,7 @@ const MODAL_CONTACT = {
      },
      messageText1: {
           text: 'Message',
-          styleString: `		
+          $styleString: `		
                     font-size: 1.5vh;
                     border-radius: .5vh;
                     position: absolute;
@@ -928,7 +926,7 @@ const MODAL_CONTACT = {
 		`,
      },
      message1: {
-          styleString: `	                    
+          $styleString: `	                    
                     font-family: Montserrat;
                     height: 10vh;	
                     resize: none;                    
@@ -943,7 +941,7 @@ const MODAL_CONTACT = {
 		`,
      },
      message2: {
-          styleString: `		
+          $styleString: `		
                     font-family: Montserrat;
                     height: 10vh;	
                     resize: none;

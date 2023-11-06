@@ -39,19 +39,19 @@ const IndexPage: FunctionComponent = () => {
      return (
           <>
                <ModalContact showModal={state.showModal} />
-               <CustomBox styleString={'display: inline-block; transition: .5s;'}>
+               <CustomBox $styleString={'display: inline-block; transition: .5s;'}>
                     <CustomBox onClick={() => handleClick('HOME')} >
-                         <RenderMedia {...INDEX.arrowDown} />
+                         <RenderMedia {...INDEX.$arrowDow} />
                     </CustomBox>
                     <CustomBox onClick={() => handleClick('ABOUT')} >
-                         <RenderMedia {...INDEX.arrowDown1} />
+                         <RenderMedia {...INDEX.$arrowDow1} />
                     </CustomBox>
                     <CustomBox onClick={() => handleClick('EXP')} >
-                         <RenderMedia {...INDEX.arrowDown2} />
+                         <RenderMedia {...INDEX.$arrowDow2} />
                     </CustomBox>
 
                     <CustomBox onClick={() => handleClick('EXP')} >
-                         <RenderMedia {...INDEX.arrowDown3(!mailMe)} />
+                         <RenderMedia {...INDEX.$arrowDow3(!mailMe)} />
                     </CustomBox>
 
                </CustomBox >

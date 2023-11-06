@@ -12,20 +12,20 @@ const Homepage: FunctionComponent = () => {
      return (
           <>
                <CustomBox {...HOME}>
-                    <CustomBox {...HOME.mainContainer} fadeAnimation>
+                    <CustomBox {...HOME.$mainContainer} $fadeAnimation>
 
-                         <RenderMedia {...HOME.logo} />
+                         <RenderMedia {...HOME.$logo} />
                          <CustomBox>
-                              <CustomBox {...HOME.pageText}>
-                                   <RenderText text={"Hi, I'm"} {...HOME.presentationText} color={'#FFF'} />
-                                   <RenderText text={"Mathias Lovera"} {...HOME.presentationText} color={COLORS.PURPLE} margin={'0 .5vh 0 .7vh'} />
+                              <CustomBox {...HOME.$pageText}>
+                                   <RenderText text={"Hi, I'm"} {...HOME.$presentationText} color={'#FFF'} />
+                                   <RenderText text={"Mathias Lovera"} {...HOME.$presentationText} color={COLORS.PURPLE} $margin={'0 .5vh 0 .7vh'} />
                                    <ShakingText style={{ top: '-.2vh' }}>
                                         {'👋'}
                                    </ShakingText>
                               </CustomBox>
                          </CustomBox>
 
-                         <CustomBox {...HOME.pageText}>
+                         <CustomBox {...HOME.$pageText}>
                               <Typewriter
                                    options={{
                                         cursor: '_',
@@ -39,8 +39,8 @@ const Homepage: FunctionComponent = () => {
                          </CustomBox>
 
                          <CustomBox>
-                              <a href='https://www.linkedin.com/in/mathiasalss/' target="_blank">
-                                   <RenderMedia {...HOME.linkedIn} />
+                              <a href='https://www.$linkedIn.com/in/mathiasalss/' target="_blank">
+                                   <RenderMedia {...HOME.$linkedIn} />
                               </a>
                          </CustomBox>
                     </CustomBox>
