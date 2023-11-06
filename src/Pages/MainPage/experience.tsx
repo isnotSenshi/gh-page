@@ -69,7 +69,7 @@ const Experience: FunctionComponent = () => {
                               ))}
                          </CustomBox>
 
-                         <CustomBox $styleString={'display: flex; gap: .7vh; justify-content: center;'} ref={ref}>
+                         <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
                               {EXPERIENCE.$linkedInMessage.map((message: any) =>
                                    <RenderText {...message} key={uuidv4()} />
                               )}
@@ -77,8 +77,10 @@ const Experience: FunctionComponent = () => {
 
                          <RenderText {...EXPERIENCE.finalMessage} />
 
-                         <CustomBox {...EXPERIENCE.contactWith} onClick={setModal}>
-                              {mailMe && <RenderText text={'Contact with me'} {...EXPERIENCE.contactWithText} />}
+                         <CustomBox {...EXPERIENCE.contactWithContainer}>
+                              <CustomBox {...EXPERIENCE.contactWith} onClick={setModal}>
+                                   {mailMe && <RenderText text={'Contact with me'} {...EXPERIENCE.contactWithText} />}
+                              </CustomBox>
                          </CustomBox>
                     </CustomBox>
 

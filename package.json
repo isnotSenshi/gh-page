@@ -1,5 +1,4 @@
 {
-  "homepage": "https://isnotsenshi.github.io/portfolio",
   "name": "portfolio-landpage",
   "version": "1.0.0",
   "private": true,
@@ -10,10 +9,11 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
+    "@types/lodash": "^4.14.200",
     "@types/node": "^16.18.38",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "dotenv": "^16.3.1",
+    "lodash": "^4.17.21",
     "nodemon": "^3.0.1",
     "openai": "^4.0.1",
     "react": "^18.2.0",
@@ -24,13 +24,11 @@
     "TagCloud": "^2.3.2",
     "typescript": "^4.9.5",
     "typewriter-effect": "^2.20.1",
-    "uuid": "^9.0.1",
     "web-vitals": "^2.1.4",
     "yarn": "^1.22.19"
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "nodemon src/app.tsx",
     "start": "react-scripts start",
     "build": "react-scripts build"
@@ -54,7 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.6",
-    "gh-pages": "^6.0.0"
+    "@types/lodash": "^4.14.200",
+    "@types/uuid": "^9.0.6"
   }
 }

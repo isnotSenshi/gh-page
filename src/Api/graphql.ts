@@ -1,12 +1,10 @@
 import packageJson from '../../package.json'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
-console.info('Micro Front: ', packageJson.name)
-console.info('Versión: ', packageJson.version)
 
-console.log(process.env.SH1_GRAPHQL)
+console.info('Version: ', packageJson.version)
 
 const client = new ApolloClient({
-     uri: process.env.SH1_GRAPHQL,
+     uri: process.env.REACT_APP_SH1_GRAPHQL,
      cache: new InMemoryCache(),
      defaultOptions: {
           query: {

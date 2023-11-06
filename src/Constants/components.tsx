@@ -756,16 +756,22 @@ const EXPERIENCE = {
                cursor: pointer;
           `,
      }],
+     contactWithContainer: {
+          $styleString: `
+               display: flex; gap: .7vh; 
+               justify-content: center;
+               position: relative;
+               display: flex;               
+          `
+     },
      contactWith: {
           $styleString: `
-               justify-content: center;
                position: relative;
                cursor: pointer;
                background: ${COLORS.LIGHT_BLUE_STRONG};           
                padding: 1vh;
                border-radius: 1vh;
                top: 25vh;
-               left: 44.5vw;
                height: 5vh;
                width: 20vh;
                &: hover {
@@ -834,6 +840,41 @@ const MODAL_CONTACT = {
                     color: ${COLORS.LIGHT_BLUE};
                }
           `
+     },
+     nameContainer: {
+          $styleString: `		
+               margin-top: 5vh;
+               display: flex;
+               justify-content: center;
+     `,
+     },
+     nameText: {
+          text: 'Name',
+          $styleString: `		
+                    font-size: 1vh;
+                    border-radius: .5vh;
+                    position: absolute;
+                    top: -2.5vh;
+                    left: 1vh;
+                    padding: .5vh;
+                    z-index: 1;
+                    color: ${COLORS.GREEN_STRONG};
+                    transition: .5s;
+		`,
+     },
+     nameText1: {
+          text: 'Name',
+          $styleString: `		
+               font-size: 1.5vh;
+               border-radius: .5vh;
+               position: absolute;
+               top: .75vh;
+               left: 2vh;
+               padding: .5vh;
+               z-index: 1;
+               color: ${COLORS.WHITE_GREY};
+               transition: .5s;
+		`,
      },
      inputContainer: {
           $styleString: `		
@@ -953,6 +994,45 @@ const MODAL_CONTACT = {
 			     background-color: ${COLORS.GREY_DEEP};
                     color: white;
 		`,
+     },
+     contactModal: (aviable: any) => {
+          return {
+               $styleString: `
+               display: flex;
+               justify-content: center;
+               ${aviable && 'cursor: pointer'};
+               background: ${aviable ? COLORS.LIGHT_BLUE_STRONG : COLORS.RED_STRONG};           
+               border-radius: .5vh;
+               margin-top: 3vh;
+               margin-left: 12vh;
+               transition: .5s;
+               margin-right: 12vh;
+               &: hover {
+                    background-color: ${aviable ? COLORS.LIGHT_BLUE : COLORS.RED_STRONG};
+               }
+          `}
+     },
+     contactModalText: {
+          color: 'white',
+          size: '2vh',
+          $styleString: `
+               justify-content: center; 
+               padding-top: 1vh; 
+               padding-bottom: 1vh; 
+               justify-content: center;
+          `
+     },
+     sumbitOk: {
+          $styleString: `
+               color: white;
+               padding: 1vh;
+               margin-top: 3vh;
+               transition: .5s;
+               border-radius: .5vh;
+               margin-right: 15vh;
+               margin-left: 15vh;
+               background: ${COLORS.ALERT_SUCCESS};
+          `
      },
 }
 
