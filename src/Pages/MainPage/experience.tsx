@@ -8,6 +8,7 @@ import useOnScreen from '../../Hooks/checkVisibility'
 import { CONTEXT } from '../../App/context'
 import { MAIL_ME_STATUS, SHOW_MODAL } from '../../Core/Types'
 import { v4 as uuidv4 } from 'uuid'
+import { Link } from 'react-router-dom'
 
 const Experience: FunctionComponent = () => {
 
@@ -73,6 +74,14 @@ const Experience: FunctionComponent = () => {
                               {EXPERIENCE.$linkedInMessage.map((message: any) =>
                                    <RenderText {...message} key={uuidv4()} />
                               )}
+                         </CustomBox>
+
+                         <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
+                              <RenderText {...EXPERIENCE.$resumeMessage} />
+                              <Link to="/Archives/sh1-resume.pdf" target="_blank" download style={{textDecoration: 'none'}}>
+                                   <RenderText {...EXPERIENCE.$resumeMessage2} />
+                              </Link>
+
                          </CustomBox>
 
                          <RenderText {...EXPERIENCE.finalMessage} />

@@ -303,7 +303,6 @@ const TEXT_SPHERE: any = {
           "NodeJS",
           "Design",
           "SQL",
-          //"Express",
           "MongoDB",
           "GIT",
           "Dart",
@@ -475,7 +474,7 @@ const EXPERIENCE = {
                     width: '8vh',
                     height: '9.7vh',
                     src: ICONS.CLARO,
-                    margin: '0',
+                    $margin: '0',
                },
                $cardBoxText: {
                     text: 'Fullstack Developer',
@@ -575,7 +574,7 @@ const EXPERIENCE = {
                     width: '7vh',
                     height: '7vh',
                     src: ICONS.TEEROMU,
-                    margin: '1.5vh 0',
+                    $margin: '1.5vh 0',
                },
                $cardBoxText: {
                     text: 'Creative Lead - Software Developer',
@@ -676,7 +675,7 @@ const EXPERIENCE = {
                     width: '7vh',
                     height: '7vh',
                     src: ICONS.WHITE_SMARTPHONE,
-                    margin: '1.5vh 0',
+                    $margin: '1.5vh 0',
                },
                $cardBoxText: {
                     text: 'Beginner & Enthusiast',
@@ -730,6 +729,34 @@ const EXPERIENCE = {
 
           },
      ],
+     $resumeMessage: {
+          text: "Or check my",
+          size: '1.5vh',
+          color: COLORS.WHITE,
+          fontWeight: '100',
+          $styleString: `   
+               justify-content: center;
+               z-index: 1;
+               position: relative;
+               top: 10vh;
+          `,
+     },
+     $resumeMessage2: {
+          text: "Resume",
+          size: '1.5vh',
+          fontWeight: 'bold',
+          $styleString: `   
+               justify-content: center;
+               z-index: 1;
+               position: relative;
+               top: 10vh;
+               cursor: pointer;
+               color: ${COLORS.GREEN_3};
+               &: hover {                    
+                    color: ${COLORS.GREEN_5};
+               }
+          `,
+     },
      $linkedInMessage: [{
           text: "Further in-depth experience can be found on my",
           size: '1.5vh',
@@ -743,9 +770,8 @@ const EXPERIENCE = {
           `,
      },
      {
-          text: "$linkedIn",
+          text: "LinkedIn",
           size: '1.5vh',
-          color: COLORS.LIGHT_BLUE_STRONG,
           fontWeight: 'bold',
           onClick: () => window.open("https://www.$linkedIn.com/in/mathiasalss/"),
           $styleString: `   
@@ -753,7 +779,13 @@ const EXPERIENCE = {
                z-index: 1;
                position: relative;
                top: 10vh;
-               cursor: pointer;
+               margin-bottom: 1vh;
+               cursor: pointer;               
+               color: ${COLORS.LIGHT_BLUE};
+               &: hover {
+                    
+               color: ${COLORS.LIGHT_BLUE_STRONG};
+               }
           `,
      }],
      contactWithContainer: {
@@ -794,7 +826,7 @@ const EXPERIENCE = {
                justify-content: center;
                z-index: 1;
                position: relative;
-               top: 45vh;
+               top: 42vh;
           `,
      },
 }
