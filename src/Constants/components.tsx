@@ -773,7 +773,7 @@ const EXPERIENCE = {
           text: "LinkedIn",
           size: '1.5vh',
           fontWeight: 'bold',
-          onClick: () => window.open("https://www.$linkedIn.com/in/mathiasalss/"),
+          onClick: () => window.open("https://www.linkedIn.com/in/mathiasalss/"),
           $styleString: `   
                justify-content: center;
                z-index: 1;

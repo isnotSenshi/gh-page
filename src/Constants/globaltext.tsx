@@ -23,5 +23,5 @@ export const ABOUT_ME_TEXT = {
 	],
 	$presentationText: `Since 2014 - I've been working on different projects, some of my own, others as a formal programmer.
 	Always looking for new challenges or places where I can achieve experience and improve myself. This has lead me
-	working on some amazing projectsm at some amazing places and with some great people`
+	working on some amazing projectsm at some amazing places and with some great people.`
 }

@@ -39,7 +39,7 @@ const Homepage: FunctionComponent = () => {
                          </CustomBox>
 
                          <CustomBox>
-                              <a href='https://www.$linkedIn.com/in/mathiasalss/' target="_blank">
+                              <a href='https://www.linkedIn.com/in/mathiasalss/' target="_blank">
                                    <RenderMedia {...HOME.$linkedIn} />
                               </a>
                          </CustomBox>

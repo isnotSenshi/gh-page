@@ -45,7 +45,7 @@ const AboutMe: FunctionComponent = () => {
                                         <RenderText text={ABOUT_ME_TEXT.$presentationText} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         <CustomBox {...ABOUT_ME.whiteBar} />
                                         <CustomBox $styleString={'display: flex;'}>
-                                             <RenderMedia {...ABOUT_ME.location} />
+                                             <RenderMedia {...ABOUT_ME.location} $margin={'.15vh .25vh 0 0'}/>
                                              <RenderText text={"Buenos Aires, Argentina"} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         </CustomBox>
                                    </CustomBox >
