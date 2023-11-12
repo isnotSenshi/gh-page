@@ -1,2 +1,2 @@
 Mathias Lovera Landpage
-https://isnotsenshi.github.io/portfolio/
+https://www.notsenshi.com.ar
