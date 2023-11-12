@@ -1,17 +1,17 @@
 import URLS from '../Constants/urls'
-import Homepage from '../Pages/MainPage'
+import RenderApp from '../Pages/RenderApp'
 
 const useRoutes = () => {
 	return [
 		{
 			name: 'HOME',
 			path: URLS.home,
-			element: <Homepage />
+			element: <RenderApp />
 		},
 		{
 			name: 'PORTFOLIO',
 			path: URLS.portfolio,
-			element: <Homepage />
+			element: <RenderApp />
 		}
 	]
 }

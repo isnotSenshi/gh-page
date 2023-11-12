@@ -1,16 +1,15 @@
-import { FunctionComponent, useContext, useState } from 'react'
+import { FunctionComponent, useContext } from 'react'
 import Homepage from './home'
 import AboutMe from './about'
 import RenderMedia from '../../Components/Media'
 import { INDEX } from '../../Constants/components'
 import { CustomBox } from '../../Styles/customBox'
 import Experience from './experience'
-import { CHANGE_SPHERE_BOX, SHOW_MODAL } from '../../Core/Types'
+import { CHANGE_SPHERE_BOX } from '../../Core/Types'
 import { CONTEXT } from '../../App/context'
-import RenderText from '../../Components/Text'
 import ModalContact from '../../Components/ModalContact'
 
-const IndexPage: FunctionComponent = () => {
+const IndexPageMobile: FunctionComponent = () => {
 
      const { state, dispatch }: any = useContext(CONTEXT)
      const { mailMe }: any = state
@@ -61,4 +60,4 @@ const IndexPage: FunctionComponent = () => {
           </>
      )
 }
-export default IndexPage
+export default IndexPageMobile
