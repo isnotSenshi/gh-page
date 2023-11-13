@@ -13,6 +13,7 @@ export const EmailJsMutation = (
 				reply_to: "${reply_to}"
 			) {
 				data
+				error
 			}
 		}
 	`

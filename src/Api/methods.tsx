@@ -37,11 +37,11 @@ class Methods {
 		onFinally?: any
 	) {
 		client
-			.mutate(execute)
+			.mutate(execute)			
 			.then(({ data }) => {
 				succeeded(data)
 				navigateTo && navigateTo()
-			})
+			})			
 			.catch(({ error }) => {
 				mainError(dispatch, error, onError)
 			})

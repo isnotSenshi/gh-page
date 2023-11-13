@@ -1,8 +1,18 @@
 import { FunctionComponent, useState, useEffect } from 'react'
 import IndexPage from '../MainPage/indexMain'
 import IndexPageMobile from '../MobilePage/indexMobile'
+import methods from '../../Api/methods'
+import { XcodeQuery } from '../../Api/querys/xcode'
 
 const RenderApp: FunctionComponent = () => {
+
+     const handleClick = () => {
+          methods.query(
+               null,
+               XcodeQuery('dcode', 'U2FsdGVkX1+zSS//EY+zEMl0DugZSCiJsmqNAHlQYuQ=', 'notsenshi2k24graphql'),
+               null
+          )
+     }
 
      const [dimensions, setDimensions] = useState({
           width: window.innerWidth,
@@ -19,7 +29,6 @@ const RenderApp: FunctionComponent = () => {
      useEffect(() => {
           window.addEventListener("resize", handleResize, false)
      }, [])
-     console.log((dimensions.width / dimensions.height))
 
      return (
           <>
@@ -27,6 +36,8 @@ const RenderApp: FunctionComponent = () => {
                     ? <IndexPage />
                     : <IndexPageMobile />
                }
+
+               <button onClick={handleClick}> SADSA </button>
           </>
      )
 }
