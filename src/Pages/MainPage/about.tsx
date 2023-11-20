@@ -14,10 +14,10 @@ const AboutMe: FunctionComponent = () => {
 
      return (
           <>
-               <CustomBox $styleString={ABOUT_ME.$styleString}>
+               <CustomBox $styleString={ABOUT_ME.$styleString} className='aboutScroll'>
                     <CustomBox $styleString={ABOUT_ME.$mainContainer.$styleString}>
                          <CustomBox {...ABOUT_ME.titleContainer}>
-                              <RenderText text={"About Me"} {...ABOUT_ME.titleAbout} color={COLORS.WHITE} id='about-me' />
+                              <RenderText text={"About Me"} {...ABOUT_ME.titleAbout} color={COLORS.WHITE} />
                               <CustomBox {...ABOUT_ME.greenBar} />
                          </CustomBox>
 
@@ -45,7 +45,7 @@ const AboutMe: FunctionComponent = () => {
                                         <RenderText text={ABOUT_ME_TEXT.$presentationText} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         <CustomBox {...ABOUT_ME.whiteBar} />
                                         <CustomBox $styleString={'display: flex;'}>
-                                             <RenderMedia {...ABOUT_ME.location} $margin={'.15vh .25vh 0 0'}/>
+                                             <RenderMedia {...ABOUT_ME.location} $margin={'.15vh .25vh 0 0'} />
                                              <RenderText text={"Buenos Aires, Argentina"} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         </CustomBox>
                                    </CustomBox >
@@ -66,7 +66,7 @@ const AboutMe: FunctionComponent = () => {
                          </CustomBox>
                     </CustomBox>
                </CustomBox>
-               
+
 
           </>
      )

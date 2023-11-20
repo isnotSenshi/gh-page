@@ -35,7 +35,7 @@ const Experience: FunctionComponent = () => {
                <CustomBox $styleString={EXPERIENCE.$styleString}>
                     <CustomBox $styleString={EXPERIENCE.$mainContainer.$styleString}>
                          <CustomBox {...EXPERIENCE.titleContainer}>
-                              <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE} id='about-me' />
+                              <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE}/>
                               <CustomBox {...EXPERIENCE.greenBar} />
                          </CustomBox>
 

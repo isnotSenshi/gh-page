@@ -6,14 +6,6 @@ import { XcodeQuery } from '../../Api/querys/xcode'
 
 const RenderApp: FunctionComponent = () => {
 
-     const handleClick = () => {
-          methods.query(
-               null,
-               XcodeQuery('dcode', 'U2FsdGVkX1+zSS//EY+zEMl0DugZSCiJsmqNAHlQYuQ=', 'notsenshi2k24graphql'),
-               null
-          )
-     }
-
      const [dimensions, setDimensions] = useState({
           width: window.innerWidth,
           height: window.innerHeight,
@@ -33,11 +25,9 @@ const RenderApp: FunctionComponent = () => {
      return (
           <>
                {(dimensions.width / dimensions.height) < 1.1
-                    ? <IndexPage />
-                    : <IndexPageMobile />
+                    ? <IndexPageMobile />
+                    : <IndexPage />
                }
-
-               <button onClick={handleClick}> SADSA </button>
           </>
      )
 }

@@ -1,4 +1,4 @@
-import { FunctionComponent, useContext } from 'react'
+import { FunctionComponent, useContext, useEffect } from 'react'
 import Homepage from './home'
 import AboutMe from './about'
 import RenderMedia from '../../Components/Media'
@@ -11,6 +11,7 @@ import ModalContact from '../../Components/ModalContact'
 
 const IndexPageMobile: FunctionComponent = () => {
 
+     console.log('MOBILE RENDER')
      const { state, dispatch }: any = useContext(CONTEXT)
      const { mailMe }: any = state
 
@@ -19,14 +20,14 @@ const IndexPageMobile: FunctionComponent = () => {
                type: CHANGE_SPHERE_BOX,
                value: { text: null, icon: null, level: null }
           })
-
-          const about: any = document.getElementsByClassName('sc-bdnyFh dEcNyL')
+          
+          const about: any = document.getElementsByClassName('aboutScroll')
 
           switch (place) {
                case 'HOME':
                     return window.scrollTo(0, 0)
                case 'ABOUT':
-                    return about[0].scrollIntoView();
+                    return about[0].scrollIntoView()
                case 'EXP':
                     return window.scrollTo(99999, 99999)
                default:

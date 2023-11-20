@@ -14,10 +14,10 @@ const AboutMe: FunctionComponent = () => {
 
      return (
           <>
-               <CustomBox $styleString={ABOUT_ME.$styleString}>
+               <CustomBox $styleString={ABOUT_ME.$styleString} className='aboutScroll'>
                     <CustomBox $styleString={ABOUT_ME.$mainContainer.$styleString}>
                          <CustomBox {...ABOUT_ME.titleContainer}>
-                              <RenderText text={"About Me"} {...ABOUT_ME.titleAbout} color={COLORS.WHITE} id='about-me' />
+                              <RenderText text={"About Me"} {...ABOUT_ME.titleAbout} color={COLORS.WHITE}/>
                               <CustomBox {...ABOUT_ME.greenBar} />
                          </CustomBox>
 

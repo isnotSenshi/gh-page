@@ -10,9 +10,9 @@ import { CONTEXT } from '../../App/context'
 import ModalContact from '../../Components/ModalContact'
 
 const IndexPage: FunctionComponent = () => {
-
      const { state, dispatch }: any = useContext(CONTEXT)
      const { mailMe }: any = state
+     const about: any = document.getElementsByClassName('aboutScroll')
 
      const handleClick = (place: any) => {
           dispatch({
@@ -20,13 +20,11 @@ const IndexPage: FunctionComponent = () => {
                value: { text: null, icon: null, level: null }
           })
 
-          const about: any = document.getElementsByClassName('sc-bdnyFh dEcNyL')
-
           switch (place) {
                case 'HOME':
                     return window.scrollTo(0, 0)
                case 'ABOUT':
-                    return about[0].scrollIntoView();
+                    return about[0].scrollIntoView()
                case 'EXP':
                     return window.scrollTo(99999, 99999)
                default:
