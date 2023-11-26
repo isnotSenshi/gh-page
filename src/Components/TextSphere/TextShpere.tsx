@@ -1,5 +1,5 @@
 import { CustomBox } from '../../Styles/customBox'
-import { TEXT_SPHERE } from '../../Constants/components'
+import { TEXT_SPHERE } from '../../Constants/mobileComponents'
 import { TagCloud } from "@frank-mayer/react-tag-cloud"
 import { CONTEXT } from '../../App/context'
 import { useContext, useState } from 'react'
@@ -30,8 +30,8 @@ const TextShpere = () => {
         style={{ width: '30vh' }}
         onClick={e => changeGreenBox(e)}
         options={{
-          maxSpeed: "fast",
-          initSpeed: "fast",
+          maxSpeed: "normal",
+          initSpeed: "normal",
           keep: false,
           radius: windowSize
         }}>

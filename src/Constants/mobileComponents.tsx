@@ -2,20 +2,25 @@ import { COLORS } from "./colors"
 import ICONS from "./icons"
 
 const INDEX = {
+     mainContainer: {
+          $styleString: `
+          display: flex;
+          transition: .5s; 
+          gap: 4.5vh;
+          bottom: -90vh;
+          justify-content: center;    
+     `},
      $arrowDow: {
-          src: ICONS.HOME,
+          src: ICONS.TS,
           width: '2.5vh',
           height: '2.5vh',
           $pointer: true,
           $styleString: `
-               right: 3vh; 
                background-color: ${COLORS.GREEN_STRONG}; 
-               border-radius: 1vh;
                padding: .75vh;
                transition: .5s;
+               position: fixed;  
                z-index: 2;
-               position: fixed;
-               top: 45vh;
                &: hover {
                     background-color: ${COLORS.GREEN_4};
                }
@@ -27,13 +32,10 @@ const INDEX = {
           height: '2.5vh',
           $pointer: true,
           $styleString: `
-               right: 3vh; 
                background-color: ${COLORS.GREEN_STRONG}; 
-               border-radius: 1vh;
                padding: .75vh;
                transition: .5s;
-               position: fixed;
-               top: 50vh;
+               position: fixed;  
                z-index: 2;
                &: hover {
                     background-color: ${COLORS.GREEN_4};
@@ -46,15 +48,11 @@ const INDEX = {
           height: '2.5vh',
           $pointer: true,
           $styleString: `
-               right: 3vh; 
                background-color: ${COLORS.GREEN_STRONG}; 
-               border-radius: 1vh;
                padding: .75vh;
                transition: .5s;
-               position: fixed;
-               top: 9vh;
-               z-index: 2;
-               top: 55vh;              
+               position: fixed;  
+               z-index: 2;         
                &: hover {
                     background-color: ${COLORS.GREEN_4};
                }
@@ -67,36 +65,29 @@ const INDEX = {
                height: '2.5vh',
                $pointer: true,
                $styleString: `
-                    right: 3vh; 
                     background-color: ${COLORS.GREEN}; 
+                    padding: .75vh;
+                    transition: .5s;
+                    position: fixed;  
+                    z-index: 2;
                     &: hover {
                          background-color: ${COLORS.LIGHT_BLUE_STRONG};
                     }
-                    border-radius: 1vh;
-                    padding: .75vh;
-                    transition: .5s;
-                    position: fixed;
-                    top: 9vh;
-                    z-index: 2;
-                    top: 60vh;
           `} : {
                src: ICONS.MAIL_ME,
                width: '2.5vh',
                height: '2.5vh',
                $pointer: true,
                $styleString: `
-                    right: -10vh; 
                     background-color: ${COLORS.GREEN}; 
-                    &: hover {
-                         background-color: ${COLORS.LIGHT_BLUE_STRONG};
-                    }
                     border-radius: 1vh;
                     padding: .75vh;
                     transition: .5s;
                     position: fixed;
-                    top: 9vh;
                     z-index: 2;
-                    top: 60vh;
+                    &: hover {
+                         background-color: ${COLORS.LIGHT_BLUE_STRONG};
+                    }
           `})
      },
      Size: '2vh',
@@ -166,7 +157,7 @@ const HOME = {
 const ABOUT_ME = {
      $styleString: `      
           background: ${COLORS.GREY_SMOOTH};
-          height: 100vh;
+          padding-bottom: 10vh;
           background: linear-gradient(0deg, rgba(44,50,63,1) 0%, rgba(0,0,0,1) 100%);  
      `,
      $mainContainer: {
@@ -313,17 +304,16 @@ const TEXT_SPHERE: any = {
 const TECH_DESC = {
      $mainContainer: {
           $styleString: ` 
-               display: inline-block;
                position: relative;
-               top: 10vh;
-               left: -12.5vh;
+               display: flex;
+               justify-content: center;
+               margin-top: 10vh;
           `
      },
      textImage: {
           $styleString: ` 
-               position: relative;
-               top: -.5vh;
-               left: -4vh;
+               position: absolute;
+               top: -2vh;
                font-size: 1.1vh;
                justify-content: center;
                width: 5vh;
@@ -333,7 +323,6 @@ const TECH_DESC = {
      barMain: {
           $styleString: ` 
           display: flex;
-          left: -5vh;
           border-radius: 1vh;
           background-color: ${COLORS.GREY_STRONG};
      `},
@@ -344,15 +333,15 @@ const TECH_DESC = {
           border-top-right-radius: 1vh;
           border-bottom-right-radius: 1vh;
           margin-left: .2vh;
-          width: 50vh;
+          width: 30vh;
           background-color: ${COLORS.GREEN_2};
      `},
      barLevelContainer: (width: any) => {
-          const realWidth = width * 5
+          const realWidth = width * 3
           return {
                $styleString: ` 
-               border-top-right-radius: ${width ? width === 10 && '1vh' : '0vh'};
-               border-bottom-right-radius:  ${width ? width === 10 && '1vh' : '0vh'};
+               border-top-right-radius: ${width ? width > 9 && '1vh' : '0vh'};
+               border-bottom-right-radius:  ${width ? width > 9 && '1vh' : '0vh'};
                width: ${realWidth ? realWidth + 'vh' : '10vh'};
                background-color: ${COLORS.GREEN};
                transition: 1s;
@@ -362,18 +351,17 @@ const TECH_DESC = {
      typeWritter: {
           $styleString: `
                color: ${COLORS.WHITE};
-               font-size: 2.5vh; 
+               font-size: 1.75vh; 
                font-weight: bold;
-               margin-top: 2.2vh;
+               margin-top: 2.5vh;
      `
      },
      typeWritter2: {
           $styleString: `
                color: ${COLORS.WHITE};
-               font-size: 2.5vh; 
+               font-size: 1.75vh; 
                font-weight: bold;
-               margin-top: .1vh;
-               margin-left: 1vh;
+               margin-left: 2vh;
      `
      },
 }
@@ -381,7 +369,6 @@ const TECH_DESC = {
 const EXPERIENCE = {
      $styleString: `      
           background: ${COLORS.GREY_SMOOTH};
-          height: 100vh;
           background: linear-gradient(0deg, ${COLORS.BLACK} 10%, rgba(44,50,63,1) 70%);  
      `,
      $mainContainer: {
@@ -419,28 +406,126 @@ const EXPERIENCE = {
      },
      cardContainer: {
           $styleString: ` 
-               justify-content: center;
-               display: flex;
-               width: 90vw;
-               left: 5vw;
+               display: block;
+               position: absolute;
                gap: 2vh;
+               height: 55vh;
+               margin-left: 17.5vw;
+               overflow-x: hidden;
+               overflow-y: hidden;
           `
      },
      cardBox: [
           {
                $styleString: `
+          top: 5vh;
+          transition: .5s;
+          width: 30vh;
+          height: 40vh;
+          background-color: ${COLORS.GREY_DEEP};
+          border-radius: 1.5vh;
+          &: hover {
+               background-color: ${COLORS.GREY_LIGHT};
+               z-index: 99;
+          }
+          `,
+               $cardTitle: {
+                    text: 'Flutter Dev',
+                    size: '1.8vh',
+                    $styleString: `
+               color: white;
+               justify-content: center;
+               position: relative; 
+               z-index: 2;                        
+               top: 1vh;
+          `
+               },
+               $upperPart: {
+                    $styleString: `
+                    width: 30vh;
+                    height: 10vh;
+                    background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
+                    border-top-left-radius: 1vh;
+                    border-top-right-radius: 1vh;
+          `},
+               $cardBoxLogo: {
+                    $styleString: `
+                    width: 10vh;
+                    height: 10vh;
+                    top: -5vh;
+                    display: inline-block;
+                    background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
+                    border-radius: 10vh;
+                    box-shadow: .1vh .1vh 8vh .5vh black;
+          `},
+               media: {
+                    width: '7vh',
+                    height: '7vh',
+                    src: ICONS.WHITE_SMARTPHONE,
+                    $margin: '1.5vh 0',
+               },
+               $cardBoxText: {
+                    text: 'Beginner & Enthusiast',
+                    color: 'white',
+                    size: '2.5vh',
+                    $styleString: `
+               position: relative;
+               top: -3vh;
+               justify-content: center;
+          `
+               },
+               $cardBoxSubText: {
+                    text: 'Since 2022',
+                    color: 'white',
+                    size: '1.7vh',
+                    $styleString: `
+               position: relative;
+               justify-content: center;
+               top: -2.5vh;
+               font-weight: 300;
+          `
+               },
+               $cardBoxUlText: {
+                    text: ['◆ Self taught on the area.', '◆ Many demos made from scratch.', '◆ Next step as a programmer, formally work with Mobile.'],
+                    color: 'white',
+                    size: '1.2vh',
+                    $styleString: `
+                    font-weight: 100;
+          `},
+               $miniTextBoxes: {
+                    text: ['Mobile', 'React Native', 'Flutter'],
+                    color: 'white',
+                    size: '1vh',
+                    $mainContainer: `
+                    display: flex;
+                    margin-top: 2.1vh;
+                    left: 2vh;
+                    gap: .5vh;
+               `,
+                    container: `
+                    background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
+                    border-radius: .5vh;
+                    display: flex;
+                    bottom: -3.3vh;
+                    padding: .5vh .5vh .5vh .5vh;
+               `,
+                    $styleString: `
+                    font-weight: 100;
+          `
+               }
+          },
+          {
+               $styleString: `
+               top: -30vh;
                width: 30vh;
                height: 40vh;
-               top: 5vh;
                transition: .2s;
                background-color: ${COLORS.GREY_DEEP};
                border-radius: 1.5vh;
                &: hover {
                     background-color: ${COLORS.GREY_LIGHT};
-                    cursor: pointer;
-                    top: 4vh;
-               }
-          `,
+                    z-index: 99;
+               }`,
                $cardTitle: {
                     text: 'Claro',
                     size: '1.8vh',
@@ -503,7 +588,7 @@ const EXPERIENCE = {
                     size: '1.2vh',
                     $styleString: `
                          font-weight: 100;
-               `},
+          `},
                $miniTextBoxes: {
                     text: ['ReactTS', 'NodeJS', 'SQL', 'Web Apps'],
                     color: 'white',
@@ -525,22 +610,21 @@ const EXPERIENCE = {
                          font-weight: 100;
                `
                }
-
           },
           {
                $styleString: `
                width: 30vh;
+               top: -65vh;
+               overflow-y: hidden;
+               overflow-x: hidden;
                height: 40vh;
                transition: .2s;
-               top: 5vh;
                background-color: ${COLORS.GREY_DEEP};
                border-radius: 1.5vh;
                &: hover {
                     background-color: ${COLORS.GREY_LIGHT};
-                    cursor: pointer;
-                    top: 4vh;
-               }
-          `,
+                    z-index: 99;
+               }`,
                $cardTitle: {
                     text: 'Teeromu',
                     size: '1.8vh',
@@ -559,7 +643,7 @@ const EXPERIENCE = {
                          background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
-          `},
+               `},
                $cardBoxLogo: {
                     $styleString: `
                          width: 10vh;
@@ -569,7 +653,7 @@ const EXPERIENCE = {
                          background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
                          border-radius: 10vh;
                          box-shadow: .1vh .1vh 8vh .5vh black;
-          `},
+               `},
                media: {
                     width: '7vh',
                     height: '7vh',
@@ -626,108 +710,8 @@ const EXPERIENCE = {
                          font-weight: 100;
                `
                }
-
           },
-          {
-               $styleString: `
-               width: 30vh;
-               transition: .2s;
-               height: 40vh;
-               top: 5vh;
-               background-color: ${COLORS.GREY_DEEP};
-               border-radius: 1.5vh;
-               &: hover {
-                    background-color: ${COLORS.GREY_LIGHT};
-                    cursor: pointer;
-                    top: 4vh;
-               }
-          `,
-               $cardTitle: {
-                    text: 'Flutter Dev',
-                    size: '1.8vh',
-                    $styleString: `
-                    color: white;
-                    justify-content: center;
-                    position: relative; 
-                    z-index: 2;                        
-                    top: 1vh;
-               `
-               },
-               $upperPart: {
-                    $styleString: `
-                         width: 30vh;
-                         height: 10vh;
-                         background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
-                         border-top-left-radius: 1vh;
-                         border-top-right-radius: 1vh;
-          `},
-               $cardBoxLogo: {
-                    $styleString: `
-                         width: 10vh;
-                         height: 10vh;
-                         top: -5vh;
-                         display: inline-block;
-                         background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
-                         border-radius: 10vh;
-                         box-shadow: .1vh .1vh 8vh .5vh black;
-          `},
-               media: {
-                    width: '7vh',
-                    height: '7vh',
-                    src: ICONS.WHITE_SMARTPHONE,
-                    $margin: '1.5vh 0',
-               },
-               $cardBoxText: {
-                    text: 'Beginner & Enthusiast',
-                    color: 'white',
-                    size: '2.5vh',
-                    $styleString: `
-                    position: relative;
-                    top: -3vh;
-                    justify-content: center;
-               `
-               },
-               $cardBoxSubText: {
-                    text: 'Since 2022',
-                    color: 'white',
-                    size: '1.7vh',
-                    $styleString: `
-                    position: relative;
-                    justify-content: center;
-                    top: -2.5vh;
-                    font-weight: 300;
-               `
-               },
-               $cardBoxUlText: {
-                    text: ['◆ Self taught on the area.', '◆ Many demos made from scratch.', '◆ Next step as a programmer, formally work with Mobile.'],
-                    color: 'white',
-                    size: '1.2vh',
-                    $styleString: `
-                         font-weight: 100;
-               `},
-               $miniTextBoxes: {
-                    text: ['Mobile', 'React Native', 'Flutter'],
-                    color: 'white',
-                    size: '1vh',
-                    $mainContainer: `
-                         display: flex;
-                         margin-top: 2.1vh;
-                         left: 2vh;
-                         gap: .5vh;
-                    `,
-                    container: `
-                         background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
-                         border-radius: .5vh;
-                         display: flex;
-                         bottom: -3.3vh;
-                         padding: .5vh .5vh .5vh .5vh;
-                    `,
-                    $styleString: `
-                         font-weight: 100;
-               `
-               }
 
-          },
      ],
      $resumeMessage: {
           text: "Or check my",
@@ -738,7 +722,7 @@ const EXPERIENCE = {
                justify-content: center;
                z-index: 1;
                position: relative;
-               top: 10vh;
+               margin-top: 1vh;
           `,
      },
      $resumeMessage2: {
@@ -749,7 +733,7 @@ const EXPERIENCE = {
                justify-content: center;
                z-index: 1;
                position: relative;
-               top: 10vh;
+               margin-top: 1vh;
                cursor: pointer;
                color: ${COLORS.GREEN_3};
                &: hover {                    
@@ -764,9 +748,8 @@ const EXPERIENCE = {
           fontWeight: '100',
           $styleString: `   
                justify-content: center;
-               z-index: 1;
                position: relative;
-               top: 10vh;
+               margin-top: 5vh;
           `,
      },
      {
@@ -776,24 +759,19 @@ const EXPERIENCE = {
           onClick: () => window.open("https://www.linkedIn.com/in/mathiasalss/"),
           $styleString: `   
                justify-content: center;
-               z-index: 1;
-               position: relative;
-               top: 10vh;
-               margin-bottom: 1vh;
+               margin-top: 5vh;
                cursor: pointer;               
                color: ${COLORS.LIGHT_BLUE};
-               &: hover {
-                    
-               color: ${COLORS.LIGHT_BLUE_STRONG};
+               &: hover {                    
+                    color: ${COLORS.LIGHT_BLUE_STRONG};
                }
           `,
      }],
      contactWithContainer: {
           $styleString: `
-               display: flex; gap: .7vh; 
-               justify-content: center;
-               position: relative;
-               display: flex;               
+               display: flex; 
+               gap: .5vh; 
+               justify-content: center;   
           `
      },
      contactWith: {
@@ -803,7 +781,7 @@ const EXPERIENCE = {
                background: ${COLORS.LIGHT_BLUE_STRONG};           
                padding: 1vh;
                border-radius: 1vh;
-               top: 25vh;
+               margin-top: 5vh;
                height: 5vh;
                width: 20vh;
                &: hover {
@@ -825,8 +803,9 @@ const EXPERIENCE = {
           $styleString: `   
                justify-content: center;
                z-index: 1;
-               position: relative;
-               top: 42vh;
+               position: relative;               
+               padding-bottom: 1vh;
+               margin-top: 5vh;
           `,
      },
 }

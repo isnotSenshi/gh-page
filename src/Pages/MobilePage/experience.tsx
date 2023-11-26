@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect, useContext, useRef } from 'react'
 import { CustomBox } from '../../Styles/customBox'
-import { EXPERIENCE } from '../../Constants/components'
+import { EXPERIENCE } from '../../Constants/mobileComponents'
 import RenderMedia from '../../Components/Media'
 import RenderText from '../../Components/Text'
 import { COLORS } from '../../Constants/colors'
@@ -35,7 +35,7 @@ const Experience: FunctionComponent = () => {
                <CustomBox $styleString={EXPERIENCE.$styleString}>
                     <CustomBox $styleString={EXPERIENCE.$mainContainer.$styleString}>
                          <CustomBox {...EXPERIENCE.titleContainer}>
-                              <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE}/>
+                              <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE} />
                               <CustomBox {...EXPERIENCE.greenBar} />
                          </CustomBox>
 
@@ -78,19 +78,18 @@ const Experience: FunctionComponent = () => {
 
                          <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
                               <RenderText {...EXPERIENCE.$resumeMessage} />
-                              <Link to="/Archives/sh1-resume.pdf" target="_blank" download style={{textDecoration: 'none'}}>
+                              <Link to="/Archives/sh1-resume.pdf" target="_blank" download style={{ textDecoration: 'none' }}>
                                    <RenderText {...EXPERIENCE.$resumeMessage2} />
                               </Link>
-
                          </CustomBox>
-
-                         <RenderText {...EXPERIENCE.finalMessage} />
 
                          <CustomBox {...EXPERIENCE.contactWithContainer}>
                               <CustomBox {...EXPERIENCE.contactWith} onClick={setModal}>
                                    {mailMe && <RenderText text={'Contact with me'} {...EXPERIENCE.contactWithText} />}
                               </CustomBox>
                          </CustomBox>
+
+                         <RenderText {...EXPERIENCE.finalMessage} />
                     </CustomBox>
 
                </CustomBox>

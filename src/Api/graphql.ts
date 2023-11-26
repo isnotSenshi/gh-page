@@ -18,8 +18,6 @@ const REFRESH_TOKEN = () => {
      return generateToken(formattedDate, process.env.REACT_APP_TOKEN_XCODE)
 }
 
-console.log(REFRESH_TOKEN())
-
 const authMiddleware = new ApolloLink((operation, forward) => {
      operation.setContext(({ headers = {} }) => ({
           headers: {

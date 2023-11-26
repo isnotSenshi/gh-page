@@ -53,7 +53,7 @@ const AboutMe: FunctionComponent = () => {
 
                               <CustomBox $styleString={'display: inline-block;'}>
                                    <CustomBox {...ABOUT_ME.skills}>
-                                        <RenderText text={"Skills Box"} {...ABOUT_ME.skillsText} color={COLORS.WHITE} />
+                                        <RenderText text={"Skill Box"} {...ABOUT_ME.skillsText} color={COLORS.WHITE} />
                                         <RenderText text={"Interact with me!"} {...ABOUT_ME.skillsText2} color={COLORS.GREEN} />
                                    </CustomBox>
 

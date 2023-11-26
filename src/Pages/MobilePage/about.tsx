@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react'
 import { CustomBox } from '../../Styles/customBox'
-import { ABOUT_ME, TEXT_SPHERE } from '../../Constants/components'
+import { ABOUT_ME, TEXT_SPHERE } from '../../Constants/mobileComponents'
 import RenderMedia from '../../Components/Media'
 import RenderText from '../../Components/Text'
 import { COLORS } from '../../Constants/colors'
@@ -21,7 +21,7 @@ const AboutMe: FunctionComponent = () => {
                               <CustomBox {...ABOUT_ME.greenBar} />
                          </CustomBox>
 
-                         <CustomBox $styleString={'display: flex; justify-content: space-around;'}>
+                         <CustomBox $styleString={'display: block; padding: 5vw;'}>
                               <CustomBox {...ABOUT_ME.introductionMe}>
                                    <CustomBox {...ABOUT_ME.textBox}>
                                         <RenderText text={ABOUT_ME_TEXT.textBox1} {...ABOUT_ME.whoIam} color={COLORS.WHITE} />
@@ -53,7 +53,7 @@ const AboutMe: FunctionComponent = () => {
 
                               <CustomBox $styleString={'display: inline-block;'}>
                                    <CustomBox {...ABOUT_ME.skills}>
-                                        <RenderText text={"Skills Box"} {...ABOUT_ME.skillsText} color={COLORS.WHITE} />
+                                        <RenderText text={"Skill Box"} {...ABOUT_ME.skillsText} color={COLORS.WHITE} />
                                         <RenderText text={"Interact with me!"} {...ABOUT_ME.skillsText2} color={COLORS.GREEN} />
                                    </CustomBox>
 

@@ -1,8 +1,6 @@
 import { FunctionComponent, useState, useEffect } from 'react'
 import IndexPage from '../MainPage/indexMain'
 import IndexPageMobile from '../MobilePage/indexMobile'
-import methods from '../../Api/methods'
-import { XcodeQuery } from '../../Api/querys/xcode'
 
 const RenderApp: FunctionComponent = () => {
 

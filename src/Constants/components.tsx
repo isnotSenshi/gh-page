@@ -790,7 +790,7 @@ const EXPERIENCE = {
      }],
      contactWithContainer: {
           $styleString: `
-               display: flex; gap: .7vh; 
+               display: flex; gap: .5vh; 
                justify-content: center;
                position: relative;
                display: flex;               

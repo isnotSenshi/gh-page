@@ -1,4 +1,4 @@
-import { ABOUT_ME, TECH_DESC } from '../../Constants/components'
+import { ABOUT_ME, TECH_DESC } from '../../Constants/mobileComponents'
 import { CustomBox } from '../../Styles/customBox'
 import { CONTEXT } from '../../App/context'
 import React, { useContext, useEffect, useState } from 'react'
@@ -19,6 +19,8 @@ const TechDesc = () => {
           setImg(greenBox?.icon)
           setlevel(greenBox?.level)
      }, [greenBox])
+
+     console.log(greenText, greenLevel)
 
      return ((greenText || greenImg || greenLevel) &&
           <CustomBox {...TECH_DESC.$mainContainer}>

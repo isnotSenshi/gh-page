@@ -2,7 +2,7 @@ import { FunctionComponent, useContext, useEffect } from 'react'
 import Homepage from './home'
 import AboutMe from './about'
 import RenderMedia from '../../Components/Media'
-import { INDEX } from '../../Constants/components'
+import { INDEX } from '../../Constants/mobileComponents'
 import { CustomBox } from '../../Styles/customBox'
 import Experience from './experience'
 import { CHANGE_SPHERE_BOX } from '../../Core/Types'
@@ -11,7 +11,6 @@ import ModalContact from '../../Components/ModalContact'
 
 const IndexPageMobile: FunctionComponent = () => {
 
-     console.log('MOBILE RENDER')
      const { state, dispatch }: any = useContext(CONTEXT)
      const { mailMe }: any = state
 
@@ -20,7 +19,7 @@ const IndexPageMobile: FunctionComponent = () => {
                type: CHANGE_SPHERE_BOX,
                value: { text: null, icon: null, level: null }
           })
-          
+
           const about: any = document.getElementsByClassName('aboutScroll')
 
           switch (place) {
@@ -39,7 +38,8 @@ const IndexPageMobile: FunctionComponent = () => {
      return (
           <>
                <ModalContact showModal={state.showModal} />
-               <CustomBox $styleString={'display: inline-block; transition: .5s;'}>
+
+               {/*<CustomBox {...INDEX.mainContainer}>
                     <CustomBox onClick={() => handleClick('HOME')} >
                          <RenderMedia {...INDEX.$arrowDow} />
                     </CustomBox>
@@ -49,12 +49,11 @@ const IndexPageMobile: FunctionComponent = () => {
                     <CustomBox onClick={() => handleClick('EXP')} >
                          <RenderMedia {...INDEX.$arrowDow2} />
                     </CustomBox>
-
                     <CustomBox onClick={() => handleClick('EXP')} >
                          <RenderMedia {...INDEX.$arrowDow3(!mailMe)} />
                     </CustomBox>
+               </CustomBox >*/}
 
-               </CustomBox >
                <Homepage />
                <AboutMe />
                <Experience />
