@@ -111,17 +111,16 @@ const HOME = {
           $styleString: `   
           font-weight: bold;
           text-align: center;
-          item-align: center;
           top: 15vh;
      `,
      },
      $logo: {
           src: ICONS.CONDING_DOGE,
-          width: '5%',
+          width: '5vw',
           $styleString: `
                border: .5vh solid ${COLORS.GREEN};
                border-radius: 500vh;
-               margin-bottom: 1vh;
+               margin-bottom: 10vh;
           `
      },
      $presentationText: {

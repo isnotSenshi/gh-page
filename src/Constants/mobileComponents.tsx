@@ -108,11 +108,11 @@ const HOME = {
      },
      $logo: {
           src: ICONS.CONDING_DOGE,
-          width: '5%',
+          width: '10vh',
           $styleString: `
                border: .5vh solid ${COLORS.GREEN};
                border-radius: 500vh;
-               margin-bottom: 1vh;
+               margin-bottom: 5vh;
           `
      },
      $presentationText: {
@@ -770,7 +770,7 @@ const EXPERIENCE = {
      contactWithContainer: {
           $styleString: `
                display: flex; 
-               gap: .5vh; 
+               gap: .35vh; 
                justify-content: center;   
           `
      },

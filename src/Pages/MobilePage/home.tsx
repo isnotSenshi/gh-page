@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react'
 import { CustomBox } from '../../Styles/customBox'
-import { HOME } from '../../Constants/components'
+import { HOME } from '../../Constants/mobileComponents'
 import RenderMedia from '../../Components/Media'
 import RenderText from '../../Components/Text'
 import { COLORS } from '../../Constants/colors'
