@@ -318,74 +318,6 @@ const TEXT_SPHERE: any = {
      ]
 }
 
-const TECH_DESC = {
-     $mainContainer: {
-          $styleString: ` 
-               display: inline-block;
-               position: relative;
-               top: 10vh;
-               left: -12.5vh;
-          `
-     },
-     textImage: {
-          $styleString: ` 
-               position: relative;
-               top: -.5vh;
-               left: -4vh;
-               font-size: 1.1vh;
-               justify-content: center;
-               width: 5vh;
-               color: white;
-          `
-     },
-     barMain: {
-          $styleString: ` 
-          display: flex;
-          left: -5vh;
-          border-radius: 1vh;
-          background-color: ${COLORS.GREY_STRONG};
-     ` },
-     barContainer:
-     {
-          $styleString: ` 
-          display: flex;
-          border-top-right-radius: 1vh;
-          border-bottom-right-radius: 1vh;
-          margin-left: .2vh;
-          width: 50vh;
-          background-color: ${COLORS.GREEN_2};
-     ` },
-     barLevelContainer: (width: any) => {
-          const realWidth = width * 5
-          return {
-               $styleString: ` 
-               border-top-right-radius: ${width ? width === 10 && '1vh' : '0vh'};
-               border-bottom-right-radius:  ${width ? width === 10 && '1vh' : '0vh'};
-               width: ${realWidth ? realWidth + 'vh' : '10vh'};
-               background-color: ${COLORS.GREEN};
-               transition: 1s;
-               `
-          }
-     },
-     typeWritter: {
-          $styleString: `
-               color: ${COLORS.WHITE};
-               font-size: 2.5vh; 
-               font-weight: bold;
-               margin-top: 2.2vh;
-     `
-     },
-     typeWritter2: {
-          $styleString: `
-               color: ${COLORS.WHITE};
-               font-size: 2.5vh; 
-               font-weight: bold;
-               margin-top: .1vh;
-               margin-left: 1vh;
-     `
-     },
-}
-
 const EXPERIENCE = {
      $styleString: `      
           background: ${COLORS.GREY_SMOOTH};
@@ -834,6 +766,7 @@ const EXPERIENCE = {
 const MODAL_CONTACT = {
      mainConainer: {
           $styleString: `
+          height: 47.5vh;
           padding: 3vh;
           background: ${COLORS.GREY_SMOOTH};  
           border-radius: 1vh;
@@ -887,6 +820,7 @@ const MODAL_CONTACT = {
                     border-radius: .5vh;
                     position: absolute;
                     top: -2.5vh;
+                    user-select: none;
                     left: 1vh;
                     padding: .5vh;
                     z-index: 1;
@@ -900,7 +834,8 @@ const MODAL_CONTACT = {
                font-size: 1.5vh;
                border-radius: .5vh;
                position: absolute;
-               top: .75vh;
+               top: .5vh;
+               user-select: none;
                left: 2vh;
                padding: .5vh;
                z-index: 1;
@@ -922,6 +857,7 @@ const MODAL_CONTACT = {
                     border-radius: .5vh;
                     position: absolute;
                     top: -2.5vh;
+                    user-select: none;
                     left: 1vh;
                     padding: .5vh;
                     z-index: 1;
@@ -934,9 +870,11 @@ const MODAL_CONTACT = {
           $styleString: `		
                font-size: 1.5vh;
                border-radius: .5vh;
+               height: 3.5vh;
                position: absolute;
-               top: .75vh;
+               top: .5vh;
                left: 2vh;
+               user-select: none;
                padding: .5vh;
                z-index: 1;
                color: ${COLORS.WHITE_GREY};
@@ -944,23 +882,32 @@ const MODAL_CONTACT = {
 		`,
      },
      input1: {
-          $styleString: `		
+          $styleString: `	
                     padding: 1.5vh 1.5vh 1.5vh 1vh;
                     font-size: 1.5vh;
                     border: .25vh solid transparent;
+                    height: 3.5vh;
+                    width: -webkit-fill-available;
 			     background-color: ${COLORS.GREY_DEEP};
+                    padding: 0 1vh;
                     border-radius: .5vh;
                     color: white;
+                    outline: 0;
 		`,
      },
      input2: {
-          $styleString: `		
+          $styleString: `	                    
                     padding: 1.5vh 1.5vh 1.5vh 1vh;
+                    text-overflow: hidden;
+                    height: 3.5vh;
+                    width: -webkit-fill-available;
                     font-size: 1.5vh;	
                     border: .2vh solid ${COLORS.GREEN_STRONG}; 
+                    padding: 0 1vh;
                     border-radius: .5vh;
 			     background-color: ${COLORS.GREY_DEEP};
                     color: white;
+                    outline: 0;
 		`,
      },
      messageContainer: {
@@ -978,6 +925,7 @@ const MODAL_CONTACT = {
                     position: absolute;
                     top: -2.5vh;
                     left: 1vh;
+                    user-select: none;
                     padding: .5vh;
                     z-index: 1;
                     color: ${COLORS.GREEN_STRONG};
@@ -991,6 +939,7 @@ const MODAL_CONTACT = {
                     border-radius: .5vh;
                     position: absolute;
                     top: 1vh;
+                    user-select: none;
                     left: 2vh;
                     padding: .5vh;
                     z-index: 1;
@@ -1001,22 +950,28 @@ const MODAL_CONTACT = {
      message1: {
           $styleString: `	                    
                     font-family: Montserrat;
+                    font-weight: 600;
                     height: 10vh;	
+                    width: -webkit-fill-available;
+                    height: 3.5vh;
                     resize: none;                    
                     justify-content: flex-start;
                     padding: 1.5vh 1.5vh 1.5vh 1vh;
                     font-size: 1.5vh;
-                    border: .25vh solid transparent;
+                    border: .25vh 
+                    width: -webkit-fill-available;
 			     background-color: ${COLORS.GREY_DEEP};
                     border-radius: .5vh;
                     color: white;
-                    ine-break: auto;
+                    line-break: auto;
 		`,
      },
      message2: {
           $styleString: `		
                     font-family: Montserrat;
+                    font-weight: 600;
                     height: 10vh;	
+                    width: -webkit-fill-available;
                     resize: none;
                     padding: 1.5vh 1.5vh 1.5vh 1vh;
                     text-overflow: hidden;
@@ -1025,6 +980,7 @@ const MODAL_CONTACT = {
                     border-radius: .5vh;
 			     background-color: ${COLORS.GREY_DEEP};
                     color: white;
+                    outline: 0;
 		`,
      },
      contactModal: (aviable: any) => {
@@ -1079,7 +1035,6 @@ export {
      HOME,
      ABOUT_ME,
      TEXT_SPHERE,
-     TECH_DESC,
      INDEX,
      EXPERIENCE,
      MODAL_CONTACT,
