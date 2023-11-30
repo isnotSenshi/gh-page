@@ -5,7 +5,7 @@ export interface BoxInterface {
      background?: any
      $styleString?: string
      $fadeAnimation?: boolean
-     barAnimation?: boolean
+     $barAnimation?: boolean
 }
 
 const fadeAnimation = keyframes`
@@ -33,5 +33,5 @@ export const CustomBox = styled('div') <BoxInterface>`
      ${(props) => props.$styleString};
      position: relative;
      background: ${(props) => props.background && props.background};
-     animation: ${(props) => props.barAnimation ? barAnimation : props.$fadeAnimation && fadeAnimation} 2s 1;
+     animation: ${(props) => props.$barAnimation ? barAnimation : props.$fadeAnimation && fadeAnimation} 2s 1;
 `

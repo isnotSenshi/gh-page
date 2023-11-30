@@ -19,7 +19,7 @@ const SwiperCards = () => {
                >
                     <CustomBox $styleString={'display: flex; justify-content: center;'}>
                          {EXPERIENCE.cardBox.map((card: any, i: any) => (
-                              <SwiperSlide key={uuidv4()}>
+                              <SwiperSlide key={'swiper' + i}>
                                    <Card {...card} />
                               </SwiperSlide>
                          ))}

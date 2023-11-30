@@ -26,7 +26,7 @@ const TechDesc = () => {
                <CustomBox {...TECH_DESC.barMain}>
                     <RenderMedia src={greenImg} width={'5vh'} height={'5vh'} $styleString={'border-radius: 2vh; padding: 1vh;'} />
                     <CustomBox {...TECH_DESC.barContainer}>
-                         <CustomBox {...TECH_DESC.barLevelContainer(greenLevel)} barAnimation>
+                         <CustomBox {...TECH_DESC.barLevelContainer(greenLevel)} $barAnimation>
                               {greenLevel >= 4 && <CustomBox {...TECH_DESC.typeWritter}>
                                    <Typewriter
                                         options={{
