@@ -21,7 +21,7 @@ const AboutMe: FunctionComponent = () => {
                               <CustomBox {...ABOUT_ME.greenBar} />
                          </CustomBox>
 
-                         <CustomBox $styleString={'display: flex; justify-content: space-around;'}>
+                         <CustomBox $styleString={'display: flex; justify-content: space-around; margin-top: 15vh;'}>
                               <CustomBox {...ABOUT_ME.introductionMe}>
                                    <CustomBox {...ABOUT_ME.textBox}>
                                         <RenderText text={ABOUT_ME_TEXT.textBox1} {...ABOUT_ME.whoIam} color={COLORS.WHITE} />
@@ -51,7 +51,7 @@ const AboutMe: FunctionComponent = () => {
                                    </CustomBox >
                               </CustomBox>
 
-                              <CustomBox $styleString={'display: inline-block;'}>
+                              <CustomBox {...ABOUT_ME.techTextSphere}>
                                    <CustomBox {...ABOUT_ME.skills}>
                                         <RenderText text={"Skill Box"} {...ABOUT_ME.skillsText} color={COLORS.WHITE} />
                                         <RenderText text={"Interact with me!"} {...ABOUT_ME.skillsText2} color={COLORS.GREEN} />
@@ -59,8 +59,9 @@ const AboutMe: FunctionComponent = () => {
 
                                    <CustomBox {...TEXT_SPHERE.container}>
                                         <TextShpere />
-                                        <TechDesc />
                                    </CustomBox>
+
+                                   <TechDesc />
                               </CustomBox>
 
                          </CustomBox>

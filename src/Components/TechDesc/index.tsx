@@ -1,7 +1,7 @@
-import { ABOUT_ME, TECH_DESC } from '../../Constants/mobileComponents'
+import { TECH_DESC } from '../../Constants/mobileComponents'
 import { CustomBox } from '../../Styles/customBox'
 import { CONTEXT } from '../../App/context'
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import RenderMedia from '../Media'
 import Typewriter from 'typewriter-effect'
 import { GreenBoxText } from '../../utils/greenBoxText'
@@ -20,11 +20,9 @@ const TechDesc = () => {
           setlevel(greenBox?.level)
      }, [greenBox])
 
-     console.log(greenText, greenLevel)
-
-     return ((greenText || greenImg || greenLevel) &&
-          <CustomBox {...TECH_DESC.$mainContainer}>
-               <RenderText text={greenText} {...TECH_DESC.textImage} />
+     return (
+          <CustomBox {...TECH_DESC.$mainContainer((greenText || greenImg || greenLevel))} >
+               <RenderText text={greenText || '0'} {...TECH_DESC.textImage((greenText || greenImg || greenLevel))} />
                <CustomBox {...TECH_DESC.barMain}>
                     <RenderMedia src={greenImg} width={'5vh'} height={'5vh'} $styleString={'border-radius: 2vh; padding: 1vh;'} />
                     <CustomBox {...TECH_DESC.barContainer}>

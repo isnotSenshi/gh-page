@@ -1,7 +1,6 @@
 import { FunctionComponent, useEffect, useContext, useRef } from 'react'
 import { CustomBox } from '../../Styles/customBox'
 import { EXPERIENCE } from '../../Constants/components'
-import RenderMedia from '../../Components/Media'
 import RenderText from '../../Components/Text'
 import { COLORS } from '../../Constants/colors'
 import useOnScreen from '../../Hooks/checkVisibility'
@@ -9,6 +8,7 @@ import { CONTEXT } from '../../App/context'
 import { MAIL_ME_STATUS, SHOW_MODAL } from '../../Core/Types'
 import { v4 as uuidv4 } from 'uuid'
 import { Link } from 'react-router-dom'
+import SwiperComponent from '../../Components/Swiper'
 
 const Experience: FunctionComponent = () => {
 
@@ -35,40 +35,11 @@ const Experience: FunctionComponent = () => {
                <CustomBox $styleString={EXPERIENCE.$styleString}>
                     <CustomBox $styleString={EXPERIENCE.$mainContainer.$styleString}>
                          <CustomBox {...EXPERIENCE.titleContainer}>
-                              <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE}/>
+                              <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE} />
                               <CustomBox {...EXPERIENCE.greenBar} />
                          </CustomBox>
-
-                         <CustomBox {...EXPERIENCE.cardContainer}>
-                              {EXPERIENCE.cardBox.map((card: any, i: any) => (
-                                   <CustomBox {...card} key={uuidv4()}>
-                                        <CustomBox {...card.$upperPart}>
-                                             <RenderText {...card.$cardTitle} />
-                                        </CustomBox>
-                                        <CustomBox {...card.$cardBoxLogo}>
-                                             <RenderMedia {...card.media} />
-                                        </CustomBox>
-                                        <RenderText {...card.$cardBoxText} />
-                                        <RenderText {...card.$cardBoxSubText} />
-
-                                        <CustomBox style={{ margin: '-2vh 0' }}>
-                                             {card.$cardBoxUlText.text.map((cardUl: any, i: any) => (
-                                                  <CustomBox style={{ textAlign: 'left', left: '3vh', maxWidth: '25vh', marginTop: '1vh' }} key={uuidv4()}>
-                                                       <RenderText {...card.$cardBoxUlText} text={cardUl} />
-                                                  </CustomBox>
-                                             ))}
-                                        </CustomBox>
-
-                                        <CustomBox $styleString={card.$miniTextBoxes.$mainContainer}>
-                                             {card.$miniTextBoxes.text.map((boxText: any, i: any) => (
-                                                  <CustomBox $styleString={card.$miniTextBoxes.container} key={uuidv4()}>
-                                                       <RenderText {...card.$cardBoxUlText} text={boxText} />
-                                                  </CustomBox>
-                                             ))}
-                                        </CustomBox>
-                                   </CustomBox>
-                              ))}
-                         </CustomBox>
+                         
+                         <SwiperComponent />
 
                          <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
                               {EXPERIENCE.$linkedInMessage.map((message: any) =>
@@ -78,10 +49,9 @@ const Experience: FunctionComponent = () => {
 
                          <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
                               <RenderText {...EXPERIENCE.$resumeMessage} />
-                              <Link to="/Archives/sh1-resume.pdf" target="_blank" download style={{textDecoration: 'none'}}>
+                              <Link to="/Archives/sh1-resume.pdf" target="_blank" download style={{ textDecoration: 'none' }}>
                                    <RenderText {...EXPERIENCE.$resumeMessage2} />
                               </Link>
-
                          </CustomBox>
 
                          <RenderText {...EXPERIENCE.finalMessage} />

@@ -1,4 +1,3 @@
-import { FC } from 'react'
 import styled from 'styled-components'
 
 export interface CustomTextInterface {
@@ -23,7 +22,7 @@ export const CustomText = styled('div')<CustomTextInterface>`
 	display: flex;
 	font-weight: ${(props) => props.fontWeight};
 	color: ${(props) => props.color};
-	font-size: ${(props) => props.size} !important;
+	font-size: ${(props) => props.size};
 	text-align: ${(props) => props.align};
 	padding: ${(props) => props.padding};
 	margin: ${(props) => props.$margin};

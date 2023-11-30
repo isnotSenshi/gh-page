@@ -36,7 +36,7 @@ export const Title: FC<TitleInterface> = styled('div')<{
 	box-sizing: border-box;
 	font-weight: ${(props) => props.fontWeight};
 	color: ${(props) => props.color};
-	font-size: ${(props) => props.size} !important;
+	font-size: ${(props) => props.size};
 	text-align: ${(props) => props.align};
 	padding: ${(props) => props.padding};
 	margin: ${(props) => props.margin};

@@ -22,6 +22,7 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "^5.0.1",
     "styled-components": "^6.0.4",
+    "swiper": "^11.0.5",
     "TagCloud": "^2.3.2",
     "typescript": "^4.9.5",
     "typewriter-effect": "^2.20.1",

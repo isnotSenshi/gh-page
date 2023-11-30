@@ -17,7 +17,7 @@ const AboutMe: FunctionComponent = () => {
                <CustomBox $styleString={ABOUT_ME.$styleString} className='aboutScroll'>
                     <CustomBox $styleString={ABOUT_ME.$mainContainer.$styleString}>
                          <CustomBox {...ABOUT_ME.titleContainer}>
-                              <RenderText text={"About Me"} {...ABOUT_ME.titleAbout} color={COLORS.WHITE}/>
+                              <RenderText text={"About Me"} {...ABOUT_ME.titleAbout} color={COLORS.WHITE} />
                               <CustomBox {...ABOUT_ME.greenBar} />
                          </CustomBox>
 
@@ -45,13 +45,13 @@ const AboutMe: FunctionComponent = () => {
                                         <RenderText text={ABOUT_ME_TEXT.$presentationText} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         <CustomBox {...ABOUT_ME.whiteBar} />
                                         <CustomBox $styleString={'display: flex;'}>
-                                             <RenderMedia {...ABOUT_ME.location} $margin={'.15vh .25vh 0 0'}/>
+                                             <RenderMedia {...ABOUT_ME.location} $margin={'.15vh .25vh 0 0'} />
                                              <RenderText text={"Buenos Aires, Argentina"} {...ABOUT_ME.text1} color={COLORS.WHITE} />
                                         </CustomBox>
                                    </CustomBox >
                               </CustomBox>
 
-                              <CustomBox $styleString={'display: inline-block;'}>
+                              <CustomBox {...ABOUT_ME.techTextSphere}>
                                    <CustomBox {...ABOUT_ME.skills}>
                                         <RenderText text={"Skill Box"} {...ABOUT_ME.skillsText} color={COLORS.WHITE} />
                                         <RenderText text={"Interact with me!"} {...ABOUT_ME.skillsText2} color={COLORS.GREEN} />
@@ -59,14 +59,15 @@ const AboutMe: FunctionComponent = () => {
 
                                    <CustomBox {...TEXT_SPHERE.container}>
                                         <TextShpere />
-                                        <TechDesc />
                                    </CustomBox>
+
+                                   <TechDesc />
                               </CustomBox>
 
                          </CustomBox>
                     </CustomBox>
                </CustomBox>
-               
+
 
           </>
      )

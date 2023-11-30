@@ -8,7 +8,6 @@ import ModalContact from '../../Components/ModalContact'
 const IndexPageMobile: FunctionComponent = () => {
 
      const { state }: any = useContext(CONTEXT)
-     console.log('mpobile')
 
      return (
           <>
