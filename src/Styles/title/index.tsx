@@ -19,7 +19,7 @@ export interface TitleInterface {
 	hover?: boolean
 }
 
-export const Title: FC<TitleInterface> = styled('div')<{
+export const Title: FC<TitleInterface> = styled('div') <{
 	title?: string
 	color?: string
 	size?: string

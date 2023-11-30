@@ -18,7 +18,7 @@ const INDEX = {
                top: 45vh;
                &: hover {
                     background-color: ${COLORS.GREEN_4};
-               }
+                }
           `
      },
      $arrowDow1: {
@@ -37,7 +37,7 @@ const INDEX = {
                z-index: 2;
                &: hover {
                     background-color: ${COLORS.GREEN_4};
-               }
+                }
           `
      },
      $arrowDow2: {
@@ -57,7 +57,7 @@ const INDEX = {
                top: 55vh;              
                &: hover {
                     background-color: ${COLORS.GREEN_4};
-               }
+                }
           `
      },
      $arrowDow3: (mailMe: boolean) => {
@@ -71,7 +71,7 @@ const INDEX = {
                     background-color: ${COLORS.GREEN}; 
                     &: hover {
                          background-color: ${COLORS.LIGHT_BLUE_STRONG};
-                    }
+                     }
                     border-radius: 1vh;
                     padding: .75vh;
                     transition: .5s;
@@ -79,7 +79,7 @@ const INDEX = {
                     top: 9vh;
                     z-index: 2;
                     top: 60vh;
-          `} : {
+          ` } : {
                src: ICONS.MAIL_ME,
                width: '2.5vh',
                height: '2.5vh',
@@ -89,7 +89,7 @@ const INDEX = {
                     background-color: ${COLORS.GREEN}; 
                     &: hover {
                          background-color: ${COLORS.LIGHT_BLUE_STRONG};
-                    }
+                     }
                     border-radius: 1vh;
                     padding: .75vh;
                     transition: .5s;
@@ -97,7 +97,7 @@ const INDEX = {
                     top: 9vh;
                     z-index: 2;
                     top: 60vh;
-          `})
+          ` })
      },
      Size: '2vh',
 }
@@ -252,7 +252,7 @@ const ABOUT_ME = {
           font-size: 1.5vh; 
           font-weight: 100;
           margin-bottom: 1.2vh;
-     `},
+     ` },
      typeWritter: {
           $styleString: `
           color: ${COLORS.WHITE};
@@ -294,7 +294,7 @@ const TEXT_SPHERE: any = {
                padding: 1vh 1.5vh 1vh 1.5vh;
                background-color: ${COLORS.GREEN_2};
                border: .5vh solid ${COLORS.GREEN};
-     `},
+     ` },
      cloud: {
           $styleString: `   
                font-weight: bold;
@@ -344,7 +344,7 @@ const TECH_DESC = {
           left: -5vh;
           border-radius: 1vh;
           background-color: ${COLORS.GREY_STRONG};
-     `},
+     ` },
      barContainer:
      {
           $styleString: ` 
@@ -354,7 +354,7 @@ const TECH_DESC = {
           margin-left: .2vh;
           width: 50vh;
           background-color: ${COLORS.GREEN_2};
-     `},
+     ` },
      barLevelContainer: (width: any) => {
           const realWidth = width * 5
           return {
@@ -444,7 +444,7 @@ const EXPERIENCE = {
           &: hover {
                background-color: ${COLORS.GREY_LIGHT};
                cursor: pointer; 
-          }
+           }
           `,
           $cardTitle: {
                text: 'Flutter Dev',
@@ -464,7 +464,7 @@ const EXPERIENCE = {
                     background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
                     border-top-left-radius: 1vh;
                     border-top-right-radius: 1vh;
-          `},
+          ` },
           $cardBoxLogo: {
                $styleString: `
                     width: 10vh;
@@ -474,7 +474,7 @@ const EXPERIENCE = {
                     background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
                     border-radius: 10vh;
                     box-shadow: .1vh .1vh 8vh .5vh black;
-          `},
+          ` },
           media: {
                width: '7vh',
                height: '7vh',
@@ -508,7 +508,7 @@ const EXPERIENCE = {
                size: '1.2vh',
                $styleString: `
                     font-weight: 100;
-          `},
+          ` },
           $miniTextBoxes: {
                text: ['Mobile', 'React Native', 'Flutter'],
                color: 'white',
@@ -542,7 +542,7 @@ const EXPERIENCE = {
                &: hover {
                     background-color: ${COLORS.GREY_LIGHT};
                     cursor: pointer;        
-               }`,
+                }`,
           $cardTitle: {
                text: 'Claro',
                size: '1.8vh',
@@ -561,7 +561,7 @@ const EXPERIENCE = {
                          background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
-          `},
+          ` },
           $cardBoxLogo: {
                $styleString: `
                          width: 10vh;
@@ -571,7 +571,7 @@ const EXPERIENCE = {
                          background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
                          border-radius: 10vh;
                          box-shadow: .1vh .1vh 8vh .5vh black;
-          `},
+          ` },
           media: {
                width: '8vh',
                height: '9.7vh',
@@ -605,7 +605,7 @@ const EXPERIENCE = {
                size: '1.2vh',
                $styleString: `
                          font-weight: 100;
-          `},
+          ` },
           $miniTextBoxes: {
                text: ['ReactTS', 'NodeJS', 'SQL', 'Web Apps'],
                color: 'white',
@@ -639,7 +639,7 @@ const EXPERIENCE = {
                &: hover {
                     background-color: ${COLORS.GREY_LIGHT};
                     cursor: pointer;    
-               }`,
+                }`,
           $cardTitle: {
                text: 'Teeromu',
                size: '1.8vh',
@@ -658,7 +658,7 @@ const EXPERIENCE = {
                          background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
-          `},
+          ` },
           $cardBoxLogo: {
                $styleString: `
                          width: 10vh;
@@ -668,7 +668,7 @@ const EXPERIENCE = {
                          background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
                          border-radius: 10vh;
                          box-shadow: .1vh .1vh 8vh .5vh black;
-          `},
+          ` },
           media: {
                width: '7vh',
                height: '7vh',
@@ -703,7 +703,7 @@ const EXPERIENCE = {
                $styleString: `
                          font-weight: 100;
                          top: -1vh;
-          `},
+          ` },
           $miniTextBoxes: {
                text: ['App design', 'Games', 'Challengers', 'Web'],
                color: 'white',
@@ -753,7 +753,7 @@ const EXPERIENCE = {
                color: ${COLORS.GREEN_3};
                &: hover {                    
                     color: ${COLORS.GREEN_5};
-               }
+                }
           `,
      },
      $linkedInMessage: [{
@@ -784,7 +784,7 @@ const EXPERIENCE = {
                &: hover {
                     
                color: ${COLORS.LIGHT_BLUE_STRONG};
-               }
+                }
           `,
      }],
      contactWithContainer: {
@@ -807,7 +807,7 @@ const EXPERIENCE = {
                width: 20vh;
                &: hover {
                     background-color: ${COLORS.LIGHT_BLUE};
-               }
+                }
           `
      },
      contactWithText: {
@@ -837,7 +837,7 @@ const MODAL_CONTACT = {
           padding: 3vh;
           background: ${COLORS.GREY_SMOOTH};  
           border-radius: 1vh;
-     `},
+     ` },
      titleModal: {
           text: "Mail me ",
           color: COLORS.WHITE,
@@ -870,7 +870,7 @@ const MODAL_CONTACT = {
                cursor: pointer;
                &: hover { 
                     color: ${COLORS.LIGHT_BLUE};
-               }
+                }
           `
      },
      nameContainer: {
@@ -1041,8 +1041,8 @@ const MODAL_CONTACT = {
                margin-right: 12vh;
                &: hover {
                     background-color: ${aviable ? COLORS.LIGHT_BLUE : COLORS.RED_STRONG};
-               }
-          `}
+                }
+          ` }
      },
      contactModalText: {
           color: 'white',
@@ -1072,7 +1072,7 @@ const SWIPER_MAIN = {
      container: {
           $styleString: `
                margin-top: 5vh;
-     `},
+     ` },
 }
 
 export {

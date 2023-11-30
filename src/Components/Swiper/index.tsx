@@ -6,7 +6,6 @@ import { EffectCards } from 'swiper/modules'
 import { CustomBox } from '../../Styles/customBox'
 import { EXPERIENCE, SWIPER_MAIN } from '../../Constants/components'
 import Card from '../Card'
-import { v4 as uuidv4 } from 'uuid'
 
 const SwiperCards = () => {
      return (

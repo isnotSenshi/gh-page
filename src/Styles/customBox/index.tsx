@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 
 export interface BoxInterface {
@@ -17,7 +17,7 @@ const fadeAnimation = keyframes`
         opacity: 1;
         top: 15vh;
      }
-`;
+`
 
 const barAnimation = keyframes`
      0% {
@@ -26,7 +26,7 @@ const barAnimation = keyframes`
      100% {
           width: 100;
      }
-`;
+`
 
 
 export const CustomBox = styled('div') <BoxInterface>`

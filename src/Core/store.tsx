@@ -1,5 +1,3 @@
-import ICONS from "../Constants/icons"
-
 export interface Store {
 }
 

@@ -9,10 +9,6 @@ interface ModalWrapperInterface {
 	minWidth?: string
 }
 
-interface ModalContentInterface {
-	$styleString?: string
-}
-
 export const ModalContainer = styled('div')<ModalContainer>`
 	width: 100%;
 	height: 100%;

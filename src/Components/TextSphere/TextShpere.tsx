@@ -22,13 +22,13 @@ const TextShpere = () => {
   function reportWindowSize() {
     setWindowSize(window.innerHeight / 8)
   }
-  window.onresize = reportWindowSize;
+  window.onresize = reportWindowSize
 
   return (
     <CustomBox {...TEXT_SPHERE.cloud}>
       <TagCloud
         style={{ width: '30vh' }}
-        onClick={e => changeGreenBox(e)}
+        onClick={(e: any) => changeGreenBox(e)}
         options={{
           maxSpeed: "normal",
           initSpeed: "normal",

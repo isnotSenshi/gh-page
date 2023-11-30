@@ -17,7 +17,7 @@ import folderBlack from '../Images/data.svg'
 import robotBlack from '../Images/robot.svg'
 import dogeCoding from '../Images/dogogif.gif'
 import dogePng from '../Images/dogepng.png'
-import linkedIn from '../Images/linkedin.png'
+import linkedInImg from '../Images/linkedin.png'
 import location from '../Images/location.png'
 import linkedInBlue from '../Images/linkedinblue.png'
 import styledCo from '../Images/styledCo.png'
@@ -40,7 +40,7 @@ export const ICONS = {
      CLARO: claro,
      SQL: sql,
      TEEROMU: teeromu,
-     linkedIn: linkedIn,
+     linkedIn: linkedInImg,
      linkedIn_BLUE: linkedInBlue,
      WHITE_SMARTPHONE: smartPhoneWhite,
      REACT: react,

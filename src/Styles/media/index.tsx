@@ -52,20 +52,20 @@ const imgAnimation = keyframes`
   30%   {rotate: -10deg;}
   35%   {rotate: 0deg;}
   100%  {rotate: 0deg;}
-`;
+`
 
 export const ShakingImg = styled("img")(
 	({ width }) => css`
-	  width: ${width ? width : '60px'};
+	  width: ${width || '60px'};
 	  display: block;
 	  margin-left: auto;
 	  margin-right: auto;
 	  animation: ${imgAnimation} 2s infinite;
 	`
-);
+)
 
 export const ShakingText = styled("div")(
-	({ style }) => css`
+	() => css`
 		font-size: ${'3vh'};
 		transform-origin: bottom right;
 		transform: rotate(10deg);
@@ -74,6 +74,6 @@ export const ShakingText = styled("div")(
 		animation-iteration-count: infinite;  
 		position: relative;
 	`
-);
+)
 
 

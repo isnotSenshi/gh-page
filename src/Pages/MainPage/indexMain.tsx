@@ -28,7 +28,7 @@ const IndexPage: FunctionComponent = () => {
                case 'EXP':
                     return window.scrollTo(99999, 99999)
                default:
-                    break;
+                    break
           }
      }
 

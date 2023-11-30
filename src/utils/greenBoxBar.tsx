@@ -25,6 +25,6 @@ export const greenBoxLevel = (lang: string) => {
           case 'GIT':
                return 6
           default:
-               break;
+               break
      }
 }
