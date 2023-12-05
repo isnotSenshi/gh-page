@@ -357,16 +357,9 @@ const EXPERIENCE = {
           `
 
      },
-     cardContainer: {
-          $styleString: ` 
-               justify-content: center;
-               display: flex;
-               width: 90vw;
-               gap: 2vh;
-          `
-     },
-     cardBox: [{
-          $styleString: `
+     cardBox: [
+          {
+               $styleString: `
           transition: .5s;
           position: absolute;
           width: 30vh;
@@ -378,27 +371,27 @@ const EXPERIENCE = {
                cursor: pointer; 
            }
           `,
-          $cardTitle: {
-               text: 'Flutter Dev',
-               size: '1.8vh',
-               $styleString: `
+               $cardTitle: {
+                    text: 'Flutter Dev',
+                    size: '1.8vh',
+                    $styleString: `
                color: white;
                justify-content: center;
                position: relative; 
                z-index: 2;                        
                top: 1vh;
           `
-          },
-          $upperPart: {
-               $styleString: `
+               },
+               $upperPart: {
+                    $styleString: `
                     width: 30vh;
                     height: 10vh;
                     background: linear-gradient(82deg, rgba(0,255,226,1) 0%, rgba(86,255,0,1) 100%);
                     border-top-left-radius: 1vh;
                     border-top-right-radius: 1vh;
           ` },
-          $cardBoxLogo: {
-               $styleString: `
+               $cardBoxLogo: {
+                    $styleString: `
                     width: 10vh;
                     height: 10vh;
                     top: -5vh;
@@ -407,64 +400,65 @@ const EXPERIENCE = {
                     border-radius: 10vh;
                     box-shadow: .1vh .1vh 8vh .5vh black;
           ` },
-          media: {
-               width: '7vh',
-               height: '7vh',
-               src: ICONS.WHITE_SMARTPHONE,
-               $margin: '1.5vh 0',
-          },
-          $cardBoxText: {
-               text: 'Beginner & Enthusiast',
-               color: 'white',
-               size: '2.5vh',
-               $styleString: `
+               media: {
+                    width: '7vh',
+                    height: '7vh',
+                    src: ICONS.WHITE_SMARTPHONE,
+                    $margin: '1.5vh 0',
+               },
+               $cardBoxText: {
+                    text: 'Beginner & Enthusiast',
+                    color: 'white',
+                    size: '2.5vh',
+                    $styleString: `
                position: relative;
                top: -3vh;
                justify-content: center;
           `
-          },
-          $cardBoxSubText: {
-               text: 'Since 2022',
-               color: 'white',
-               size: '1.7vh',
-               $styleString: `
+               },
+               $cardBoxSubText: {
+                    text: 'Since 2022',
+                    color: 'white',
+                    size: '1.7vh',
+                    $styleString: `
                position: relative;
                justify-content: center;
                top: -2.5vh;
                font-weight: 300;
           `
-          },
-          $cardBoxUlText: {
-               text: ['◆ Self taught on the area.', '◆ Many demos made from scratch.', '◆ Next step as a programmer, formally work with Mobile.'],
-               color: 'white',
-               size: '1.2vh',
-               $styleString: `
+               },
+               $cardBoxUlText: {
+                    text: ['◆ Self taught on the area.', '◆ Many demos made from scratch.', '◆ Next step as a programmer, formally work with Mobile.'],
+                    color: 'white',
+                    size: '1.2vh',
+                    $styleString: `
                     font-weight: 100;
           ` },
-          $miniTextBoxes: {
-               text: ['Mobile', 'React Native', 'Flutter'],
-               color: 'white',
-               size: '1vh',
-               $mainContainer: `
+               $miniTextBoxes: {
+                    text: ['Mobile', 'React Native', 'Flutter'],
+                    color: 'white',
+                    size: '1vh',
+                    $mainContainer: `
                     display: flex;
                     margin-top: 2.1vh;
                     left: 2vh;
                     gap: .5vh;
                `,
-               container: `
+                    container: `
                     background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
                     border-radius: .5vh;
                     display: flex;
                     bottom: -3.3vh;
                     padding: .5vh .5vh .5vh .5vh;
                `,
-               $styleString: `
+                    $styleString: `
                     font-weight: 100;
           `
-          }
-     },
-     {
-          $styleString: `
+               }
+          },
+          {
+               hrefLink: 'https://weplan-latam.com/',
+               $styleString: `
                width: 30vh;
                position: absolute;
                height: 40vh;
@@ -475,27 +469,27 @@ const EXPERIENCE = {
                     background-color: ${COLORS.GREY_LIGHT};
                     cursor: pointer;        
                 }`,
-          $cardTitle: {
-               text: 'Claro',
-               size: '1.8vh',
-               $styleString: `
+               $cardTitle: {
+                    text: 'Claro',
+                    size: '1.8vh',
+                    $styleString: `
                          color: white;
                          justify-content: center;
                          position: relative; 
                          z-index: 2;                        
                          top: 1vh;
                     `
-          },
-          $upperPart: {
-               $styleString: `
+               },
+               $upperPart: {
+                    $styleString: `
                          width: 30vh;
                          height: 10vh;
                          background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
           ` },
-          $cardBoxLogo: {
-               $styleString: `
+               $cardBoxLogo: {
+                    $styleString: `
                          width: 10vh;
                          height: 10vh;
                          top: -5vh;
@@ -504,64 +498,64 @@ const EXPERIENCE = {
                          border-radius: 10vh;
                          box-shadow: .1vh .1vh 8vh .5vh black;
           ` },
-          media: {
-               width: '8vh',
-               height: '9.7vh',
-               src: ICONS.CLARO,
-               $margin: '0',
-          },
-          $cardBoxText: {
-               text: 'Fullstack Developer',
-               color: 'white',
-               size: '2.5vh',
-               $styleString: `
+               media: {
+                    width: '8vh',
+                    height: '9.7vh',
+                    src: ICONS.CLARO,
+                    $margin: '0',
+               },
+               $cardBoxText: {
+                    text: 'Fullstack Developer',
+                    color: 'white',
+                    size: '2.5vh',
+                    $styleString: `
                     position: relative;
                     top: -3vh;
                     justify-content: center;
                `
-          },
-          $cardBoxSubText: {
-               text: '2021 - Current',
-               color: 'white',
-               size: '1.7vh',
-               $styleString: `
+               },
+               $cardBoxSubText: {
+                    text: '2021 - Current',
+                    color: 'white',
+                    size: '1.7vh',
+                    $styleString: `
                     position: relative;
                     justify-content: center;
                     top: -2.5vh;
                     font-weight: 300;
                `
-          },
-          $cardBoxUlText: {
-               text: ['◆ Ssr Developer at WePlan S.A.', '◆ Web design, Back-end support, bug fixer, customer engagement.', ' ◆ Code quality control, code smells fixing, clean code coverage.'],
-               color: 'white',
-               size: '1.2vh',
-               $styleString: `
+               },
+               $cardBoxUlText: {
+                    text: ['◆ Ssr Developer at WePlan S.A.', '◆ Web design, Back-end support, bug fixer, customer engagement.', ' ◆ Code quality control, code smells fixing, clean code coverage.'],
+                    color: 'white',
+                    size: '1.2vh',
+                    $styleString: `
                          font-weight: 100;
           ` },
-          $miniTextBoxes: {
-               text: ['ReactTS', 'NodeJS', 'SQL', 'Web Apps'],
-               color: 'white',
-               size: '1vh',
-               $mainContainer: `
+               $miniTextBoxes: {
+                    text: ['ReactTS', 'NodeJS', 'SQL', 'Web Apps'],
+                    color: 'white',
+                    size: '1vh',
+                    $mainContainer: `
                          display: flex;
                          justify-content: left;
                          left: 2vh;
                          gap: .5vh;
                     `,
-               container: `
+                    container: `
                          background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
                          border-radius: .5vh;
                          bottom: -4vh;
                          display: flex;
                          padding: .5vh .5vh .5vh .5vh;
                     `,
-               $styleString: `
+                    $styleString: `
                          font-weight: 100;
                `
-          }
-     },
-     {
-          $styleString: `
+               }
+          },
+          {
+               $styleString: `
                width: 30vh;
                height: 40vh;
                transition: .5s;
@@ -572,27 +566,27 @@ const EXPERIENCE = {
                     background-color: ${COLORS.GREY_LIGHT};
                     cursor: pointer;    
                 }`,
-          $cardTitle: {
-               text: 'Teeromu',
-               size: '1.8vh',
-               $styleString: `
+               $cardTitle: {
+                    text: 'Teeromu',
+                    size: '1.8vh',
+                    $styleString: `
                     color: white;
                     justify-content: center;
                     position: relative; 
                     z-index: 2;                        
                     top: 1vh;
                `
-          },
-          $upperPart: {
-               $styleString: `
+               },
+               $upperPart: {
+                    $styleString: `
                          width: 30vh;
                          height: 10vh;
                          background: linear-gradient(82deg, rgba(255,46,0,1) 0%, rgba(255,124,0,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
           ` },
-          $cardBoxLogo: {
-               $styleString: `
+               $cardBoxLogo: {
+                    $styleString: `
                          width: 10vh;
                          height: 10vh;
                          top: -5vh;
@@ -601,64 +595,63 @@ const EXPERIENCE = {
                          border-radius: 10vh;
                          box-shadow: .1vh .1vh 8vh .5vh black;
           ` },
-          media: {
-               width: '7vh',
-               height: '7vh',
-               src: ICONS.TEEROMU,
-               $margin: '1.5vh 0',
-          },
-          $cardBoxText: {
-               text: 'Creative Lead - Software Developer',
-               color: 'white',
-               size: '2.5vh',
-               $styleString: `
+               media: {
+                    width: '7vh',
+                    height: '7vh',
+                    src: ICONS.TEEROMU,
+                    $margin: '1.5vh 0',
+               },
+               $cardBoxText: {
+                    text: 'Creative Lead - Software Developer',
+                    color: 'white',
+                    size: '2.5vh',
+                    $styleString: `
                     position: relative;
                     top: -3vh;
                     justify-content: center;
                `
-          },
-          $cardBoxSubText: {
-               text: '2019 - Current',
-               color: 'white',
-               size: '1.7vh',
-               $styleString: `
+               },
+               $cardBoxSubText: {
+                    text: '2019 - Current',
+                    color: 'white',
+                    size: '1.7vh',
+                    $styleString: `
                     position: relative;
                     justify-content: center;
                     top: -2.5vh;
                     font-weight: 300;
                `
-          },
-          $cardBoxUlText: {
-               text: ['◆ Responsible for general software team, development, architecture and design.', '◆ Vanguardist software team.'],
-               color: 'white',
-               size: '1.2vh',
-               $styleString: `
+               },
+               $cardBoxUlText: {
+                    text: ['◆ Responsible for general software team, development, architecture and design.', '◆ Vanguardist software team.'],
+                    color: 'white',
+                    size: '1.2vh',
+                    $styleString: `
                          font-weight: 100;
                          top: -1vh;
           ` },
-          $miniTextBoxes: {
-               text: ['App design', 'Games', 'Challengers', 'Web'],
-               color: 'white',
-               size: '1vh',
-               $mainContainer: `
+               $miniTextBoxes: {
+                    text: ['App design', 'Games', 'Challengers', 'Web'],
+                    color: 'white',
+                    size: '1vh',
+                    $mainContainer: `
                          display: flex;
                          justify-content: left;
                          left: 2vh;
                          gap: .5vh;
                     `,
-               container: `
+                    container: `
                          background: linear-gradient(251deg, rgba(80,88,106,1) 0%, rgba(104,110,124,1) 100%);
                          border-radius: .5vh;
                          display: flex;
                          bottom: -5vh;
                          padding: .5vh .5vh .5vh .5vh;
                     `,
-               $styleString: `
+                    $styleString: `
                          font-weight: 100;
                `
-          }
-     },
-
+               }
+          },
      ],
      $resumeMessage: {
           text: "Or check my",
