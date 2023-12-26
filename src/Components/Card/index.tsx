@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid'
 const Card = (card: any) => {
      return (
           <CustomBox {...card} key={uuidv4()}>
-               <a href={card.hrefLink} target="_blank" style={{ textDecoration: 'none' }}>
+               <a href={card.hreflink} target="_blank" style={{ textDecoration: 'none' }}>
                     <CustomBox {...card.$upperPart}>
                          <RenderText {...card.$cardTitle} />
                     </CustomBox>
