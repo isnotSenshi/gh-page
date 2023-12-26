@@ -946,7 +946,6 @@ const MODAL_CONTACT = {
                     font-weight: 600;
                     height: 10vh;	
                     width: -webkit-fill-available;
-                    height: 3.5vh;
                     resize: none;                    
                     justify-content: flex-start;
                     padding: 1.5vh 1.5vh 1.5vh 1vh;
