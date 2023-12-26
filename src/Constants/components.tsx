@@ -457,7 +457,7 @@ const EXPERIENCE = {
                }
           },
           {
-               hreflink: 'https://weplan-latam.com/',
+               $hreflink: 'https://weplan-latam.com/',
                $styleString: `
                width: 30vh;
                position: absolute;

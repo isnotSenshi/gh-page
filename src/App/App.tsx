@@ -5,7 +5,9 @@ import { store } from '../Core/store'
 import { Reducer } from '../Core/Reducer'
 
 function App() {
+  
   const [state, dispatch] = useReducer(Reducer, store)
+
   return (
     <Provider value={{ dispatch, state }}>
       <>

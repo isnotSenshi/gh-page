@@ -8,9 +8,6 @@ import { ShakingText } from '../../Styles/media'
 import Typewriter from 'typewriter-effect'
 
 const Homepage: FunctionComponent = () => {
-     
-     const pjson = require('../../../package.json')
-     console.log("Version: ", pjson.version)
 
      return (
           <CustomBox {...HOME}>
