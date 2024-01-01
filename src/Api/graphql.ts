@@ -1,8 +1,5 @@
-import packageJson from '../../package.json'
 import { ApolloClient, InMemoryCache, HttpLink, ApolloLink, concat } from '@apollo/client'
 import { generateToken } from '../utils/generateToken'
-
-console.info('Version: ', packageJson.version)
 
 const httpLink = new HttpLink({ uri: process.env.REACT_APP_SH1_GRAPHQL })
 
@@ -19,7 +16,7 @@ const REFRESH_TOKEN = () => {
 }
 
 const authMiddleware = new ApolloLink((operation, forward) => {
-     operation.setContext(({ headers = {} }) => ({
+     operation.setContext(({ headers = { 'Content-Type': 'application/json' } }) => ({
           headers: {
                ...headers,
                token: REFRESH_TOKEN(),
@@ -32,8 +29,13 @@ const client = new ApolloClient({
      link: concat(authMiddleware, httpLink),
      cache: new InMemoryCache(),
      defaultOptions: {
+          watchQuery: {
+               fetchPolicy: 'cache-and-network',
+               errorPolicy: 'ignore',
+          },
           query: {
-               fetchPolicy: 'network-only'
+               fetchPolicy: 'network-only',
+
           },
           mutate: {
                fetchPolicy: 'network-only'
