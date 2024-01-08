@@ -6,7 +6,6 @@ import { COLORS } from '../../Constants/colors'
 import useOnScreen from '../../Hooks/checkVisibility'
 import { CONTEXT } from '../../App/context'
 import { MAIL_ME_STATUS, SHOW_MODAL } from '../../Core/Types'
-import { v4 as uuidv4 } from 'uuid'
 import { Link } from 'react-router-dom'
 import SwiperComponent from '../../Components/Swiper'
 
@@ -43,7 +42,7 @@ const Experience: FunctionComponent = () => {
 
                          <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
                               {EXPERIENCE.$linkedInMessage.map((message: any) =>
-                                   <RenderText {...message} key={uuidv4()} />
+                                   <RenderText {...message}/*  key={} */ />
                               )}
                          </CustomBox>
 
