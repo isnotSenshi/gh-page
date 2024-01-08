@@ -8,6 +8,7 @@ import { CONTEXT } from '../../App/context'
 import { MAIL_ME_STATUS, SHOW_MODAL } from '../../Core/Types'
 import { Link } from 'react-router-dom'
 import SwiperComponent from '../../Components/Swiper'
+import uniqueId from 'lodash/uniqueId'
 
 const Experience: FunctionComponent = () => {
 
@@ -30,40 +31,37 @@ const Experience: FunctionComponent = () => {
      }, [isVisible])
 
      return (
-          <>
-               <CustomBox $styleString={EXPERIENCE.$styleString}>
-                    <CustomBox $styleString={EXPERIENCE.$mainContainer.$styleString}>
-                         <CustomBox {...EXPERIENCE.titleContainer}>
-                              <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE} />
-                              <CustomBox {...EXPERIENCE.greenBar} />
-                         </CustomBox>
-                         
-                         <SwiperComponent />
-
-                         <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
-                              {EXPERIENCE.$linkedInMessage.map((message: any) =>
-                                   <RenderText {...message}/*  key={} */ />
-                              )}
-                         </CustomBox>
-
-                         <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
-                              <RenderText {...EXPERIENCE.$resumeMessage} />
-                              <Link to="/Archives/sh1-resume.pdf" target="_blank" download style={{ textDecoration: 'none' }}>
-                                   <RenderText {...EXPERIENCE.$resumeMessage2} />
-                              </Link>
-                         </CustomBox>
-
-                         <RenderText {...EXPERIENCE.finalMessage} />
-
-                         <CustomBox {...EXPERIENCE.contactWithContainer}>
-                              <CustomBox {...EXPERIENCE.contactWith} onClick={setModal}>
-                                   {mailMe && <RenderText text={'Contact with me'} {...EXPERIENCE.contactWithText} />}
-                              </CustomBox>
-                         </CustomBox>
+          <CustomBox $styleString={EXPERIENCE.$styleString}>
+               <CustomBox $styleString={EXPERIENCE.$mainContainer.$styleString}>
+                    <CustomBox {...EXPERIENCE.titleContainer}>
+                         <RenderText text={"Experience"} {...EXPERIENCE.titleExperience} color={COLORS.WHITE} />
+                         <CustomBox {...EXPERIENCE.greenBar} />
                     </CustomBox>
 
+                    <SwiperComponent />
+
+                    <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
+                         {EXPERIENCE.$linkedInMessage.map((message: any) =>
+                              <RenderText {...message} key={uniqueId()} />
+                         )}
+                    </CustomBox>
+
+                    <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
+                         <RenderText {...EXPERIENCE.$resumeMessage} />
+                         <Link to="/Archives/sh1-resume.pdf" target="_blank" download style={{ textDecoration: 'none' }}>
+                              <RenderText {...EXPERIENCE.$resumeMessage2} />
+                         </Link>
+                    </CustomBox>
+
+                    <RenderText {...EXPERIENCE.finalMessage} />
+
+                    <CustomBox {...EXPERIENCE.contactWithContainer}>
+                         <CustomBox {...EXPERIENCE.contactWith} onClick={setModal}>
+                              {mailMe && <RenderText text={'Contact with me'} {...EXPERIENCE.contactWithText} />}
+                         </CustomBox>
+                    </CustomBox>
                </CustomBox>
-          </>
+          </CustomBox>
      )
 }
 export default Experience

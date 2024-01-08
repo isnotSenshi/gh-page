@@ -8,6 +8,7 @@ import { CONTEXT } from '../../App/context'
 import { MAIL_ME_STATUS, SHOW_MODAL } from '../../Core/Types'
 import { Link } from 'react-router-dom'
 import SwiperComponent from '../../Components/Swiper'
+import uniqueId from 'lodash/uniqueId'
 
 const Experience: FunctionComponent = () => {
      const { state, dispatch }: any = useContext(CONTEXT)
@@ -40,7 +41,7 @@ const Experience: FunctionComponent = () => {
 
                     <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
                          {EXPERIENCE.$linkedInMessage.map((message: any) =>
-                              <RenderText {...message}/*  key={} */ />
+                              <RenderText {...message} key={uniqueId()}/>
                          )}
                     </CustomBox>
 

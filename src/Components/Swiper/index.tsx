@@ -6,6 +6,7 @@ import { EffectCards } from 'swiper/modules'
 import { CustomBox } from '../../Styles/customBox'
 import { EXPERIENCE, SWIPER_MAIN } from '../../Constants/components'
 import Card from '../Card'
+import uniqueId from 'lodash/uniqueId'
 
 const SwiperCards = () => {
      return (
@@ -18,7 +19,7 @@ const SwiperCards = () => {
                >
                     <CustomBox $styleString={'display: flex; justify-content: center;'}>
                          {EXPERIENCE.cardBox.map((card: any, i: any) => (
-                              <SwiperSlide key={'swiper' + i}>
+                              <SwiperSlide key={uniqueId()}>
                                    <Card {...card} />
                               </SwiperSlide>
                          ))}
