@@ -16,6 +16,7 @@ const REFRESH_TOKEN = () => {
 }
 
 const authMiddleware = new ApolloLink((operation, forward) => {
+     console.log("token:", REFRESH_TOKEN)
      operation.setContext(({ headers = { 'Content-Type': 'application/json' } }) => ({
           headers: {
                ...headers,
