@@ -12,11 +12,11 @@ const httpLink = new HttpLink({ uri: process.env.REACT_APP_SH1_GRAPHQL })
 const REFRESH_TOKEN = () => {
      const date = new Date()
      const formattedDate = `${date.getDate()}${date.getMonth() + 1}${date.getFullYear()}${date.getHours()}${date.getMinutes()}`
+     console.log("token:", generateToken(formattedDate, process.env.REACT_APP_TOKEN_XCODE))
      return generateToken(formattedDate, process.env.REACT_APP_TOKEN_XCODE)
 }
 
 const authMiddleware = new ApolloLink((operation, forward) => {
-     console.log("token:", REFRESH_TOKEN)
      operation.setContext(({ headers = { 'Content-Type': 'application/json' } }) => ({
           headers: {
                ...headers,
