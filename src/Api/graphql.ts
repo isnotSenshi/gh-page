@@ -13,6 +13,7 @@ const REFRESH_TOKEN = () => {
      const date = new Date()
      const formattedDate = `${date.getDate()}${date.getMonth() + 1}${date.getFullYear()}${date.getMinutes()}`
      console.log("token:", generateToken(formattedDate, process.env.REACT_APP_TOKEN_XCODE))
+     console.log("date:", date)
      return generateToken(formattedDate, process.env.REACT_APP_TOKEN_XCODE)
 }
 
