@@ -417,7 +417,7 @@ const EXPERIENCE = {
 
      },
      cardBox: [
-          {
+          /*{
                href: '',
                $styleString: `
           transition: .5s;
@@ -515,7 +515,7 @@ const EXPERIENCE = {
                     font-weight: 100;
           `
                }
-          },
+          },*/
           {
                $hreflink: 'https://weplan-latam.com/',
                $styleString: `
@@ -663,7 +663,7 @@ const EXPERIENCE = {
                     $margin: '1.5vh 0',
                },
                $cardBoxText: {
-                    text: 'Creative Lead - Software Developer',
+                    text: 'One man Army',
                     color: 'white',
                     size: '2.5vh',
                     $styleString: `
@@ -684,7 +684,7 @@ const EXPERIENCE = {
                `
                },
                $cardBoxUlText: {
-                    text: ['◆ Responsible for general software team, development, architecture and design.', '◆ Vanguardist software team.'],
+                    text: ['◆ Development.', '◆ Architecture.', '◆ Design.'],
                     color: 'white',
                     size: '1.2vh',
                     $styleString: `
@@ -692,7 +692,7 @@ const EXPERIENCE = {
                          top: -1vh;
           ` },
                $miniTextBoxes: {
-                    text: ['App design', 'Games', 'Challengers', 'Web'],
+                    text: ['App design', 'Games', 'Challenges', 'Web'],
                     color: 'white',
                     size: '1vh',
                     $mainContainer: `

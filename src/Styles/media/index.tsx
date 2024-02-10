@@ -44,6 +44,16 @@ export const Media = styled('img') <MediaInterface>`
 `
 
 const imgAnimation = keyframes`
+  5%    {rotate: 0deg;}
+  10%   {rotate: -10deg;}
+  15%   {rotate: 0deg;}
+  20%   {rotate: -10deg;}
+  25%   {rotate: 0deg;}
+  30%   {rotate: -10deg;}
+  35%   {rotate: 0deg;}
+  100%  {rotate: 0deg;}
+  `
+const imgAnimation2 = keyframes`
   0%    {margin-left: 1vh;}
   15%   {margin-left: -1vh;}
   20%   {margin-left: 1vh;}
@@ -62,7 +72,7 @@ export const ShakingImg = styled("img")(
 	({ width }) => css`
 	  width: ${width || '60px'};
 	  display: block;
-	  animation: ${imgAnimation} 5s infinite;
+	  animation: ${imgAnimation2} 4s infinite;
 	`
 )
 
