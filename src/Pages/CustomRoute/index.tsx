@@ -2,6 +2,7 @@ import { useContext, useEffect, FC } from 'react'
 import { CONTEXT } from '../../App/context'
 import { useNavigate } from 'react-router-dom'
 import { NAVIGATE_TO, CHANGE_SPHERE_BOX } from '../../Core/Types'
+import Starfield from 'react-starfield'
 
 interface PageInterface {
 	element?: any
@@ -30,6 +31,13 @@ const CustomRoute: FC<PageInterface> = ({ element }) => {
 		}
 	}, [path])
 
-	return element
+	return <div>
+		<Starfield
+			starCount={999}
+			starColor={[255, 255, 255]}
+			speedFactor={0.05}
+			backgroundColor="black"
+		/>{element}
+	</div>
 }
 export default CustomRoute
