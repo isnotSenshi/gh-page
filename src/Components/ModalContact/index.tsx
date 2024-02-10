@@ -10,8 +10,7 @@ import { useOutsideRef } from '../../Hooks/useOutsideRef'
 import { CONTEXT } from '../../App/context'
 import { ADD_INITIAL_VALUE, SHOW_MODAL } from '../../Core/Types'
 import { Input, TextArea } from '../../Styles/textInputs'
-import { EmailJsMutation } from '../../Api/mutations/emialJs'
-import methods from '../../Api/methods'
+import { emailJS } from '../../Api/addAccount'
 
 const ModalContact = ({ showModal }: any) => {
 
@@ -100,11 +99,8 @@ const ModalContact = ({ showModal }: any) => {
 	}
 
 	const handleSubmit = () => {
-		methods.mutate(
-			dispatch,
-			EmailJsMutation(inputNameValue, textValue, inputValue),
-			handleSubmitOk()
-		)
+		emailJS(inputNameValue, textValue, inputValue)
+		handleSubmitOk()
 	}
 
 	useEffect(() => {
