@@ -44,23 +44,25 @@ export const Media = styled('img') <MediaInterface>`
 `
 
 const imgAnimation = keyframes`
-  5%    {rotate: 0deg;}
-  10%   {rotate: -10deg;}
-  15%   {rotate: 0deg;}
-  20%   {rotate: -10deg;}
-  25%   {rotate: 0deg;}
-  30%   {rotate: -10deg;}
-  35%   {rotate: 0deg;}
-  100%  {rotate: 0deg;}
+  0%    {margin-left: 1vh;}
+  15%   {margin-left: -1vh;}
+  20%   {margin-left: 1vh;}
+  25%   {margin-left: -1vh;}
+  30%   {margin-left: 1vh;}
+  35%   {margin-left: -1vh;}
+  40%   {margin-left: 1vh;}
+  45%   {margin-left: -1vh;}
+  50%   {margin-left: 1vh;}
+  55%   {margin-left: -1vh;}
+  60%   {margin-left: 0vh;}
+  100%   {margin-left: 0vh;}
 `
 
 export const ShakingImg = styled("img")(
 	({ width }) => css`
 	  width: ${width || '60px'};
 	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	  animation: ${imgAnimation} 2s infinite;
+	  animation: ${imgAnimation} 5s infinite;
 	`
 )
 

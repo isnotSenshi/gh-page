@@ -41,7 +41,7 @@ const Experience: FunctionComponent = () => {
 
                     <CustomBox {...EXPERIENCE.contactWithContainer} ref={ref}>
                          {EXPERIENCE.$linkedInMessage.map((message: any) =>
-                              <RenderText {...message} key={uniqueId()}/>
+                              <RenderText {...message} key={uniqueId()} />
                          )}
                     </CustomBox>
 

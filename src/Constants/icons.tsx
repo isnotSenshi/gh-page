@@ -31,6 +31,7 @@ import mailMe from '../Images/mailme.png'
 import claro from '../Images/claro.png'
 import teeromu from '../Images/teeromu.png'
 import smartPhoneWhite from '../Images/smartphonewhite.png'
+import swipe from '../Images/swipe.png'
 
 export const ICONS = {
      PEPE_PNG: pepePng,
@@ -65,7 +66,8 @@ export const ICONS = {
      BLACK_ROBOT: robotBlack,
      BLACK_FOLDER: folderBlack,
      BLACK_MOBILE: mobileBlack,
-     BLACK_WWW: internetBlack
+     BLACK_WWW: internetBlack,
+     SWIPE: swipe,
 }
 
 export default ICONS

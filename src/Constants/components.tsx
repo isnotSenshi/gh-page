@@ -104,6 +104,7 @@ const INDEX = {
 
 const HOME = {
      $styleString: `      
+          overflow-x: hidden; 
           height: 100vh;
           animation-iteration-count: 1;  
      `,
@@ -1020,6 +1021,7 @@ const SWIPER_MAIN = {
      container: {
           $styleString: `
                margin-top: 5vh;
+               position: fixed;               
      ` },
 }
 
