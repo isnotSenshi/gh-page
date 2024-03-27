@@ -320,7 +320,8 @@ const TEXT_SPHERE: any = {
 }
 
 const EXPERIENCE = {
-     $styleString: `      
+     $styleString: `   
+          top: -1px;   
           background: ${COLORS.GREY_SMOOTH};
           height: 100vh;
           background: linear-gradient(0deg, ${COLORS.BLACK} 10%, rgba(44,50,63,1) 70%);  
@@ -471,7 +472,7 @@ const EXPERIENCE = {
                     cursor: pointer;        
                 }`,
                $cardTitle: {
-                    text: 'Claro',
+                    text: 'We Plan',
                     size: '1.8vh',
                     $styleString: `
                          color: white;
@@ -501,9 +502,9 @@ const EXPERIENCE = {
           ` },
                media: {
                     width: '8vh',
-                    height: '9.7vh',
-                    src: ICONS.CLARO,
-                    $margin: '0',
+                    height: '8vh',
+                    src: ICONS.WE_PLAN,
+                    $margin: '1vh 0 0 0',
                },
                $cardBoxText: {
                     text: 'Fullstack Developer',
@@ -527,7 +528,7 @@ const EXPERIENCE = {
                `
                },
                $cardBoxUlText: {
-                    text: ['◆ Ssr Developer at WePlan S.A.', '◆ Web design, Back-end support, bug fixer, customer engagement.', ' ◆ Code quality control, code smells fixing, clean code coverage.'],
+                    text: ['◆ Ssr Developer at WePlan S.A.', '◆ Web programming, Back-end support, bug fixer, customer engagement.', ' ◆ Code quality control, code smells, clean code coverage.'],
                     color: 'white',
                     size: '1.2vh',
                     $styleString: `

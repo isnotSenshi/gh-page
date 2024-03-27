@@ -380,7 +380,9 @@ const TECH_DESC = {
 
 const EXPERIENCE = {
      $styleString: `      
+          top: -1px;   
           background: ${COLORS.GREY_SMOOTH};
+          height: 100vh;
           background: linear-gradient(0deg, ${COLORS.BLACK} 10%, rgba(44,50,63,1) 70%);  
      `,
      $mainContainer: {

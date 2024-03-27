@@ -32,6 +32,7 @@ import claro from '../Images/claro.png'
 import teeromu from '../Images/teeromu.png'
 import smartPhoneWhite from '../Images/smartphonewhite.png'
 import swipe from '../Images/swipe.png'
+import wePlan from '../Images/logo-weplan.png'
 
 export const ICONS = {
      PEPE_PNG: pepePng,
@@ -68,6 +69,7 @@ export const ICONS = {
      BLACK_MOBILE: mobileBlack,
      BLACK_WWW: internetBlack,
      SWIPE: swipe,
+     WE_PLAN: wePlan
 }
 
 export default ICONS

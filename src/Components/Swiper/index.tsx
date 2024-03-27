@@ -7,7 +7,6 @@ import { EffectCreative } from 'swiper/modules'
 import { EXPERIENCE, SWIPER_MAIN } from '../../Constants/components'
 import Card from '../Card'
 import uniqueId from 'lodash/uniqueId'
-import RenderMedia from '../Media'
 import ICONS from '../../Constants/icons'
 import { ShakingImg } from '../../Styles/media'
 
