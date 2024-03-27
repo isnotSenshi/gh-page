@@ -470,7 +470,7 @@ const EXPERIENCE = {
                &: hover {
                     background-color: ${COLORS.GREY_LIGHT};
                     cursor: pointer;        
-                }`,
+               }`,
                $cardTitle: {
                     text: 'We Plan',
                     size: '1.8vh',
@@ -486,7 +486,8 @@ const EXPERIENCE = {
                     $styleString: `
                          width: 30vh;
                          height: 10vh;
-                         background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
+                         background: rgb(69,255,0);
+                         background: linear-gradient(332deg, rgba(69,255,0,1) 0%, rgba(56,148,103,1) 40%, rgba(45,82,199,1) 100%);
                          border-top-left-radius: 1vh;
                          border-top-right-radius: 1vh;
           ` },
@@ -496,7 +497,8 @@ const EXPERIENCE = {
                          height: 10vh;
                          top: -5vh;
                          display: inline-block;
-                         background: linear-gradient(186deg, rgba(149,22,22,1) 0%, rgba(255,0,0,1) 100%);
+                         background: rgb(69,255,0);
+                         background: linear-gradient(332deg, rgba(69,255,0,1) 0%, rgba(56,148,103,1) 40%, rgba(45,82,199,1) 100%);
                          border-radius: 10vh;
                          box-shadow: .1vh .1vh 8vh .5vh black;
           ` },
@@ -625,7 +627,7 @@ const EXPERIENCE = {
                `
                },
                $cardBoxUlText: {
-                    text: ['◆ Development.', '◆ Architecture.', '◆ Design.'],
+                    text: ['◆ General Development.', '◆ Architecture & Design.', '◆ Self taught, quick solutions.'],
                     color: 'white',
                     size: '1.2vh',
                     $styleString: `
